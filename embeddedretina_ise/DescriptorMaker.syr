@@ -1,0 +1,568 @@
+Release 14.6 - xst P.68d (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Reading design: DescriptorMaker.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "DescriptorMaker.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "DescriptorMaker"
+Output Format                      : NGC
+Target Device                      : xc7z020-2-clg400
+
+---- Source Options
+Top Module Name                    : DescriptorMaker
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/RetinaParameters.vhd" into library work
+Parsing package <RetinaParameters>.
+Parsing package body <RetinaParameters>.
+Parsing VHDL file "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/DescriptorMaker.vhd" into library work
+Parsing entity <DescriptorMaker>.
+Parsing architecture <BEHAVIORAL> of entity <descriptormaker>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <DescriptorMaker> (architecture <BEHAVIORAL>) from library <work>.
+WARNING:HDLCompiler:92 - "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/DescriptorMaker.vhd" Line 82: sdescriptor should be on the sensitivity list of the process
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <DescriptorMaker>.
+    Related source file is "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/DescriptorMaker.vhd".
+    Found 1-bit register for signal <enableOut>.
+    Found 14-bit register for signal <sPointSet<42>>.
+    Found 14-bit register for signal <sPointSet<41>>.
+    Found 14-bit register for signal <sPointSet<40>>.
+    Found 14-bit register for signal <sPointSet<39>>.
+    Found 14-bit register for signal <sPointSet<38>>.
+    Found 14-bit register for signal <sPointSet<37>>.
+    Found 14-bit register for signal <sPointSet<36>>.
+    Found 14-bit register for signal <sPointSet<35>>.
+    Found 14-bit register for signal <sPointSet<34>>.
+    Found 14-bit register for signal <sPointSet<33>>.
+    Found 14-bit register for signal <sPointSet<32>>.
+    Found 14-bit register for signal <sPointSet<31>>.
+    Found 14-bit register for signal <sPointSet<30>>.
+    Found 14-bit register for signal <sPointSet<29>>.
+    Found 14-bit register for signal <sPointSet<28>>.
+    Found 14-bit register for signal <sPointSet<27>>.
+    Found 14-bit register for signal <sPointSet<26>>.
+    Found 14-bit register for signal <sPointSet<25>>.
+    Found 14-bit register for signal <sPointSet<24>>.
+    Found 14-bit register for signal <sPointSet<23>>.
+    Found 14-bit register for signal <sPointSet<22>>.
+    Found 14-bit register for signal <sPointSet<21>>.
+    Found 14-bit register for signal <sPointSet<20>>.
+    Found 14-bit register for signal <sPointSet<19>>.
+    Found 14-bit register for signal <sPointSet<18>>.
+    Found 14-bit register for signal <sPointSet<17>>.
+    Found 14-bit register for signal <sPointSet<16>>.
+    Found 14-bit register for signal <sPointSet<15>>.
+    Found 14-bit register for signal <sPointSet<14>>.
+    Found 14-bit register for signal <sPointSet<13>>.
+    Found 14-bit register for signal <sPointSet<12>>.
+    Found 14-bit register for signal <sPointSet<11>>.
+    Found 14-bit register for signal <sPointSet<10>>.
+    Found 14-bit register for signal <sPointSet<9>>.
+    Found 14-bit register for signal <sPointSet<8>>.
+    Found 14-bit register for signal <sPointSet<7>>.
+    Found 14-bit register for signal <sPointSet<6>>.
+    Found 14-bit register for signal <sPointSet<5>>.
+    Found 14-bit register for signal <sPointSet<4>>.
+    Found 14-bit register for signal <sPointSet<3>>.
+    Found 14-bit register for signal <sPointSet<2>>.
+    Found 14-bit register for signal <sPointSet<1>>.
+    Found 14-bit register for signal <sPointSet<0>>.
+    Found 1-bit register for signal <innerEnable>.
+    Found 512-bit register for signal <sDescriptor>.
+    Found 5-bit register for signal <counter>.
+    Found 9-bit adder for signal <counter[4]_GND_5_o_add_13_OUT> created at line 66.
+    Found 9-bit adder for signal <counter[4]_GND_5_o_add_21_OUT> created at line 66.
+    Found 9-bit adder for signal <counter[4]_GND_5_o_add_29_OUT> created at line 66.
+    Found 9-bit adder for signal <counter[4]_GND_5_o_add_37_OUT> created at line 66.
+    Found 9-bit adder for signal <counter[4]_GND_5_o_add_45_OUT> created at line 66.
+    Found 9-bit adder for signal <counter[4]_GND_5_o_add_53_OUT> created at line 66.
+    Found 9-bit adder for signal <counter[4]_GND_5_o_add_61_OUT> created at line 66.
+    Found 9-bit adder for signal <counter[4]_GND_5_o_add_69_OUT> created at line 66.
+    Found 9-bit adder for signal <counter[4]_GND_5_o_add_77_OUT> created at line 66.
+    Found 9-bit adder for signal <counter[4]_GND_5_o_add_85_OUT> created at line 66.
+    Found 9-bit adder for signal <counter[4]_GND_5_o_add_93_OUT> created at line 66.
+    Found 9-bit adder for signal <counter[4]_GND_5_o_add_101_OUT> created at line 66.
+    Found 9-bit adder for signal <counter[4]_GND_5_o_add_109_OUT> created at line 66.
+    Found 9-bit adder for signal <counter[4]_GND_5_o_add_117_OUT> created at line 66.
+    Found 9-bit adder for signal <counter[4]_GND_5_o_add_125_OUT> created at line 66.
+    Found 5-bit adder for signal <counter[4]_GND_5_o_add_129_OUT> created at line 76.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs1[0][5]_X_5_o_wide_mux_0_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs2[0][5]_X_5_o_wide_mux_1_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs1[1][5]_X_5_o_wide_mux_8_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs2[1][5]_X_5_o_wide_mux_9_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs1[2][5]_X_5_o_wide_mux_16_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs2[2][5]_X_5_o_wide_mux_17_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs1[3][5]_X_5_o_wide_mux_24_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs2[3][5]_X_5_o_wide_mux_25_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs1[4][5]_X_5_o_wide_mux_32_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs2[4][5]_X_5_o_wide_mux_33_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs1[5][5]_X_5_o_wide_mux_40_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs2[5][5]_X_5_o_wide_mux_41_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs1[6][5]_X_5_o_wide_mux_48_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs2[6][5]_X_5_o_wide_mux_49_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs1[7][5]_X_5_o_wide_mux_56_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs2[7][5]_X_5_o_wide_mux_57_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs1[8][5]_X_5_o_wide_mux_64_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs2[8][5]_X_5_o_wide_mux_65_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs1[9][5]_X_5_o_wide_mux_72_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs2[9][5]_X_5_o_wide_mux_73_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs1[10][5]_X_5_o_wide_mux_80_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs2[10][5]_X_5_o_wide_mux_81_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs1[11][5]_X_5_o_wide_mux_88_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs2[11][5]_X_5_o_wide_mux_89_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs1[12][5]_X_5_o_wide_mux_96_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs2[12][5]_X_5_o_wide_mux_97_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs1[13][5]_X_5_o_wide_mux_104_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs2[13][5]_X_5_o_wide_mux_105_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs1[14][5]_X_5_o_wide_mux_112_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs2[14][5]_X_5_o_wide_mux_113_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs1[15][5]_X_5_o_wide_mux_120_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs2[15][5]_X_5_o_wide_mux_121_OUT> created at line 63.
+    Found 14-bit comparator greater for signal <pointIndexs2[0][5]_pointIndexs1[0][5]_LessThan_3_o> created at line 63
+    Found 14-bit comparator greater for signal <pointIndexs2[1][5]_pointIndexs1[1][5]_LessThan_11_o> created at line 63
+    Found 14-bit comparator greater for signal <pointIndexs2[2][5]_pointIndexs1[2][5]_LessThan_19_o> created at line 63
+    Found 14-bit comparator greater for signal <pointIndexs2[3][5]_pointIndexs1[3][5]_LessThan_27_o> created at line 63
+    Found 14-bit comparator greater for signal <pointIndexs2[4][5]_pointIndexs1[4][5]_LessThan_35_o> created at line 63
+    Found 14-bit comparator greater for signal <pointIndexs2[5][5]_pointIndexs1[5][5]_LessThan_43_o> created at line 63
+    Found 14-bit comparator greater for signal <pointIndexs2[6][5]_pointIndexs1[6][5]_LessThan_51_o> created at line 63
+    Found 14-bit comparator greater for signal <pointIndexs2[7][5]_pointIndexs1[7][5]_LessThan_59_o> created at line 63
+    Found 14-bit comparator greater for signal <pointIndexs2[8][5]_pointIndexs1[8][5]_LessThan_67_o> created at line 63
+    Found 14-bit comparator greater for signal <pointIndexs2[9][5]_pointIndexs1[9][5]_LessThan_75_o> created at line 63
+    Found 14-bit comparator greater for signal <pointIndexs2[10][5]_pointIndexs1[10][5]_LessThan_83_o> created at line 63
+    Found 14-bit comparator greater for signal <pointIndexs2[11][5]_pointIndexs1[11][5]_LessThan_91_o> created at line 63
+    Found 14-bit comparator greater for signal <pointIndexs2[12][5]_pointIndexs1[12][5]_LessThan_99_o> created at line 63
+    Found 14-bit comparator greater for signal <pointIndexs2[13][5]_pointIndexs1[13][5]_LessThan_107_o> created at line 63
+    Found 14-bit comparator greater for signal <pointIndexs2[14][5]_pointIndexs1[14][5]_LessThan_115_o> created at line 63
+    Found 14-bit comparator greater for signal <pointIndexs2[15][5]_pointIndexs1[15][5]_LessThan_123_o> created at line 63
+    Summary:
+	inferred  16 Adder/Subtractor(s).
+	inferred 1121 D-type flip-flop(s).
+	inferred  16 Comparator(s).
+	inferred 8737 Multiplexer(s).
+Unit <DescriptorMaker> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 16
+ 5-bit adder                                           : 1
+ 9-bit adder                                           : 15
+# Registers                                            : 47
+ 1-bit register                                        : 2
+ 14-bit register                                       : 43
+ 5-bit register                                        : 1
+ 512-bit register                                      : 1
+# Comparators                                          : 16
+ 14-bit comparator greater                             : 16
+# Multiplexers                                         : 8737
+ 1-bit 2-to-1 multiplexer                              : 8705
+ 14-bit 43-to-1 multiplexer                            : 32
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <DescriptorMaker>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <DescriptorMaker> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 15
+ 9-bit adder                                           : 15
+# Counters                                             : 1
+ 5-bit up counter                                      : 1
+# Registers                                            : 1116
+ Flip-Flops                                            : 1116
+# Comparators                                          : 16
+ 14-bit comparator greater                             : 16
+# Multiplexers                                         : 8737
+ 1-bit 2-to-1 multiplexer                              : 8705
+ 14-bit 43-to-1 multiplexer                            : 32
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <DescriptorMaker> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block DescriptorMaker, actual ratio is 18.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1121
+ Flip-Flops                                            : 1121
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : DescriptorMaker.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 7659
+#      GND                         : 1
+#      INV                         : 1
+#      LUT2                        : 3
+#      LUT3                        : 498
+#      LUT4                        : 226
+#      LUT5                        : 1392
+#      LUT6                        : 5393
+#      MUXCY                       : 144
+#      VCC                         : 1
+# FlipFlops/Latches                : 1121
+#      FDR                         : 2
+#      FDRE                        : 1119
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 1309
+#      IBUF                        : 796
+#      OBUF                        : 513
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7z020clg400-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            1121  out of  106400     1%  
+ Number of Slice LUTs:                 7513  out of  53200    14%  
+    Number used as Logic:              7513  out of  53200    14%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   8130
+   Number with an unused Flip Flop:    7009  out of   8130    86%  
+   Number with an unused LUT:           617  out of   8130     7%  
+   Number of fully used LUT-FF pairs:   504  out of   8130     6%  
+   Number of unique control sets:         5
+
+IO Utilization: 
+ Number of IOs:                        1310
+ Number of bonded IOBs:                1310  out of    125   1048% (*) 
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 1121  |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 3.392ns (Maximum Frequency: 294.798MHz)
+   Minimum input arrival time before clock: 3.287ns
+   Maximum output required time after clock: 0.580ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.392ns (frequency: 294.798MHz)
+  Total number of paths / destination ports: 1236622 / 1041
+-------------------------------------------------------------------------
+Delay:               3.392ns (Levels of Logic = 12)
+  Source:            sPointSet_42_0 (FF)
+  Destination:       sDescriptor_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: sPointSet_42_0 to sDescriptor_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            32   0.236   0.625  sPointSet_42_0 (sPointSet_42_0)
+     LUT5:I2->O            1   0.043   0.495  pointIndexs1<0><5>_SW0 (N18)
+     LUT5:I2->O            1   0.043   0.495  pointIndexs1<0><5>_SW1 (N914)
+     LUT5:I2->O            2   0.043   0.527  pointIndexs1<0><5> (pointIndexs1[0][5]_X_5_o_wide_mux_0_OUT<0>)
+     LUT4:I0->O            1   0.043   0.000  Mcompar_pointIndexs2[0][5]_pointIndexs1[0][5]_LessThan_3_o_lut<0> (Mcompar_pointIndexs2[0][5]_pointIndexs1[0][5]_LessThan_3_o_lut<0>)
+     MUXCY:S->O            1   0.238   0.000  Mcompar_pointIndexs2[0][5]_pointIndexs1[0][5]_LessThan_3_o_cy<0> (Mcompar_pointIndexs2[0][5]_pointIndexs1[0][5]_LessThan_3_o_cy<0>)
+     MUXCY:CI->O           1   0.013   0.000  Mcompar_pointIndexs2[0][5]_pointIndexs1[0][5]_LessThan_3_o_cy<1> (Mcompar_pointIndexs2[0][5]_pointIndexs1[0][5]_LessThan_3_o_cy<1>)
+     MUXCY:CI->O           1   0.013   0.000  Mcompar_pointIndexs2[0][5]_pointIndexs1[0][5]_LessThan_3_o_cy<2> (Mcompar_pointIndexs2[0][5]_pointIndexs1[0][5]_LessThan_3_o_cy<2>)
+     MUXCY:CI->O           1   0.013   0.000  Mcompar_pointIndexs2[0][5]_pointIndexs1[0][5]_LessThan_3_o_cy<3> (Mcompar_pointIndexs2[0][5]_pointIndexs1[0][5]_LessThan_3_o_cy<3>)
+     MUXCY:CI->O           1   0.013   0.000  Mcompar_pointIndexs2[0][5]_pointIndexs1[0][5]_LessThan_3_o_cy<4> (Mcompar_pointIndexs2[0][5]_pointIndexs1[0][5]_LessThan_3_o_cy<4>)
+     MUXCY:CI->O           1   0.013   0.000  Mcompar_pointIndexs2[0][5]_pointIndexs1[0][5]_LessThan_3_o_cy<5> (Mcompar_pointIndexs2[0][5]_pointIndexs1[0][5]_LessThan_3_o_cy<5>)
+     MUXCY:CI->O          32   0.013   0.480  Mcompar_pointIndexs2[0][5]_pointIndexs1[0][5]_LessThan_3_o_cy<6> (Mcompar_pointIndexs2[0][5]_pointIndexs1[0][5]_LessThan_3_o_cy<6>)
+     LUT3:I2->O            1   0.043   0.000  counter[4]_Decoder_118_OUT<480>1 (counter[4]_Decoder_118_OUT<480>1)
+     FDRE:D                   -0.000          sDescriptor_480
+    ----------------------------------------
+    Total                      3.392ns (0.770ns logic, 2.622ns route)
+                                       (22.7% logic, 77.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 863009 / 3355
+-------------------------------------------------------------------------
+Offset:              3.287ns (Levels of Logic = 13)
+  Source:            pointIndexs1<0><0> (PAD)
+  Destination:       sDescriptor_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: pointIndexs1<0><0> to sDescriptor_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           154   0.000   0.756  pointIndexs1_0__0_IBUF (pointIndexs1_0__0_IBUF)
+     LUT5:I0->O            1   0.043   0.495  pointIndexs1<0><5>_SW0 (N18)
+     LUT5:I2->O            1   0.043   0.495  pointIndexs1<0><5>_SW1 (N914)
+     LUT5:I2->O            2   0.043   0.527  pointIndexs1<0><5> (pointIndexs1[0][5]_X_5_o_wide_mux_0_OUT<0>)
+     LUT4:I0->O            1   0.043   0.000  Mcompar_pointIndexs2[0][5]_pointIndexs1[0][5]_LessThan_3_o_lut<0> (Mcompar_pointIndexs2[0][5]_pointIndexs1[0][5]_LessThan_3_o_lut<0>)
+     MUXCY:S->O            1   0.238   0.000  Mcompar_pointIndexs2[0][5]_pointIndexs1[0][5]_LessThan_3_o_cy<0> (Mcompar_pointIndexs2[0][5]_pointIndexs1[0][5]_LessThan_3_o_cy<0>)
+     MUXCY:CI->O           1   0.013   0.000  Mcompar_pointIndexs2[0][5]_pointIndexs1[0][5]_LessThan_3_o_cy<1> (Mcompar_pointIndexs2[0][5]_pointIndexs1[0][5]_LessThan_3_o_cy<1>)
+     MUXCY:CI->O           1   0.013   0.000  Mcompar_pointIndexs2[0][5]_pointIndexs1[0][5]_LessThan_3_o_cy<2> (Mcompar_pointIndexs2[0][5]_pointIndexs1[0][5]_LessThan_3_o_cy<2>)
+     MUXCY:CI->O           1   0.013   0.000  Mcompar_pointIndexs2[0][5]_pointIndexs1[0][5]_LessThan_3_o_cy<3> (Mcompar_pointIndexs2[0][5]_pointIndexs1[0][5]_LessThan_3_o_cy<3>)
+     MUXCY:CI->O           1   0.013   0.000  Mcompar_pointIndexs2[0][5]_pointIndexs1[0][5]_LessThan_3_o_cy<4> (Mcompar_pointIndexs2[0][5]_pointIndexs1[0][5]_LessThan_3_o_cy<4>)
+     MUXCY:CI->O           1   0.013   0.000  Mcompar_pointIndexs2[0][5]_pointIndexs1[0][5]_LessThan_3_o_cy<5> (Mcompar_pointIndexs2[0][5]_pointIndexs1[0][5]_LessThan_3_o_cy<5>)
+     MUXCY:CI->O          32   0.013   0.480  Mcompar_pointIndexs2[0][5]_pointIndexs1[0][5]_LessThan_3_o_cy<6> (Mcompar_pointIndexs2[0][5]_pointIndexs1[0][5]_LessThan_3_o_cy<6>)
+     LUT3:I2->O            1   0.043   0.000  counter[4]_Decoder_118_OUT<480>1 (counter[4]_Decoder_118_OUT<480>1)
+     FDRE:D                   -0.000          sDescriptor_480
+    ----------------------------------------
+    Total                      3.287ns (0.534ns logic, 2.753ns route)
+                                       (16.2% logic, 83.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 513 / 513
+-------------------------------------------------------------------------
+Offset:              0.580ns (Levels of Logic = 1)
+  Source:            sDescriptor_511 (FF)
+  Destination:       descriptor<511> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: sDescriptor_511 to descriptor<511>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             2   0.236   0.344  sDescriptor_511 (sDescriptor_511)
+     OBUF:I->O                 0.000          descriptor_511_OBUF (descriptor<511>)
+    ----------------------------------------
+    Total                      0.580ns (0.236ns logic, 0.344ns route)
+                                       (40.7% logic, 59.3% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.392|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 78.00 secs
+Total CPU time to Xst completion: 76.24 secs
+ 
+--> 
+
+
+Total memory usage is 643756 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :   32 (   0 filtered)
+

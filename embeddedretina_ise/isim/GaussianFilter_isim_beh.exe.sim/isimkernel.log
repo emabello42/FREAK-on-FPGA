@@ -1,0 +1,29 @@
+Command line:
+   GaussianFilter_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  55303
+
+Thu Apr 10 16:29:52 2014
+
+
+ Elaboration Time: 0.05 sec
+
+ Current Memory Usage: 211.341 Meg
+
+ Total Signals          : 135
+ Total Nets             : 8411
+ Total Signal Drivers   : 66
+ Total Blocks           : 30
+ Total Primitive Blocks : 26
+ Total Processes        : 49
+ Total Traceable Variables  : 84
+ Total Scalar Nets and Variables : 8987
+Total Line Count : 160
+
+ Total Simulation Time: 0.07 sec
+
+ Current Memory Usage: 286.843 Meg
+
+Thu Apr 10 16:30:16 2014
+

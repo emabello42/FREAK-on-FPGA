@@ -1,0 +1,34 @@
+Running: /opt/Xilinx/14.6/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib secureip -o /media/DATA42/Projects/EmbeddedRetina/EmbeddedRetina_ISE/GaussianFilter_isim_beh.exe -prj /media/DATA42/Projects/EmbeddedRetina/EmbeddedRetina_ISE/GaussianFilter_beh.prj work.GaussianFilter 
+ISim P.68d (signature 0xfbc00daa)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "/media/DATA42/Projects/EmbeddedRetina/EmbeddedRetina_ISE/ipcore_dir/ROM_GAUSS_COE.vhd" into library work
+Parsing VHDL file "/media/DATA42/Projects/EmbeddedRetina/EmbeddedRetina_ISE/RetinaParameters.vhd" into library work
+Parsing VHDL file "/media/DATA42/Projects/EmbeddedRetina/EmbeddedRetina_ISE/VerticalConvolution.vhd" into library work
+Parsing VHDL file "/media/DATA42/Projects/EmbeddedRetina/EmbeddedRetina_ISE/IntermediateRegsConv.vhd" into library work
+Parsing VHDL file "/media/DATA42/Projects/EmbeddedRetina/EmbeddedRetina_ISE/HorizontalConvolution.vhd" into library work
+Parsing VHDL file "/media/DATA42/Projects/EmbeddedRetina/EmbeddedRetina_ISE/GaussianFilter.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 113060 KB
+Fuse CPU Usage: 1280 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package vcomponents
+Compiling package retinaparameters
+Compiling package textio
+Compiling architecture behavioral of entity dist_mem_gen_v7_2 [\dist_mem_gen_v7_2("zynq",4,"0",...]
+Compiling architecture rom_gauss_coe_a of entity ROM_GAUSS_COE [rom_gauss_coe_default]
+Compiling architecture behavioral of entity VerticalConvolution [verticalconvolution_default]
+Compiling architecture behavioral of entity IntermediateRegsConv [intermediateregsconv_default]
+Compiling architecture behavioral of entity HorizontalConvolution [horizontalconvolution_default]
+Compiling architecture behavioral of entity gaussianfilter
+Time Resolution for simulation is 1ps.
+Waiting for 4 sub-compilation(s) to finish...
+Compiled 17 VHDL Units
+Built simulation executable /media/DATA42/Projects/EmbeddedRetina/EmbeddedRetina_ISE/GaussianFilter_isim_beh.exe
+Fuse Memory Usage: 691204 KB
+Fuse CPU Usage: 1410 ms
+GCC CPU Usage: 2890 ms

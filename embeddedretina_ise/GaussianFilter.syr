@@ -1,0 +1,698 @@
+Release 14.6 - xst P.68d (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Reading design: GaussianFilter.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "GaussianFilter.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "GaussianFilter"
+Output Format                      : NGC
+Target Device                      : xc7z020-2-clg400
+
+---- Source Options
+Top Module Name                    : GaussianFilter
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/RetinaParameters.vhd" into library work
+Parsing package <RetinaParameters>.
+Parsing package body <RetinaParameters>.
+Parsing VHDL file "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/VerticalConvolution.vhd" into library work
+Parsing entity <VerticalConvolution>.
+Parsing architecture <BEHAVIORAL> of entity <verticalconvolution>.
+Parsing VHDL file "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/rom_coe.vhd" into library work
+Parsing entity <rom_coe>.
+Parsing architecture <Behavioral> of entity <rom_coe>.
+Parsing VHDL file "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/IntermediateRegsConv.vhd" into library work
+Parsing entity <IntermediateRegsConv>.
+Parsing architecture <BEHAVIORAL> of entity <intermediateregsconv>.
+Parsing VHDL file "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/HorizontalConvolution.vhd" into library work
+Parsing entity <HorizontalConvolution>.
+Parsing architecture <BEHAVIORAL> of entity <horizontalconvolution>.
+Parsing VHDL file "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/GaussianFilter.vhd" into library work
+Parsing entity <GaussianFilter>.
+Parsing architecture <BEHAVIORAL> of entity <gaussianfilter>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <GaussianFilter> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <rom_coe> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <VerticalConvolution> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <IntermediateRegsConv> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <HorizontalConvolution> (architecture <BEHAVIORAL>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <GaussianFilter>.
+    Related source file is "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/GaussianFilter.vhd".
+    Summary:
+	no macro.
+Unit <GaussianFilter> synthesized.
+
+Synthesizing Unit <rom_coe>.
+    Related source file is "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/rom_coe.vhd".
+WARNING:Xst:647 - Input <address<5:5>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 55-bit register for signal <data_out>.
+    Found 32x55-bit Read Only RAM for signal <address[4]_X_6_o_wide_mux_0_OUT>
+    Summary:
+	inferred   1 RAM(s).
+	inferred  55 D-type flip-flop(s).
+Unit <rom_coe> synthesized.
+
+Synthesizing Unit <VerticalConvolution>.
+    Related source file is "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/VerticalConvolution.vhd".
+    Found 9-bit register for signal <s1_vert_conv_array<3>>.
+    Found 9-bit register for signal <s1_vert_conv_array<2>>.
+    Found 9-bit register for signal <s1_vert_conv_array<1>>.
+    Found 9-bit register for signal <s1_vert_conv_array<0>>.
+    Found 1-bit register for signal <s1_vert_enable>.
+    Found 18-bit register for signal <s2_vert_conv_array<4>>.
+    Found 18-bit register for signal <s2_vert_conv_array<3>>.
+    Found 18-bit register for signal <s2_vert_conv_array<2>>.
+    Found 18-bit register for signal <s2_vert_conv_array<1>>.
+    Found 18-bit register for signal <s2_vert_conv_array<0>>.
+    Found 1-bit register for signal <s2_vert_enable>.
+    Found 20-bit register for signal <s3_vert_conv>.
+    Found 1-bit register for signal <enableOut>.
+    Found 9-bit register for signal <s1_vert_conv_array<4>>.
+    Found 8-bit adder for signal <inputArray[0][7]_inputArray[8][7]_add_0_OUT> created at line 53.
+    Found 8-bit adder for signal <inputArray[1][7]_inputArray[7][7]_add_1_OUT> created at line 53.
+    Found 8-bit adder for signal <inputArray[2][7]_inputArray[6][7]_add_2_OUT> created at line 53.
+    Found 8-bit adder for signal <inputArray[3][7]_inputArray[5][7]_add_3_OUT> created at line 53.
+    Found 18-bit adder for signal <n0134> created at line 79.
+    Found 18-bit adder for signal <n0135> created at line 80.
+    Found 18-bit adder for signal <n0137> created at line 79.
+    Found 18-bit adder for signal <s2_vert_conv_array[0][17]_s2_vert_conv_array[4][17]_add_22_OUT> created at line 79.
+    Found 9x11-bit multiplier for signal <n0084> created at line 65.
+    Found 9x11-bit multiplier for signal <n0085> created at line 65.
+    Found 9x11-bit multiplier for signal <n0086> created at line 65.
+    Found 9x11-bit multiplier for signal <n0087> created at line 65.
+    Found 9x11-bit multiplier for signal <n0088> created at line 65.
+    Summary:
+	inferred   5 Multiplier(s).
+	inferred   8 Adder/Subtractor(s).
+	inferred 158 D-type flip-flop(s).
+Unit <VerticalConvolution> synthesized.
+
+Synthesizing Unit <IntermediateRegsConv>.
+    Related source file is "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/IntermediateRegsConv.vhd".
+    Found 10-bit register for signal <intermediate_registers<7>>.
+    Found 10-bit register for signal <intermediate_registers<6>>.
+    Found 10-bit register for signal <intermediate_registers<5>>.
+    Found 10-bit register for signal <intermediate_registers<4>>.
+    Found 10-bit register for signal <intermediate_registers<3>>.
+    Found 10-bit register for signal <intermediate_registers<2>>.
+    Found 10-bit register for signal <intermediate_registers<1>>.
+    Found 10-bit register for signal <intermediate_registers<0>>.
+    Found 4-bit register for signal <counter>.
+    Found 1-bit register for signal <enableOut>.
+    Found 10-bit register for signal <intermediate_registers<8>>.
+    Found 4-bit adder for signal <counter[3]_GND_10_o_add_0_OUT> created at line 52.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  95 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <IntermediateRegsConv> synthesized.
+
+Synthesizing Unit <HorizontalConvolution>.
+    Related source file is "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/HorizontalConvolution.vhd".
+    Found 11-bit register for signal <s1_horiz_conv_array<3>>.
+    Found 11-bit register for signal <s1_horiz_conv_array<2>>.
+    Found 11-bit register for signal <s1_horiz_conv_array<1>>.
+    Found 11-bit register for signal <s1_horiz_conv_array<0>>.
+    Found 1-bit register for signal <s1_horiz_enable>.
+    Found 22-bit register for signal <s2_horiz_conv_array<4>>.
+    Found 22-bit register for signal <s2_horiz_conv_array<3>>.
+    Found 22-bit register for signal <s2_horiz_conv_array<2>>.
+    Found 22-bit register for signal <s2_horiz_conv_array<1>>.
+    Found 22-bit register for signal <s2_horiz_conv_array<0>>.
+    Found 1-bit register for signal <s2_horiz_enable>.
+    Found 24-bit register for signal <s3_horiz_conv>.
+    Found 1-bit register for signal <enableOut>.
+    Found 11-bit register for signal <s1_horiz_conv_array<4>>.
+    Found 10-bit adder for signal <inputData[0][9]_inputData[8][9]_add_0_OUT> created at line 53.
+    Found 10-bit adder for signal <inputData[1][9]_inputData[7][9]_add_1_OUT> created at line 53.
+    Found 10-bit adder for signal <inputData[2][9]_inputData[6][9]_add_2_OUT> created at line 53.
+    Found 10-bit adder for signal <inputData[3][9]_inputData[5][9]_add_3_OUT> created at line 53.
+    Found 22-bit adder for signal <n0134> created at line 77.
+    Found 22-bit adder for signal <n0135> created at line 78.
+    Found 22-bit adder for signal <n0137> created at line 77.
+    Found 22-bit adder for signal <s2_horiz_conv_array[0][21]_s2_horiz_conv_array[4][21]_add_22_OUT> created at line 77.
+    Found 11x11-bit multiplier for signal <s1_horiz_conv_array[0][10]_gaussianKernel[54]_MuLt_9_OUT> created at line 66.
+    Found 11x11-bit multiplier for signal <s1_horiz_conv_array[1][10]_gaussianKernel[43]_MuLt_10_OUT> created at line 66.
+    Found 11x11-bit multiplier for signal <s1_horiz_conv_array[2][10]_gaussianKernel[32]_MuLt_11_OUT> created at line 66.
+    Found 11x11-bit multiplier for signal <s1_horiz_conv_array[3][10]_gaussianKernel[21]_MuLt_12_OUT> created at line 66.
+    Found 11x11-bit multiplier for signal <s1_horiz_conv_array[4][10]_gaussianKernel[10]_MuLt_13_OUT> created at line 66.
+    Summary:
+	inferred   5 Multiplier(s).
+	inferred   8 Adder/Subtractor(s).
+	inferred 192 D-type flip-flop(s).
+Unit <HorizontalConvolution> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 32x55-bit single-port Read Only RAM                   : 1
+# Multipliers                                          : 10
+ 11x11-bit multiplier                                  : 5
+ 11x9-bit multiplier                                   : 5
+# Adders/Subtractors                                   : 17
+ 10-bit adder                                          : 4
+ 18-bit adder                                          : 4
+ 22-bit adder                                          : 4
+ 4-bit adder                                           : 1
+ 8-bit adder                                           : 4
+# Registers                                            : 40
+ 1-bit register                                        : 7
+ 10-bit register                                       : 9
+ 11-bit register                                       : 5
+ 18-bit register                                       : 5
+ 20-bit register                                       : 1
+ 22-bit register                                       : 5
+ 24-bit register                                       : 1
+ 4-bit register                                        : 1
+ 55-bit register                                       : 1
+ 9-bit register                                        : 5
+# Multiplexers                                         : 1
+ 4-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <s3_vert_conv_18> in Unit <vert_conv> is equivalent to the following FF/Latch, which will be removed : <s3_vert_conv_19> 
+INFO:Xst:2261 - The FF/Latch <s1_vert_conv_array_0_8> in Unit <vert_conv> is equivalent to the following 4 FFs/Latches, which will be removed : <s1_vert_conv_array_3_8> <s1_vert_conv_array_2_8> <s1_vert_conv_array_1_8> <s1_vert_conv_array_4_8> 
+INFO:Xst:2261 - The FF/Latch <s3_horiz_conv_22> in Unit <horiz_conv> is equivalent to the following FF/Latch, which will be removed : <s3_horiz_conv_23> 
+INFO:Xst:2261 - The FF/Latch <s1_horiz_conv_array_0_10> in Unit <horiz_conv> is equivalent to the following 4 FFs/Latches, which will be removed : <s1_horiz_conv_array_3_10> <s1_horiz_conv_array_2_10> <s1_horiz_conv_array_1_10> <s1_horiz_conv_array_4_10> 
+WARNING:Xst:1710 - FF/Latch <s3_horiz_conv_22> (without init value) has a constant value of 0 in block <horiz_conv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s1_horiz_conv_array_0_10> (without init value) has a constant value of 0 in block <horiz_conv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s1_horiz_conv_array_0_9> (without init value) has a constant value of 0 in block <horiz_conv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s1_horiz_conv_array_0_8> (without init value) has a constant value of 0 in block <horiz_conv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s1_vert_conv_array_0_8> (without init value) has a constant value of 0 in block <vert_conv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s3_vert_conv_18> (without init value) has a constant value of 0 in block <vert_conv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <intermediate_registers_0_8> has a constant value of 0 in block <Intermediate_RegsConv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <intermediate_registers_0_9> has a constant value of 0 in block <Intermediate_RegsConv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <intermediate_registers_1_9> has a constant value of 0 in block <Intermediate_RegsConv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <intermediate_registers_1_8> has a constant value of 0 in block <Intermediate_RegsConv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <intermediate_registers_2_9> has a constant value of 0 in block <Intermediate_RegsConv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <intermediate_registers_2_8> has a constant value of 0 in block <Intermediate_RegsConv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <intermediate_registers_3_8> has a constant value of 0 in block <Intermediate_RegsConv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <intermediate_registers_3_9> has a constant value of 0 in block <Intermediate_RegsConv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <intermediate_registers_4_8> has a constant value of 0 in block <Intermediate_RegsConv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <intermediate_registers_4_9> has a constant value of 0 in block <Intermediate_RegsConv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <intermediate_registers_5_8> has a constant value of 0 in block <Intermediate_RegsConv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <intermediate_registers_5_9> has a constant value of 0 in block <Intermediate_RegsConv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <intermediate_registers_6_8> has a constant value of 0 in block <Intermediate_RegsConv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <intermediate_registers_6_9> has a constant value of 0 in block <Intermediate_RegsConv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <intermediate_registers_7_8> has a constant value of 0 in block <Intermediate_RegsConv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <intermediate_registers_7_9> has a constant value of 0 in block <Intermediate_RegsConv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <intermediate_registers_8_8> has a constant value of 0 in block <Intermediate_RegsConv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <intermediate_registers_8_9> has a constant value of 0 in block <Intermediate_RegsConv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <s3_vert_conv_0> of sequential type is unconnected in block <vert_conv>.
+WARNING:Xst:2677 - Node <s3_vert_conv_1> of sequential type is unconnected in block <vert_conv>.
+WARNING:Xst:2677 - Node <s3_vert_conv_2> of sequential type is unconnected in block <vert_conv>.
+WARNING:Xst:2677 - Node <s3_vert_conv_3> of sequential type is unconnected in block <vert_conv>.
+WARNING:Xst:2677 - Node <s3_vert_conv_4> of sequential type is unconnected in block <vert_conv>.
+WARNING:Xst:2677 - Node <s3_vert_conv_5> of sequential type is unconnected in block <vert_conv>.
+WARNING:Xst:2677 - Node <s3_vert_conv_6> of sequential type is unconnected in block <vert_conv>.
+WARNING:Xst:2677 - Node <s3_vert_conv_7> of sequential type is unconnected in block <vert_conv>.
+WARNING:Xst:2677 - Node <s3_vert_conv_8> of sequential type is unconnected in block <vert_conv>.
+WARNING:Xst:2677 - Node <s3_vert_conv_9> of sequential type is unconnected in block <vert_conv>.
+WARNING:Xst:2677 - Node <s3_horiz_conv_0> of sequential type is unconnected in block <horiz_conv>.
+WARNING:Xst:2677 - Node <s3_horiz_conv_1> of sequential type is unconnected in block <horiz_conv>.
+WARNING:Xst:2677 - Node <s3_horiz_conv_2> of sequential type is unconnected in block <horiz_conv>.
+WARNING:Xst:2677 - Node <s3_horiz_conv_3> of sequential type is unconnected in block <horiz_conv>.
+WARNING:Xst:2677 - Node <s3_horiz_conv_4> of sequential type is unconnected in block <horiz_conv>.
+WARNING:Xst:2677 - Node <s3_horiz_conv_5> of sequential type is unconnected in block <horiz_conv>.
+WARNING:Xst:2677 - Node <s3_horiz_conv_6> of sequential type is unconnected in block <horiz_conv>.
+WARNING:Xst:2677 - Node <s3_horiz_conv_7> of sequential type is unconnected in block <horiz_conv>.
+WARNING:Xst:2677 - Node <s3_horiz_conv_8> of sequential type is unconnected in block <horiz_conv>.
+WARNING:Xst:2677 - Node <s3_horiz_conv_9> of sequential type is unconnected in block <horiz_conv>.
+WARNING:Xst:2404 -  FFs/Latches <s3_vert_conv<19:18>> (without init value) have a constant value of 0 in block <VerticalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s1_vert_conv_array_3<8:8>> (without init value) have a constant value of 0 in block <VerticalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s1_vert_conv_array_2<8:8>> (without init value) have a constant value of 0 in block <VerticalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s1_vert_conv_array_1<8:8>> (without init value) have a constant value of 0 in block <VerticalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s1_vert_conv_array_4<8:8>> (without init value) have a constant value of 0 in block <VerticalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s1_vert_conv_array_0<8:8>> (without init value) have a constant value of 0 in block <VerticalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s3_horiz_conv<23:22>> (without init value) have a constant value of 0 in block <HorizontalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s1_horiz_conv_array_3<10:10>> (without init value) have a constant value of 0 in block <HorizontalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s1_horiz_conv_array_2<10:10>> (without init value) have a constant value of 0 in block <HorizontalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s1_horiz_conv_array_1<10:10>> (without init value) have a constant value of 0 in block <HorizontalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s1_horiz_conv_array_4<10:10>> (without init value) have a constant value of 0 in block <HorizontalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s1_horiz_conv_array_0<10:10>> (without init value) have a constant value of 0 in block <HorizontalConvolution>.
+
+Synthesizing (advanced) Unit <HorizontalConvolution>.
+	The following adders/subtractors are grouped into adder tree <Madd_s2_horiz_conv_array[0][21]_s2_horiz_conv_array[4][21]_add_22_OUT1> :
+ 	<Madd_n0134> in block <HorizontalConvolution>, 	<Madd_n0135> in block <HorizontalConvolution>, 	<Madd_s2_horiz_conv_array[0][21]_s2_horiz_conv_array[4][21]_add_22_OUT> in block <HorizontalConvolution>.
+	Multiplier <Mmult_s1_horiz_conv_array[4][10]_gaussianKernel[10]_MuLt_13_OUT> in block <HorizontalConvolution> and adder/subtractor <ADDER_FOR_MULTADD_Madd3> in block <HorizontalConvolution> are combined into a MAC<Maddsub_s1_horiz_conv_array[4][10]_gaussianKernel[10]_MuLt_13_OUT>.
+	The following registers are also absorbed by the MAC: <s2_horiz_conv_array_4> in block <HorizontalConvolution>, <s3_horiz_conv> in block <HorizontalConvolution>.
+	Multiplier <Mmult_s1_horiz_conv_array[3][10]_gaussianKernel[21]_MuLt_12_OUT> in block <HorizontalConvolution> and adder/subtractor <ADDER_FOR_MULTADD_Madd2> in block <HorizontalConvolution> are combined into a MAC<Maddsub_s1_horiz_conv_array[3][10]_gaussianKernel[21]_MuLt_12_OUT>.
+	The following registers are also absorbed by the MAC: <s2_horiz_conv_array_3> in block <HorizontalConvolution>.
+	Multiplier <Mmult_s1_horiz_conv_array[2][10]_gaussianKernel[32]_MuLt_11_OUT> in block <HorizontalConvolution> and adder/subtractor <ADDER_FOR_MULTADD_Madd1> in block <HorizontalConvolution> are combined into a MAC<Maddsub_s1_horiz_conv_array[2][10]_gaussianKernel[32]_MuLt_11_OUT>.
+	The following registers are also absorbed by the MAC: <s2_horiz_conv_array_2> in block <HorizontalConvolution>.
+	Multiplier <Mmult_s1_horiz_conv_array[1][10]_gaussianKernel[43]_MuLt_10_OUT> in block <HorizontalConvolution> and adder/subtractor <ADDER_FOR_MULTADD_Madd> in block <HorizontalConvolution> are combined into a MAC<Maddsub_s1_horiz_conv_array[1][10]_gaussianKernel[43]_MuLt_10_OUT>.
+	The following registers are also absorbed by the MAC: <s2_horiz_conv_array_1> in block <HorizontalConvolution>.
+	Found pipelined multiplier on signal <s1_horiz_conv_array[0][10]_gaussianKernel[54]_MuLt_9_OUT>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_s1_horiz_conv_array[0][10]_gaussianKernel[54]_MuLt_9_OUT by adding 1 register level(s).
+Unit <HorizontalConvolution> synthesized (advanced).
+
+Synthesizing (advanced) Unit <IntermediateRegsConv>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <IntermediateRegsConv> synthesized (advanced).
+
+Synthesizing (advanced) Unit <VerticalConvolution>.
+	The following adders/subtractors are grouped into adder tree <Madd_s2_vert_conv_array[0][17]_s2_vert_conv_array[4][17]_add_22_OUT1> :
+ 	<Madd_n0134> in block <VerticalConvolution>, 	<Madd_n0135> in block <VerticalConvolution>, 	<Madd_s2_vert_conv_array[0][17]_s2_vert_conv_array[4][17]_add_22_OUT> in block <VerticalConvolution>.
+	Multiplier <Mmult_n0088> in block <VerticalConvolution> and adder/subtractor <ADDER_FOR_MULTADD_Madd3> in block <VerticalConvolution> are combined into a MAC<Maddsub_n0088>.
+	The following registers are also absorbed by the MAC: <s2_vert_conv_array_4> in block <VerticalConvolution>, <s3_vert_conv> in block <VerticalConvolution>.
+	Multiplier <Mmult_n0087> in block <VerticalConvolution> and adder/subtractor <ADDER_FOR_MULTADD_Madd2> in block <VerticalConvolution> are combined into a MAC<Maddsub_n0087>.
+	The following registers are also absorbed by the MAC: <s2_vert_conv_array_3> in block <VerticalConvolution>.
+	Multiplier <Mmult_n0086> in block <VerticalConvolution> and adder/subtractor <ADDER_FOR_MULTADD_Madd1> in block <VerticalConvolution> are combined into a MAC<Maddsub_n0086>.
+	The following registers are also absorbed by the MAC: <s2_vert_conv_array_2> in block <VerticalConvolution>.
+	Multiplier <Mmult_n0085> in block <VerticalConvolution> and adder/subtractor <ADDER_FOR_MULTADD_Madd> in block <VerticalConvolution> are combined into a MAC<Maddsub_n0085>.
+	The following registers are also absorbed by the MAC: <s2_vert_conv_array_1> in block <VerticalConvolution>.
+	Found pipelined multiplier on signal <n0084>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_n0084 by adding 1 register level(s).
+Unit <VerticalConvolution> synthesized (advanced).
+
+Synthesizing (advanced) Unit <rom_coe>.
+INFO:Xst:3231 - The small RAM <Mram_address[4]_X_6_o_wide_mux_0_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 55-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <address>       |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <rom_coe> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 32x55-bit single-port distributed Read Only RAM       : 1
+# MACs                                                 : 8
+ 11x11-to-22-bit MAC                                   : 4
+ 11x9-to-18-bit MAC                                    : 4
+# Multipliers                                          : 2
+ 11x11-bit registered multiplier                       : 1
+ 11x9-bit registered multiplier                        : 1
+# Adders/Subtractors                                   : 8
+ 10-bit adder                                          : 4
+ 8-bit adder                                           : 4
+# Counters                                             : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 242
+ Flip-Flops                                            : 242
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <data_out_4> (without init value) has a constant value of 0 in block <rom_coe>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_out_7> (without init value) has a constant value of 0 in block <rom_coe>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_out_8> (without init value) has a constant value of 0 in block <rom_coe>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_out_9> (without init value) has a constant value of 0 in block <rom_coe>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_out_10> (without init value) has a constant value of 0 in block <rom_coe>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_out_19> (without init value) has a constant value of 0 in block <rom_coe>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_out_20> (without init value) has a constant value of 0 in block <rom_coe>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_out_21> (without init value) has a constant value of 0 in block <rom_coe>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_out_30> (without init value) has a constant value of 0 in block <rom_coe>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_out_31> (without init value) has a constant value of 0 in block <rom_coe>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_out_32> (without init value) has a constant value of 0 in block <rom_coe>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_out_42> (without init value) has a constant value of 0 in block <rom_coe>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_out_43> (without init value) has a constant value of 0 in block <rom_coe>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_out_53> (without init value) has a constant value of 0 in block <rom_coe>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <data_out_29> in Unit <rom_coe> is equivalent to the following 2 FFs/Latches, which will be removed : <data_out_40> <data_out_51> 
+INFO:Xst:2261 - The FF/Latch <data_out_41> in Unit <rom_coe> is equivalent to the following FF/Latch, which will be removed : <data_out_52> 
+INFO:Xst:2261 - The FF/Latch <data_out_39> in Unit <rom_coe> is equivalent to the following FF/Latch, which will be removed : <data_out_50> 
+INFO:Xst:2261 - The FF/Latch <data_out_1> in Unit <rom_coe> is equivalent to the following 3 FFs/Latches, which will be removed : <data_out_3> <data_out_6> <data_out_17> 
+INFO:Xst:2261 - The FF/Latch <data_out_0> in Unit <rom_coe> is equivalent to the following 4 FFs/Latches, which will be removed : <data_out_5> <data_out_16> <data_out_27> <data_out_38> 
+INFO:Xst:2261 - The FF/Latch <data_out_12> in Unit <rom_coe> is equivalent to the following FF/Latch, which will be removed : <data_out_14> 
+INFO:Xst:2261 - The FF/Latch <s1_vert_conv_array_0_0> in Unit <VerticalConvolution> is equivalent to the following 7 FFs/Latches, which will be removed : <s1_vert_conv_array_0_1> <s1_vert_conv_array_0_2> <s1_vert_conv_array_0_3> <s1_vert_conv_array_0_4> <s1_vert_conv_array_0_5> <s1_vert_conv_array_0_6> <s1_vert_conv_array_0_7> 
+INFO:Xst:2261 - The FF/Latch <s1_horiz_conv_array_0_0> in Unit <HorizontalConvolution> is equivalent to the following 9 FFs/Latches, which will be removed : <s1_horiz_conv_array_0_1> <s1_horiz_conv_array_0_2> <s1_horiz_conv_array_0_3> <s1_horiz_conv_array_0_4> <s1_horiz_conv_array_0_5> <s1_horiz_conv_array_0_6> <s1_horiz_conv_array_0_7> <s1_horiz_conv_array_0_8> <s1_horiz_conv_array_0_9> 
+
+Optimizing unit <GaussianFilter> ...
+
+Optimizing unit <rom_coe> ...
+
+Optimizing unit <VerticalConvolution> ...
+
+Optimizing unit <IntermediateRegsConv> ...
+
+Optimizing unit <HorizontalConvolution> ...
+WARNING:Xst:1293 - FF/Latch <Intermediate_RegsConv/intermediate_registers_0_8> has a constant value of 0 in block <GaussianFilter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Intermediate_RegsConv/intermediate_registers_0_9> has a constant value of 0 in block <GaussianFilter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Intermediate_RegsConv/intermediate_registers_1_8> has a constant value of 0 in block <GaussianFilter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Intermediate_RegsConv/intermediate_registers_1_9> has a constant value of 0 in block <GaussianFilter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Intermediate_RegsConv/intermediate_registers_2_8> has a constant value of 0 in block <GaussianFilter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Intermediate_RegsConv/intermediate_registers_2_9> has a constant value of 0 in block <GaussianFilter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Intermediate_RegsConv/intermediate_registers_3_9> has a constant value of 0 in block <GaussianFilter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Intermediate_RegsConv/intermediate_registers_3_8> has a constant value of 0 in block <GaussianFilter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Intermediate_RegsConv/intermediate_registers_4_9> has a constant value of 0 in block <GaussianFilter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Intermediate_RegsConv/intermediate_registers_4_8> has a constant value of 0 in block <GaussianFilter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Intermediate_RegsConv/intermediate_registers_5_9> has a constant value of 0 in block <GaussianFilter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Intermediate_RegsConv/intermediate_registers_5_8> has a constant value of 0 in block <GaussianFilter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <horiz_conv/s1_horiz_conv_array_1_9> (without init value) has a constant value of 0 in block <GaussianFilter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Intermediate_RegsConv/intermediate_registers_6_8> has a constant value of 0 in block <GaussianFilter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Intermediate_RegsConv/intermediate_registers_6_9> has a constant value of 0 in block <GaussianFilter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Intermediate_RegsConv/intermediate_registers_7_8> has a constant value of 0 in block <GaussianFilter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Intermediate_RegsConv/intermediate_registers_7_9> has a constant value of 0 in block <GaussianFilter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <horiz_conv/s1_horiz_conv_array_2_9> (without init value) has a constant value of 0 in block <GaussianFilter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <horiz_conv/s1_horiz_conv_array_3_9> (without init value) has a constant value of 0 in block <GaussianFilter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Intermediate_RegsConv/intermediate_registers_8_8> has a constant value of 0 in block <GaussianFilter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Intermediate_RegsConv/intermediate_registers_8_9> has a constant value of 0 in block <GaussianFilter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <horiz_conv/s1_horiz_conv_array_4_9> (without init value) has a constant value of 0 in block <GaussianFilter>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block GaussianFilter, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 151
+ Flip-Flops                                            : 151
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : GaussianFilter.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 230
+#      GND                         : 1
+#      INV                         : 1
+#      LUT2                        : 66
+#      LUT3                        : 1
+#      LUT4                        : 2
+#      LUT5                        : 30
+#      MUXCY                       : 60
+#      VCC                         : 1
+#      XORCY                       : 68
+# FlipFlops/Latches                : 151
+#      FD                          : 1
+#      FDE                         : 2
+#      FDR                         : 4
+#      FDRE                        : 144
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 94
+#      IBUF                        : 79
+#      OBUF                        : 15
+# DSPs                             : 10
+#      DSP48E1                     : 10
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7z020clg400-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             151  out of  106400     0%  
+ Number of Slice LUTs:                  100  out of  53200     0%  
+    Number used as Logic:               100  out of  53200     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    199
+   Number with an unused Flip Flop:      48  out of    199    24%  
+   Number with an unused LUT:            99  out of    199    49%  
+   Number of fully used LUT-FF pairs:    52  out of    199    26%  
+   Number of unique control sets:         7
+
+IO Utilization: 
+ Number of IOs:                          96
+ Number of bonded IOBs:                  95  out of    125    76%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+ Number of DSP48E1s:                     10  out of    220     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 161   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 6.082ns (Maximum Frequency: 164.420MHz)
+   Minimum input arrival time before clock: 1.539ns
+   Maximum output required time after clock: 0.709ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 6.082ns (frequency: 164.420MHz)
+  Total number of paths / destination ports: 10843524 / 419
+-------------------------------------------------------------------------
+Delay:               6.082ns (Levels of Logic = 2)
+  Source:            horiz_conv/Maddsub_s1_horiz_conv_array[1][10]_gaussianKernel[43]_MuLt_10_OUT (DSP)
+  Destination:       horiz_conv/Maddsub_s1_horiz_conv_array[4][10]_gaussianKernel[10]_MuLt_13_OUT (DSP)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: horiz_conv/Maddsub_s1_horiz_conv_array[1][10]_gaussianKernel[43]_MuLt_10_OUT to horiz_conv/Maddsub_s1_horiz_conv_array[4][10]_gaussianKernel[10]_MuLt_13_OUT
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     DSP48E1:CLK->PCOUT47    1   2.032   0.000  horiz_conv/Maddsub_s1_horiz_conv_array[1][10]_gaussianKernel[43]_MuLt_10_OUT (horiz_conv/Maddsub_s1_horiz_conv_array[1][10]_gaussianKernel[43]_MuLt_10_OUT_PCOUT_to_Maddsub_s1_horiz_conv_array[2][10]_gaussianKernel[32]_MuLt_11_OUT_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.438   0.000  horiz_conv/Maddsub_s1_horiz_conv_array[2][10]_gaussianKernel[32]_MuLt_11_OUT (horiz_conv/Maddsub_s1_horiz_conv_array[2][10]_gaussianKernel[32]_MuLt_11_OUT_PCOUT_to_Maddsub_s1_horiz_conv_array[3][10]_gaussianKernel[21]_MuLt_12_OUT_PCIN_47)
+     DSP48E1:PCIN47->PCOUT47    1   1.438   0.000  horiz_conv/Maddsub_s1_horiz_conv_array[3][10]_gaussianKernel[21]_MuLt_12_OUT (horiz_conv/Maddsub_s1_horiz_conv_array[3][10]_gaussianKernel[21]_MuLt_12_OUT_PCOUT_to_Maddsub_s1_horiz_conv_array[4][10]_gaussianKernel[10]_MuLt_13_OUT_PCIN_47)
+     DSP48E1:PCIN47            1.174          horiz_conv/Maddsub_s1_horiz_conv_array[4][10]_gaussianKernel[10]_MuLt_13_OUT
+    ----------------------------------------
+    Total                      6.082ns (6.082ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 1020 / 324
+-------------------------------------------------------------------------
+Offset:              1.539ns (Levels of Logic = 2)
+  Source:            ADDR<0> (PAD)
+  Destination:       vert_conv/Maddsub_n0088 (DSP)
+  Destination Clock: CLK rising
+
+  Data Path: ADDR<0> to vert_conv/Maddsub_n0088
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            29   0.000   0.732  ADDR_0_IBUF (ADDR_0_IBUF)
+     LUT5:I0->O           10   0.043   0.389  gauss_coe/Mram_address[4]_X_6_o_wide_mux_0_OUT1 (gauss_coe/Mram_address[4]_X_6_o_wide_mux_0_OUT)
+     DSP48E1:B5                0.374          vert_conv/Maddsub_n0087
+    ----------------------------------------
+    Total                      1.539ns (0.417ns logic, 1.122ns route)
+                                       (27.1% logic, 72.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 13 / 13
+-------------------------------------------------------------------------
+Offset:              0.709ns (Levels of Logic = 1)
+  Source:            horiz_conv/Maddsub_s1_horiz_conv_array[4][10]_gaussianKernel[10]_MuLt_13_OUT (DSP)
+  Destination:       OUTPUTDATA<11> (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: horiz_conv/Maddsub_s1_horiz_conv_array[4][10]_gaussianKernel[10]_MuLt_13_OUT to OUTPUTDATA<11>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     DSP48E1:CLK->P21      1   0.370   0.339  horiz_conv/Maddsub_s1_horiz_conv_array[4][10]_gaussianKernel[10]_MuLt_13_OUT (OUTPUTDATA_11_OBUF)
+     OBUF:I->O                 0.000          OUTPUTDATA_11_OBUF (OUTPUTDATA<11>)
+    ----------------------------------------
+    Total                      0.709ns (0.370ns logic, 0.339ns route)
+                                       (52.2% logic, 47.8% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    6.082|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 11.25 secs
+ 
+--> 
+
+
+Total memory usage is 532412 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   93 (   0 filtered)
+Number of infos    :   15 (   0 filtered)
+

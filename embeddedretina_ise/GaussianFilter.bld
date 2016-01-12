@@ -1,0 +1,38 @@
+Release 14.6 ngdbuild P.68d (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: /opt/Xilinx/14.6/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild -filter
+iseconfig/filter.filter -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i
+-p xc7z020-clg400-2 GaussianFilter.ngc GaussianFilter.ngd
+
+Reading NGO file
+"/media/DATA42/Projects/EmbeddedRetina/EmbeddedRetina_ISE/GaussianFilter.ngc"
+...
+Loading design module "ipcore_dir/ROM_GAUSS_COE.ngc"...
+Gathering constraint information from source properties...
+Done.
+
+Resolving constraint associations...
+Checking Constraint Associations...
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Total memory usage is 469832 kilobytes
+
+Writing NGD file "GaussianFilter.ngd" ...
+Total REAL time to NGDBUILD completion:  14 sec
+Total CPU time to NGDBUILD completion:   13 sec
+
+Writing NGDBUILD log file "GaussianFilter.bld"...

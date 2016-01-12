@@ -1,0 +1,435 @@
+Release 14.6 - xst P.68d (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Reading design: IntermediateBufferConv.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "IntermediateBufferConv.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "IntermediateBufferConv"
+Output Format                      : NGC
+Target Device                      : xc5vlx20t-2-ff323
+
+---- Source Options
+Top Module Name                    : IntermediateBufferConv
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/media/DATA42/Dropbox/Projects/EmbeddedRetina/EmbeddedRetina_ISE/RetinaParameters.vhd" in Library work.
+Architecture retinaparameters of Entity retinaparameters is up to date.
+Compiling vhdl file "/media/DATA42/Dropbox/Projects/EmbeddedRetina/EmbeddedRetina_ISE/IntermediateFifoConv.vhd" in Library work.
+Architecture behavioral of Entity intermediatefifoconv is up to date.
+Compiling vhdl file "/media/DATA42/Dropbox/Projects/EmbeddedRetina/EmbeddedRetina_ISE/IntermediateBufferConv.vhd" in Library work.
+Entity <intermediatebufferconv> compiled.
+Entity <intermediatebufferconv> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <IntermediateBufferConv> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <IntermediateFifoConv> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <IntermediateBufferConv> in library <work> (Architecture <behavioral>).
+INFO:Xst:2679 - Register <counter2> in unit <IntermediateBufferConv> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <enableOut> in unit <IntermediateBufferConv> has a constant value of 0 during circuit operation. The register is replaced by logic.
+Entity <IntermediateBufferConv> analyzed. Unit <IntermediateBufferConv> generated.
+
+Analyzing Entity <IntermediateFifoConv> in library <work> (Architecture <behavioral>).
+Entity <IntermediateFifoConv> analyzed. Unit <IntermediateFifoConv> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <IntermediateFifoConv>.
+    Related source file is "/media/DATA42/Dropbox/Projects/EmbeddedRetina/EmbeddedRetina_ISE/IntermediateFifoConv.vhd".
+    Found 1-bit register for signal <enableOut>.
+    Found 22-bit register for signal <intermediate_fifo>.
+    Found 1-bit register for signal <sCounter>.
+    Summary:
+	inferred  24 D-type flip-flop(s).
+Unit <IntermediateFifoConv> synthesized.
+
+
+Synthesizing Unit <IntermediateBufferConv>.
+    Related source file is "/media/DATA42/Dropbox/Projects/EmbeddedRetina/EmbeddedRetina_ISE/IntermediateBufferConv.vhd".
+WARNING:Xst:646 - Signal <enableOutArray<28>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <counter2> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 5-bit up counter for signal <counter1>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <IntermediateBufferConv> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 116
+ 1-bit register                                        : 58
+ 11-bit register                                       : 58
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 696
+ Flip-Flops                                            : 696
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <IntermediateBufferConv> ...
+
+Optimizing unit <IntermediateFifoConv> ...
+WARNING:Xst:2677 - Node <gfifo[28].fifoX/enableOut> of sequential type is unconnected in block <IntermediateBufferConv>.
+WARNING:Xst:2677 - Node <gfifo[28].fifoX/sCounter> of sequential type is unconnected in block <IntermediateBufferConv>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block IntermediateBufferConv, actual ratio is 8.
+
+Final Macro Processing ...
+
+Processing Unit <IntermediateBufferConv> :
+	Found 2-bit shift register for signal <gfifo[27].fifoX/enableOut>.
+	Found 2-bit shift register for signal <gfifo[26].fifoX/enableOut>.
+	Found 2-bit shift register for signal <gfifo[25].fifoX/enableOut>.
+	Found 2-bit shift register for signal <gfifo[24].fifoX/enableOut>.
+	Found 2-bit shift register for signal <gfifo[23].fifoX/enableOut>.
+	Found 2-bit shift register for signal <gfifo[22].fifoX/enableOut>.
+	Found 2-bit shift register for signal <gfifo[21].fifoX/enableOut>.
+	Found 2-bit shift register for signal <gfifo[20].fifoX/enableOut>.
+	Found 2-bit shift register for signal <gfifo[19].fifoX/enableOut>.
+	Found 2-bit shift register for signal <gfifo[18].fifoX/enableOut>.
+	Found 2-bit shift register for signal <gfifo[17].fifoX/enableOut>.
+	Found 2-bit shift register for signal <gfifo[16].fifoX/enableOut>.
+	Found 2-bit shift register for signal <gfifo[15].fifoX/enableOut>.
+	Found 2-bit shift register for signal <gfifo[14].fifoX/enableOut>.
+	Found 2-bit shift register for signal <gfifo[13].fifoX/enableOut>.
+	Found 2-bit shift register for signal <gfifo[12].fifoX/enableOut>.
+	Found 2-bit shift register for signal <gfifo[11].fifoX/enableOut>.
+	Found 2-bit shift register for signal <gfifo[10].fifoX/enableOut>.
+	Found 2-bit shift register for signal <gfifo[9].fifoX/enableOut>.
+	Found 2-bit shift register for signal <gfifo[8].fifoX/enableOut>.
+	Found 2-bit shift register for signal <gfifo[7].fifoX/enableOut>.
+	Found 2-bit shift register for signal <gfifo[6].fifoX/enableOut>.
+	Found 2-bit shift register for signal <gfifo[5].fifoX/enableOut>.
+	Found 2-bit shift register for signal <gfifo[4].fifoX/enableOut>.
+	Found 2-bit shift register for signal <gfifo[3].fifoX/enableOut>.
+	Found 2-bit shift register for signal <gfifo[2].fifoX/enableOut>.
+	Found 2-bit shift register for signal <gfifo[1].fifoX/enableOut>.
+	Found 2-bit shift register for signal <fifo0/enableOut>.
+Unit <IntermediateBufferConv> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 638
+ Flip-Flops                                            : 638
+# Shift Registers                                      : 28
+ 2-bit shift register                                  : 28
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : IntermediateBufferConv.ngr
+Top Level Output File Name         : IntermediateBufferConv
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 334
+
+Cell Usage :
+# BELS                             : 2
+#      GND                         : 1
+#      VCC                         : 1
+# FlipFlops/Latches                : 666
+#      FDE                         : 28
+#      FDRE                        : 638
+# Shift Registers                  : 28
+#      SRLC16E                     : 28
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 333
+#      IBUF                        : 13
+#      OBUF                        : 320
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 5vlx20tff323-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             666  out of  12480     5%  
+ Number of Slice LUTs:                   28  out of  12480     0%  
+    Number used as Memory:               28  out of   3360     0%  
+       Number used as SRL:               28
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    666
+   Number with an unused Flip Flop:       0  out of    666     0%  
+   Number with an unused LUT:           638  out of    666    95%  
+   Number of fully used LUT-FF pairs:    28  out of    666     4%  
+   Number of unique control sets:        30
+
+IO Utilization: 
+ Number of IOs:                         334
+ Number of bonded IOBs:                 334  out of    172   194% (*) 
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 694   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 1.552ns (Maximum Frequency: 644.330MHz)
+   Minimum input arrival time before clock: 1.629ns
+   Maximum output required time after clock: 2.830ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 1.552ns (frequency: 644.330MHz)
+  Total number of paths / destination ports: 1298 / 1298
+-------------------------------------------------------------------------
+Delay:               1.552ns (Levels of Logic = 0)
+  Source:            fifo0/Mshreg_enableOut (FF)
+  Destination:       fifo0/enableOut (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: fifo0/Mshreg_enableOut to fifo0/enableOut
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     SRLC16E:CLK->Q        1   1.552   0.000  fifo0/Mshreg_enableOut (fifo0/Mshreg_enableOut)
+     FDE:D                    -0.022          fifo0/enableOut
+    ----------------------------------------
+    Total                      1.552ns (1.552ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 672 / 672
+-------------------------------------------------------------------------
+Offset:              1.629ns (Levels of Logic = 1)
+  Source:            rst (PAD)
+  Destination:       gfifo[28].fifoX/intermediate_fifo_1_10 (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to gfifo[28].fifoX/intermediate_fifo_1_10
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           638   0.694   0.468  rst_IBUF (rst_IBUF)
+     FDRE:R                    0.468          gfifo[28].fifoX/intermediate_fifo_0_0
+    ----------------------------------------
+    Total                      1.629ns (1.162ns logic, 0.468ns route)
+                                       (71.3% logic, 28.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 319 / 319
+-------------------------------------------------------------------------
+Offset:              2.830ns (Levels of Logic = 1)
+  Source:            gfifo[27].fifoX/intermediate_fifo_1_10 (FF)
+  Destination:       outputData<27><10> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: gfifo[27].fifoX/intermediate_fifo_1_10 to outputData<27><10>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             2   0.396   0.290  gfifo[27].fifoX/intermediate_fifo_1_10 (gfifo[27].fifoX/intermediate_fifo_1_10)
+     OBUF:I->O                 2.144          outputData_27__10_OBUF (outputData<27><10>)
+    ----------------------------------------
+    Total                      2.830ns (2.540ns logic, 0.290ns route)
+                                       (89.8% logic, 10.2% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.79 secs
+ 
+--> 
+
+
+Total memory usage is 564800 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    5 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

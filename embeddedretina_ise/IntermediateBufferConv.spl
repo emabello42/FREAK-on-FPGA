@@ -1,0 +1,9 @@
+[Inputs]
+clk
+enableIn
+rst
+=inputValue[10:0]=
+[Outputs]
+enableOut
+=outputData[28:0]=
+[BiDir]

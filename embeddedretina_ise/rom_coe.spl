@@ -1,0 +1,6 @@
+[Inputs]
+clk
+=address[3:0]=
+[Outputs]
+=data_out[134:0]=
+[BiDir]

@@ -1,0 +1,2 @@
+vhdl isim_temp "RetinaParameters.vhd"
+vhdl isim_temp "AddressGenerator.vhd"

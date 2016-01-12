@@ -1,0 +1,5 @@
+vhdl work "RetinaParameters.vhd"
+vhdl work "ROM_PAIRS.vhd"
+vhdl work "PointBuffer.vhd"
+vhdl work "DescriptorMaker.vhd"
+vhdl work "TopDescriptorMaker.vhd"

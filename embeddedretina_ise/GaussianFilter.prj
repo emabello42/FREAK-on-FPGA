@@ -1,0 +1,6 @@
+vhdl work "RetinaParameters.vhd"
+vhdl work "VerticalConvolution.vhd"
+vhdl work "rom_coe.vhd"
+vhdl work "IntermediateRegsConv.vhd"
+vhdl work "HorizontalConvolution.vhd"
+vhdl work "GaussianFilter.vhd"

@@ -1,0 +1,13 @@
+[Inputs]
+busy_in
+clk
+request_in
+rst
+=imgBaseAddr[31:0]=
+=kptCoordX[9:0]=
+=kptCoordY[9:0]=
+[Outputs]
+busy_out
+request_out
+=addr[31:0]=
+[BiDir]

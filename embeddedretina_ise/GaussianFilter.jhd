@@ -1,0 +1,9 @@
+MODULE GaussianFilter
+	SUBMODULE VerticalConvolution
+		INSTANCE XLXI_6
+	SUBMODULE HorizontalConvolution
+		INSTANCE XLXI_8
+	SUBMODULE IntermediateBufferConv
+		INSTANCE XLXI_7
+	SUBMODULE rom_coe
+		INSTANCE XLXI_9

@@ -1,0 +1,10 @@
+[Inputs]
+clk
+rst
+enableIn
+=gaussianKernel[134:0]=
+=inputData[28:0]=
+[Outputs]
+enableOut
+=outputData[16:0]=
+[BiDir]

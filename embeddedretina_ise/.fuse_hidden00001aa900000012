@@ -1,0 +1,3 @@
+vhdl work "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/RetinaParameters.vhd"
+vhdl work "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/PointFifo.vhd"
+vhdl work "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/PointBuffer.vhd"

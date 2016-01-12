@@ -1,0 +1,988 @@
+Release 14.6 - xst P.68d (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> 
+Reading design: TopDescriptorMaker.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "TopDescriptorMaker.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "TopDescriptorMaker"
+Output Format                      : NGC
+Target Device                      : xc7z020-2-clg400
+
+---- Source Options
+Top Module Name                    : TopDescriptorMaker
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/RetinaParameters.vhd" into library work
+Parsing package <RetinaParameters>.
+Parsing package body <RetinaParameters>.
+Parsing VHDL file "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/ROM_PAIRS.vhd" into library work
+Parsing entity <ROM_PAIRS>.
+Parsing architecture <Behavioral> of entity <rom_pairs>.
+Parsing VHDL file "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/PointBuffer.vhd" into library work
+Parsing entity <PointBuffer>.
+Parsing architecture <BEHAVIORAL> of entity <pointbuffer>.
+Parsing VHDL file "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/DescriptorMaker.vhd" into library work
+Parsing entity <DescriptorMaker>.
+Parsing architecture <BEHAVIORAL> of entity <descriptormaker>.
+Parsing VHDL file "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/TopDescriptorMaker.vhd" into library work
+Parsing entity <TopDescriptorMaker>.
+Parsing architecture <BEHAVIORAL> of entity <topdescriptormaker>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <TopDescriptorMaker> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <ROM_PAIRS> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <PointBuffer> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <DescriptorMaker> (architecture <BEHAVIORAL>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <TopDescriptorMaker>.
+    Related source file is "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/TopDescriptorMaker.vhd".
+    Found 5-bit register for signal <addr>.
+    Found 5-bit adder for signal <addr[4]_GND_5_o_add_1_OUT> created at line 1241.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   5 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <TopDescriptorMaker> synthesized.
+
+Synthesizing Unit <ROM_PAIRS>.
+    Related source file is "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/ROM_PAIRS.vhd".
+    Found 6-bit register for signal <points1<14>>.
+    Found 6-bit register for signal <points1<13>>.
+    Found 6-bit register for signal <points1<12>>.
+    Found 6-bit register for signal <points1<11>>.
+    Found 6-bit register for signal <points1<10>>.
+    Found 6-bit register for signal <points1<9>>.
+    Found 6-bit register for signal <points1<8>>.
+    Found 6-bit register for signal <points1<7>>.
+    Found 6-bit register for signal <points1<6>>.
+    Found 6-bit register for signal <points1<5>>.
+    Found 6-bit register for signal <points1<4>>.
+    Found 6-bit register for signal <points1<3>>.
+    Found 6-bit register for signal <points1<2>>.
+    Found 6-bit register for signal <points1<1>>.
+    Found 6-bit register for signal <points1<0>>.
+    Found 6-bit register for signal <points2<15>>.
+    Found 6-bit register for signal <points2<14>>.
+    Found 6-bit register for signal <points2<13>>.
+    Found 6-bit register for signal <points2<12>>.
+    Found 6-bit register for signal <points2<11>>.
+    Found 6-bit register for signal <points2<10>>.
+    Found 6-bit register for signal <points2<9>>.
+    Found 6-bit register for signal <points2<8>>.
+    Found 6-bit register for signal <points2<7>>.
+    Found 6-bit register for signal <points2<6>>.
+    Found 6-bit register for signal <points2<5>>.
+    Found 6-bit register for signal <points2<4>>.
+    Found 6-bit register for signal <points2<3>>.
+    Found 6-bit register for signal <points2<2>>.
+    Found 6-bit register for signal <points2<1>>.
+    Found 6-bit register for signal <points2<0>>.
+    Found 6-bit register for signal <points1<15>>.
+    Found 10-bit adder for signal <n0116> created at line 1241.
+    Found 10-bit adder for signal <n0119> created at line 1241.
+    Found 10-bit adder for signal <n0122> created at line 1241.
+    Found 10-bit adder for signal <n0125> created at line 1241.
+    Found 10-bit adder for signal <n0128> created at line 1241.
+    Found 10-bit adder for signal <n0131> created at line 1241.
+    Found 10-bit adder for signal <n0134> created at line 1241.
+    Found 10-bit adder for signal <n0137> created at line 1241.
+    Found 10-bit adder for signal <n0140> created at line 1241.
+    Found 10-bit adder for signal <n0143> created at line 1241.
+    Found 10-bit adder for signal <n0146> created at line 1241.
+    Found 10-bit adder for signal <n0149> created at line 1241.
+    Found 10-bit adder for signal <n0152> created at line 1241.
+    Found 10-bit adder for signal <n0155> created at line 1241.
+    Found 10-bit adder for signal <n0158> created at line 1241.
+    Found 512x12-bit Read Only RAM for signal <_n0721>
+    Found 512x12-bit Read Only RAM for signal <_n1234>
+    Found 512x12-bit Read Only RAM for signal <_n1747>
+    Found 512x12-bit Read Only RAM for signal <_n2260>
+    Found 512x12-bit Read Only RAM for signal <_n2773>
+    Found 512x12-bit Read Only RAM for signal <_n3286>
+    Found 512x12-bit Read Only RAM for signal <_n3799>
+    Found 512x12-bit Read Only RAM for signal <_n4312>
+    Found 512x12-bit Read Only RAM for signal <_n4825>
+    Found 512x12-bit Read Only RAM for signal <_n5338>
+    Found 512x12-bit Read Only RAM for signal <_n5851>
+    Found 512x12-bit Read Only RAM for signal <_n6364>
+    Found 512x12-bit Read Only RAM for signal <_n6877>
+    Found 512x12-bit Read Only RAM for signal <_n7390>
+    Found 512x12-bit Read Only RAM for signal <_n7903>
+    Found 512x12-bit Read Only RAM for signal <_n8416>
+    Summary:
+	inferred  16 RAM(s).
+	inferred  15 Adder/Subtractor(s).
+	inferred 192 D-type flip-flop(s).
+Unit <ROM_PAIRS> synthesized.
+
+Synthesizing Unit <PointBuffer>.
+    Related source file is "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/PointBuffer.vhd".
+    Found 1-bit register for signal <enableOut>.
+    Found 14-bit register for signal <sPointSet<42>>.
+    Found 14-bit register for signal <sPointSet<41>>.
+    Found 14-bit register for signal <sPointSet<40>>.
+    Found 14-bit register for signal <sPointSet<39>>.
+    Found 14-bit register for signal <sPointSet<38>>.
+    Found 14-bit register for signal <sPointSet<37>>.
+    Found 14-bit register for signal <sPointSet<36>>.
+    Found 14-bit register for signal <sPointSet<35>>.
+    Found 14-bit register for signal <sPointSet<34>>.
+    Found 14-bit register for signal <sPointSet<33>>.
+    Found 14-bit register for signal <sPointSet<32>>.
+    Found 14-bit register for signal <sPointSet<31>>.
+    Found 14-bit register for signal <sPointSet<30>>.
+    Found 14-bit register for signal <sPointSet<29>>.
+    Found 14-bit register for signal <sPointSet<28>>.
+    Found 14-bit register for signal <sPointSet<27>>.
+    Found 14-bit register for signal <sPointSet<26>>.
+    Found 14-bit register for signal <sPointSet<25>>.
+    Found 14-bit register for signal <sPointSet<24>>.
+    Found 14-bit register for signal <sPointSet<23>>.
+    Found 14-bit register for signal <sPointSet<22>>.
+    Found 14-bit register for signal <sPointSet<21>>.
+    Found 14-bit register for signal <sPointSet<20>>.
+    Found 14-bit register for signal <sPointSet<19>>.
+    Found 14-bit register for signal <sPointSet<18>>.
+    Found 14-bit register for signal <sPointSet<17>>.
+    Found 14-bit register for signal <sPointSet<16>>.
+    Found 14-bit register for signal <sPointSet<15>>.
+    Found 14-bit register for signal <sPointSet<14>>.
+    Found 14-bit register for signal <sPointSet<13>>.
+    Found 14-bit register for signal <sPointSet<12>>.
+    Found 14-bit register for signal <sPointSet<11>>.
+    Found 14-bit register for signal <sPointSet<10>>.
+    Found 14-bit register for signal <sPointSet<9>>.
+    Found 14-bit register for signal <sPointSet<8>>.
+    Found 14-bit register for signal <sPointSet<7>>.
+    Found 14-bit register for signal <sPointSet<6>>.
+    Found 14-bit register for signal <sPointSet<5>>.
+    Found 14-bit register for signal <sPointSet<4>>.
+    Found 14-bit register for signal <sPointSet<3>>.
+    Found 14-bit register for signal <sPointSet<2>>.
+    Found 14-bit register for signal <sPointSet<1>>.
+    Found 14-bit register for signal <sPointSet<0>>.
+    Found 6-bit register for signal <counter>.
+    Found 6-bit adder for signal <counter[5]_GND_7_o_add_1_OUT> created at line 55.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred 609 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <PointBuffer> synthesized.
+
+Synthesizing Unit <DescriptorMaker>.
+    Related source file is "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/DescriptorMaker.vhd".
+    Found 1-bit register for signal <enableOut>.
+    Found 14-bit register for signal <sPointSet<42>>.
+    Found 14-bit register for signal <sPointSet<41>>.
+    Found 14-bit register for signal <sPointSet<40>>.
+    Found 14-bit register for signal <sPointSet<39>>.
+    Found 14-bit register for signal <sPointSet<38>>.
+    Found 14-bit register for signal <sPointSet<37>>.
+    Found 14-bit register for signal <sPointSet<36>>.
+    Found 14-bit register for signal <sPointSet<35>>.
+    Found 14-bit register for signal <sPointSet<34>>.
+    Found 14-bit register for signal <sPointSet<33>>.
+    Found 14-bit register for signal <sPointSet<32>>.
+    Found 14-bit register for signal <sPointSet<31>>.
+    Found 14-bit register for signal <sPointSet<30>>.
+    Found 14-bit register for signal <sPointSet<29>>.
+    Found 14-bit register for signal <sPointSet<28>>.
+    Found 14-bit register for signal <sPointSet<27>>.
+    Found 14-bit register for signal <sPointSet<26>>.
+    Found 14-bit register for signal <sPointSet<25>>.
+    Found 14-bit register for signal <sPointSet<24>>.
+    Found 14-bit register for signal <sPointSet<23>>.
+    Found 14-bit register for signal <sPointSet<22>>.
+    Found 14-bit register for signal <sPointSet<21>>.
+    Found 14-bit register for signal <sPointSet<20>>.
+    Found 14-bit register for signal <sPointSet<19>>.
+    Found 14-bit register for signal <sPointSet<18>>.
+    Found 14-bit register for signal <sPointSet<17>>.
+    Found 14-bit register for signal <sPointSet<16>>.
+    Found 14-bit register for signal <sPointSet<15>>.
+    Found 14-bit register for signal <sPointSet<14>>.
+    Found 14-bit register for signal <sPointSet<13>>.
+    Found 14-bit register for signal <sPointSet<12>>.
+    Found 14-bit register for signal <sPointSet<11>>.
+    Found 14-bit register for signal <sPointSet<10>>.
+    Found 14-bit register for signal <sPointSet<9>>.
+    Found 14-bit register for signal <sPointSet<8>>.
+    Found 14-bit register for signal <sPointSet<7>>.
+    Found 14-bit register for signal <sPointSet<6>>.
+    Found 14-bit register for signal <sPointSet<5>>.
+    Found 14-bit register for signal <sPointSet<4>>.
+    Found 14-bit register for signal <sPointSet<3>>.
+    Found 14-bit register for signal <sPointSet<2>>.
+    Found 14-bit register for signal <sPointSet<1>>.
+    Found 14-bit register for signal <sPointSet<0>>.
+    Found 1-bit register for signal <innerEnable>.
+    Found 512-bit register for signal <sDescriptor>.
+    Found 5-bit register for signal <counter>.
+    Found 9-bit adder for signal <counter[4]_GND_8_o_add_13_OUT> created at line 66.
+    Found 9-bit adder for signal <counter[4]_GND_8_o_add_21_OUT> created at line 66.
+    Found 9-bit adder for signal <counter[4]_GND_8_o_add_29_OUT> created at line 66.
+    Found 9-bit adder for signal <counter[4]_GND_8_o_add_37_OUT> created at line 66.
+    Found 9-bit adder for signal <counter[4]_GND_8_o_add_45_OUT> created at line 66.
+    Found 9-bit adder for signal <counter[4]_GND_8_o_add_53_OUT> created at line 66.
+    Found 9-bit adder for signal <counter[4]_GND_8_o_add_61_OUT> created at line 66.
+    Found 9-bit adder for signal <counter[4]_GND_8_o_add_69_OUT> created at line 66.
+    Found 9-bit adder for signal <counter[4]_GND_8_o_add_77_OUT> created at line 66.
+    Found 9-bit adder for signal <counter[4]_GND_8_o_add_85_OUT> created at line 66.
+    Found 9-bit adder for signal <counter[4]_GND_8_o_add_93_OUT> created at line 66.
+    Found 9-bit adder for signal <counter[4]_GND_8_o_add_101_OUT> created at line 66.
+    Found 9-bit adder for signal <counter[4]_GND_8_o_add_109_OUT> created at line 66.
+    Found 9-bit adder for signal <counter[4]_GND_8_o_add_117_OUT> created at line 66.
+    Found 9-bit adder for signal <counter[4]_GND_8_o_add_125_OUT> created at line 66.
+    Found 5-bit adder for signal <counter[4]_GND_8_o_add_129_OUT> created at line 76.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:3019 - HDL ADVISOR - 896 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs1[0][5]_X_8_o_wide_mux_0_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs2[0][5]_X_8_o_wide_mux_1_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs1[1][5]_X_8_o_wide_mux_8_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs2[1][5]_X_8_o_wide_mux_9_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs1[2][5]_X_8_o_wide_mux_16_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs2[2][5]_X_8_o_wide_mux_17_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs1[3][5]_X_8_o_wide_mux_24_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs2[3][5]_X_8_o_wide_mux_25_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs1[4][5]_X_8_o_wide_mux_32_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs2[4][5]_X_8_o_wide_mux_33_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs1[5][5]_X_8_o_wide_mux_40_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs2[5][5]_X_8_o_wide_mux_41_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs1[6][5]_X_8_o_wide_mux_48_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs2[6][5]_X_8_o_wide_mux_49_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs1[7][5]_X_8_o_wide_mux_56_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs2[7][5]_X_8_o_wide_mux_57_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs1[8][5]_X_8_o_wide_mux_64_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs2[8][5]_X_8_o_wide_mux_65_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs1[9][5]_X_8_o_wide_mux_72_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs2[9][5]_X_8_o_wide_mux_73_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs1[10][5]_X_8_o_wide_mux_80_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs2[10][5]_X_8_o_wide_mux_81_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs1[11][5]_X_8_o_wide_mux_88_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs2[11][5]_X_8_o_wide_mux_89_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs1[12][5]_X_8_o_wide_mux_96_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs2[12][5]_X_8_o_wide_mux_97_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs1[13][5]_X_8_o_wide_mux_104_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs2[13][5]_X_8_o_wide_mux_105_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs1[14][5]_X_8_o_wide_mux_112_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs2[14][5]_X_8_o_wide_mux_113_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs1[15][5]_X_8_o_wide_mux_120_OUT> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <pointIndexs2[15][5]_X_8_o_wide_mux_121_OUT> created at line 63.
+    Found 14-bit comparator greater for signal <pointIndexs2[0][5]_pointIndexs1[0][5]_LessThan_3_o> created at line 63
+    Found 14-bit comparator greater for signal <pointIndexs2[1][5]_pointIndexs1[1][5]_LessThan_11_o> created at line 63
+    Found 14-bit comparator greater for signal <pointIndexs2[2][5]_pointIndexs1[2][5]_LessThan_19_o> created at line 63
+    Found 14-bit comparator greater for signal <pointIndexs2[3][5]_pointIndexs1[3][5]_LessThan_27_o> created at line 63
+    Found 14-bit comparator greater for signal <pointIndexs2[4][5]_pointIndexs1[4][5]_LessThan_35_o> created at line 63
+    Found 14-bit comparator greater for signal <pointIndexs2[5][5]_pointIndexs1[5][5]_LessThan_43_o> created at line 63
+    Found 14-bit comparator greater for signal <pointIndexs2[6][5]_pointIndexs1[6][5]_LessThan_51_o> created at line 63
+    Found 14-bit comparator greater for signal <pointIndexs2[7][5]_pointIndexs1[7][5]_LessThan_59_o> created at line 63
+    Found 14-bit comparator greater for signal <pointIndexs2[8][5]_pointIndexs1[8][5]_LessThan_67_o> created at line 63
+    Found 14-bit comparator greater for signal <pointIndexs2[9][5]_pointIndexs1[9][5]_LessThan_75_o> created at line 63
+    Found 14-bit comparator greater for signal <pointIndexs2[10][5]_pointIndexs1[10][5]_LessThan_83_o> created at line 63
+    Found 14-bit comparator greater for signal <pointIndexs2[11][5]_pointIndexs1[11][5]_LessThan_91_o> created at line 63
+    Found 14-bit comparator greater for signal <pointIndexs2[12][5]_pointIndexs1[12][5]_LessThan_99_o> created at line 63
+    Found 14-bit comparator greater for signal <pointIndexs2[13][5]_pointIndexs1[13][5]_LessThan_107_o> created at line 63
+    Found 14-bit comparator greater for signal <pointIndexs2[14][5]_pointIndexs1[14][5]_LessThan_115_o> created at line 63
+    Found 14-bit comparator greater for signal <pointIndexs2[15][5]_pointIndexs1[15][5]_LessThan_123_o> created at line 63
+    Summary:
+	inferred  16 Adder/Subtractor(s).
+	inferred 1121 D-type flip-flop(s).
+	inferred  16 Comparator(s).
+	inferred 8739 Multiplexer(s).
+Unit <DescriptorMaker> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 16
+ 512x12-bit single-port Read Only RAM                  : 16
+# Adders/Subtractors                                   : 33
+ 10-bit adder                                          : 15
+ 5-bit adder                                           : 2
+ 6-bit adder                                           : 1
+ 9-bit adder                                           : 15
+# Registers                                            : 109
+ 1-bit register                                        : 3
+ 12-bit register                                       : 16
+ 14-bit register                                       : 86
+ 5-bit register                                        : 2
+ 512-bit register                                      : 1
+ 6-bit register                                        : 1
+# Comparators                                          : 16
+ 14-bit comparator greater                             : 16
+# Multiplexers                                         : 8742
+ 1-bit 2-to-1 multiplexer                              : 8707
+ 14-bit 43-to-1 multiplexer                            : 32
+ 5-bit 2-to-1 multiplexer                              : 2
+ 6-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <DescriptorMaker>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <DescriptorMaker> synthesized (advanced).
+
+Synthesizing (advanced) Unit <PointBuffer>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <PointBuffer> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ROM_PAIRS>.
+INFO:Xst:3226 - The RAM <Mram__n1234> will be implemented as a BLOCK RAM, absorbing the following register(s): <points1<1>_points2<1>>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 12-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n0116>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram__n2260> will be implemented as a BLOCK RAM, absorbing the following register(s): <points1<3>_points2<3>>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 12-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n0122>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram__n1747> will be implemented as a BLOCK RAM, absorbing the following register(s): <points1<2>_points2<2>>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 12-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n0119>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram__n2773> will be implemented as a BLOCK RAM, absorbing the following register(s): <points1<4>_points2<4>>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 12-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n0125>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram__n3799> will be implemented as a BLOCK RAM, absorbing the following register(s): <points1<6>_points2<6:6>>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 12-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n0131>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram__n3286> will be implemented as a BLOCK RAM, absorbing the following register(s): <points1<5>_points2<5>>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 12-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n0128>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram__n4312> will be implemented as a BLOCK RAM, absorbing the following register(s): <points1<7>_points2<7>>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 12-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n0134>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram__n5338> will be implemented as a BLOCK RAM, absorbing the following register(s): <points1<9>_points2<9>>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 12-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n0140>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram__n4825> will be implemented as a BLOCK RAM, absorbing the following register(s): <points1<8>_points2<8>>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 12-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n0137>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram__n5851> will be implemented as a BLOCK RAM, absorbing the following register(s): <points1<10>_points2<10>>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 12-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n0143>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram__n6877> will be implemented as a BLOCK RAM, absorbing the following register(s): <points1<12>_points2<12>>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 12-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n0149>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram__n6364> will be implemented as a BLOCK RAM, absorbing the following register(s): <points1<11>_points2<11>>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 12-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n0146>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram__n7390> will be implemented as a BLOCK RAM, absorbing the following register(s): <points1<13>_points2<13>>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 12-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n0152>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram__n8416> will be implemented as a BLOCK RAM, absorbing the following register(s): <points1<15>_points2<15>>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 12-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n0158>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram__n7903> will be implemented as a BLOCK RAM, absorbing the following register(s): <points1<14>_points2<14>>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 12-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n0155>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram__n0721> will be implemented as a BLOCK RAM, absorbing the following register(s): <points1<0:0>_points2<0>>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 12-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <(addr,"0000")> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <ROM_PAIRS> synthesized (advanced).
+
+Synthesizing (advanced) Unit <TopDescriptorMaker>.
+The following registers are absorbed into counter <addr>: 1 register on signal <addr>.
+Unit <TopDescriptorMaker> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 16
+ 512x12-bit single-port block Read Only RAM            : 16
+# Adders/Subtractors                                   : 30
+ 9-bit adder                                           : 30
+# Counters                                             : 3
+ 5-bit up counter                                      : 2
+ 6-bit up counter                                      : 1
+# Registers                                            : 1719
+ Flip-Flops                                            : 1719
+# Comparators                                          : 16
+ 14-bit comparator greater                             : 16
+# Multiplexers                                         : 8739
+ 1-bit 2-to-1 multiplexer                              : 8707
+ 14-bit 43-to-1 multiplexer                            : 32
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <Mram__n1234>, <Mram__n2260> are packed into the single block RAM <Mram__n12341>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <Mram__n1747>, <Mram__n2773> are packed into the single block RAM <Mram__n17471>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <Mram__n3799>, <Mram__n3286> are packed into the single block RAM <Mram__n37991>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <Mram__n4312>, <Mram__n5338> are packed into the single block RAM <Mram__n43121>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <Mram__n4825>, <Mram__n5851> are packed into the single block RAM <Mram__n48251>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <Mram__n6877>, <Mram__n6364> are packed into the single block RAM <Mram__n68771>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <Mram__n7390>, <Mram__n8416> are packed into the single block RAM <Mram__n73901>
+INFO:Xst:2697 - Unit <MTP_> : the RAMs <Mram__n7903>, <Mram__n0721> are packed into the single block RAM <Mram__n79031>
+
+Optimizing unit <TopDescriptorMaker> ...
+
+Optimizing unit <PointBuffer> ...
+
+Optimizing unit <DescriptorMaker> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block TopDescriptorMaker, actual ratio is 18.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1735
+ Flip-Flops                                            : 1735
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : TopDescriptorMaker.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 7671
+#      GND                         : 1
+#      INV                         : 1
+#      LUT2                        : 5
+#      LUT3                        : 502
+#      LUT4                        : 226
+#      LUT5                        : 1394
+#      LUT6                        : 5397
+#      MUXCY                       : 144
+#      VCC                         : 1
+# FlipFlops/Latches                : 1735
+#      FDR                         : 8
+#      FDRE                        : 1727
+# RAMS                             : 8
+#      RAMB18E1                    : 8
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 529
+#      IBUF                        : 16
+#      OBUF                        : 513
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7z020clg400-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            1735  out of  106400     1%  
+ Number of Slice LUTs:                 7525  out of  53200    14%  
+    Number used as Logic:              7525  out of  53200    14%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   8744
+   Number with an unused Flip Flop:    7009  out of   8744    80%  
+   Number with an unused LUT:          1219  out of   8744    13%  
+   Number of fully used LUT-FF pairs:   516  out of   8744     5%  
+   Number of unique control sets:         5
+
+IO Utilization: 
+ Number of IOs:                         530
+ Number of bonded IOBs:                 530  out of    125   424% (*) 
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                4  out of    140     2%  
+    Number using Block RAM only:          4
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 1743  |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+N1(XST_GND:G)                      | NONE(rom_Mram__n17471) | 16    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 5.214ns (Maximum Frequency: 191.796MHz)
+   Minimum input arrival time before clock: 1.331ns
+   Maximum output required time after clock: 0.580ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 5.214ns (frequency: 191.796MHz)
+  Total number of paths / destination ports: 2099201 / 2924
+-------------------------------------------------------------------------
+Delay:               5.214ns (Levels of Logic = 12)
+  Source:            rom_Mram__n73901 (RAM)
+  Destination:       descripMakerX/sDescriptor_511 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: rom_Mram__n73901 to descripMakerX/sDescriptor_511
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB18E1:CLKARDCLK->DOBDO0  154   2.125   0.558  rom_Mram__n73901 (points1<15><0>)
+     LUT6:I4->O            1   0.043   0.495  descripMakerX/Mmux_pointIndexs1[15][5]_X_8_o_wide_mux_120_OUT_101 (descripMakerX/Mmux_pointIndexs1[15][5]_X_8_o_wide_mux_120_OUT_101)
+     LUT5:I2->O            1   0.043   0.495  descripMakerX/pointIndexs1<15><5>_SW1 (N1000)
+     LUT5:I2->O            2   0.043   0.527  descripMakerX/pointIndexs1<15><5> (descripMakerX/pointIndexs1[15][5]_X_8_o_wide_mux_120_OUT<0>)
+     LUT4:I0->O            1   0.043   0.000  descripMakerX/Mcompar_pointIndexs2[15][5]_pointIndexs1[15][5]_LessThan_123_o_lut<0> (descripMakerX/Mcompar_pointIndexs2[15][5]_pointIndexs1[15][5]_LessThan_123_o_lut<0>)
+     MUXCY:S->O            1   0.238   0.000  descripMakerX/Mcompar_pointIndexs2[15][5]_pointIndexs1[15][5]_LessThan_123_o_cy<0> (descripMakerX/Mcompar_pointIndexs2[15][5]_pointIndexs1[15][5]_LessThan_123_o_cy<0>)
+     MUXCY:CI->O           1   0.013   0.000  descripMakerX/Mcompar_pointIndexs2[15][5]_pointIndexs1[15][5]_LessThan_123_o_cy<1> (descripMakerX/Mcompar_pointIndexs2[15][5]_pointIndexs1[15][5]_LessThan_123_o_cy<1>)
+     MUXCY:CI->O           1   0.013   0.000  descripMakerX/Mcompar_pointIndexs2[15][5]_pointIndexs1[15][5]_LessThan_123_o_cy<2> (descripMakerX/Mcompar_pointIndexs2[15][5]_pointIndexs1[15][5]_LessThan_123_o_cy<2>)
+     MUXCY:CI->O           1   0.013   0.000  descripMakerX/Mcompar_pointIndexs2[15][5]_pointIndexs1[15][5]_LessThan_123_o_cy<3> (descripMakerX/Mcompar_pointIndexs2[15][5]_pointIndexs1[15][5]_LessThan_123_o_cy<3>)
+     MUXCY:CI->O           1   0.013   0.000  descripMakerX/Mcompar_pointIndexs2[15][5]_pointIndexs1[15][5]_LessThan_123_o_cy<4> (descripMakerX/Mcompar_pointIndexs2[15][5]_pointIndexs1[15][5]_LessThan_123_o_cy<4>)
+     MUXCY:CI->O           1   0.013   0.000  descripMakerX/Mcompar_pointIndexs2[15][5]_pointIndexs1[15][5]_LessThan_123_o_cy<5> (descripMakerX/Mcompar_pointIndexs2[15][5]_pointIndexs1[15][5]_LessThan_123_o_cy<5>)
+     MUXCY:CI->O          32   0.013   0.480  descripMakerX/Mcompar_pointIndexs2[15][5]_pointIndexs1[15][5]_LessThan_123_o_cy<6> (descripMakerX/Mcompar_pointIndexs2[15][5]_pointIndexs1[15][5]_LessThan_123_o_cy<6>)
+     LUT3:I2->O            1   0.043   0.000  descripMakerX/sDescriptor[511]_sDescriptor[511]_mux_127_OUT<31>1 (descripMakerX/sDescriptor[511]_sDescriptor[511]_mux_127_OUT<31>)
+     FDRE:D                   -0.000          descripMakerX/sDescriptor_31
+    ----------------------------------------
+    Total                      5.214ns (2.659ns logic, 2.555ns route)
+                                       (51.0% logic, 49.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 2359 / 2359
+-------------------------------------------------------------------------
+Offset:              1.331ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       addr_1 (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to addr_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O          1733   0.000   0.668  rst_IBUF (rst_IBUF)
+     LUT2:I0->O            4   0.043   0.356  Mcount_addr_val1 (Mcount_addr_val)
+     FDR:R                     0.264          addr_1
+    ----------------------------------------
+    Total                      1.331ns (0.307ns logic, 1.024ns route)
+                                       (23.1% logic, 76.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 513 / 513
+-------------------------------------------------------------------------
+Offset:              0.580ns (Levels of Logic = 1)
+  Source:            descripMakerX/sDescriptor_511 (FF)
+  Destination:       descriptor<511> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: descripMakerX/sDescriptor_511 to descriptor<511>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             2   0.236   0.344  descripMakerX/sDescriptor_511 (descripMakerX/sDescriptor_511)
+     OBUF:I->O                 0.000          descriptor_511_OBUF (descriptor<511>)
+    ----------------------------------------
+    Total                      0.580ns (0.236ns logic, 0.344ns route)
+                                       (40.7% logic, 59.3% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    5.214|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 83.00 secs
+Total CPU time to Xst completion: 81.68 secs
+ 
+--> 
+
+
+Total memory usage is 648228 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :   56 (   0 filtered)
+

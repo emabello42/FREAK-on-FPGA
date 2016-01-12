@@ -1,0 +1,3 @@
+MODULE TOP_MAIN
+	SUBMODULE RetinaDescriptorGenerator
+		INSTANCE XLXI_1

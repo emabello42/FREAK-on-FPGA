@@ -1,0 +1,683 @@
+Release 14.6 - xst P.68d (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> 
+Reading design: HorizontalConvolution.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "HorizontalConvolution.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "HorizontalConvolution"
+Output Format                      : NGC
+Target Device                      : xc5vlx20t-2-ff323
+
+---- Source Options
+Top Module Name                    : HorizontalConvolution
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/media/DATA42/Dropbox/Projects/EmbeddedRetina/EmbeddedRetina_ISE/RetinaParameters.vhd" in Library work.
+Architecture retinaparameters of Entity retinaparameters is up to date.
+Compiling vhdl file "/media/DATA42/Dropbox/Projects/EmbeddedRetina/EmbeddedRetina_ISE/HorizontalConvolution.vhd" in Library work.
+Architecture behavioral of Entity horizontalconvolution is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <HorizontalConvolution> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <HorizontalConvolution> in library <work> (Architecture <behavioral>).
+Entity <HorizontalConvolution> analyzed. Unit <HorizontalConvolution> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <HorizontalConvolution>.
+    Related source file is "/media/DATA42/Dropbox/Projects/EmbeddedRetina/EmbeddedRetina_ISE/HorizontalConvolution.vhd".
+WARNING:Xst:646 - Signal <s3_horiz_conv<9:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <enableOut>.
+    Found 180-bit register for signal <s1_horiz_conv_array>.
+    Found 11-bit adder for signal <s1_horiz_conv_array_1$add0000> created at line 54.
+    Found 11-bit adder for signal <s1_horiz_conv_array_10$add0000> created at line 54.
+    Found 11-bit adder for signal <s1_horiz_conv_array_11$add0000> created at line 54.
+    Found 11-bit adder for signal <s1_horiz_conv_array_12$add0000> created at line 54.
+    Found 11-bit adder for signal <s1_horiz_conv_array_13$add0000> created at line 54.
+    Found 11-bit adder for signal <s1_horiz_conv_array_14$add0000> created at line 54.
+    Found 11-bit adder for signal <s1_horiz_conv_array_2$add0000> created at line 54.
+    Found 11-bit adder for signal <s1_horiz_conv_array_3$add0000> created at line 54.
+    Found 11-bit adder for signal <s1_horiz_conv_array_4$add0000> created at line 54.
+    Found 11-bit adder for signal <s1_horiz_conv_array_5$add0000> created at line 54.
+    Found 11-bit adder for signal <s1_horiz_conv_array_6$add0000> created at line 54.
+    Found 11-bit adder for signal <s1_horiz_conv_array_7$add0000> created at line 54.
+    Found 11-bit adder for signal <s1_horiz_conv_array_8$add0000> created at line 54.
+    Found 11-bit adder for signal <s1_horiz_conv_array_9$add0000> created at line 54.
+    Found 1-bit register for signal <s1_horiz_enable>.
+    Found 360-bit register for signal <s2_horiz_conv_array>.
+    Found 12x9-bit multiplier for signal <s2_horiz_conv_array_0$mult0000> created at line 65.
+    Found 12x9-bit multiplier for signal <s2_horiz_conv_array_1$mult0000> created at line 65.
+    Found 12x9-bit multiplier for signal <s2_horiz_conv_array_10$mult0000> created at line 65.
+    Found 12x9-bit multiplier for signal <s2_horiz_conv_array_11$mult0000> created at line 65.
+    Found 12x9-bit multiplier for signal <s2_horiz_conv_array_12$mult0000> created at line 65.
+    Found 12x9-bit multiplier for signal <s2_horiz_conv_array_13$mult0000> created at line 65.
+    Found 12x9-bit multiplier for signal <s2_horiz_conv_array_14$mult0000> created at line 65.
+    Found 12x9-bit multiplier for signal <s2_horiz_conv_array_2$mult0000> created at line 65.
+    Found 12x9-bit multiplier for signal <s2_horiz_conv_array_3$mult0000> created at line 65.
+    Found 12x9-bit multiplier for signal <s2_horiz_conv_array_4$mult0000> created at line 65.
+    Found 12x9-bit multiplier for signal <s2_horiz_conv_array_5$mult0000> created at line 65.
+    Found 12x9-bit multiplier for signal <s2_horiz_conv_array_6$mult0000> created at line 65.
+    Found 12x9-bit multiplier for signal <s2_horiz_conv_array_7$mult0000> created at line 65.
+    Found 12x9-bit multiplier for signal <s2_horiz_conv_array_8$mult0000> created at line 65.
+    Found 12x9-bit multiplier for signal <s2_horiz_conv_array_9$mult0000> created at line 65.
+    Found 1-bit register for signal <s2_horiz_enable>.
+    Found 27-bit register for signal <s3_horiz_conv>.
+    Found 24-bit adder for signal <s3_horiz_conv$add0000> created at line 77.
+    Found 24-bit adder for signal <s3_horiz_conv$addsub0000> created at line 77.
+    Found 24-bit adder for signal <s3_horiz_conv$addsub0001> created at line 77.
+    Found 24-bit adder for signal <s3_horiz_conv$addsub0002> created at line 77.
+    Found 24-bit adder for signal <s3_horiz_conv$addsub0003> created at line 77.
+    Found 24-bit adder for signal <s3_horiz_conv$addsub0004> created at line 77.
+    Found 24-bit adder for signal <s3_horiz_conv$addsub0005> created at line 77.
+    Found 24-bit adder for signal <s3_horiz_conv$addsub0006> created at line 77.
+    Found 24-bit adder for signal <s3_horiz_conv$addsub0007> created at line 77.
+    Found 24-bit adder for signal <s3_horiz_conv$addsub0008> created at line 77.
+    Found 24-bit adder for signal <s3_horiz_conv$addsub0009> created at line 77.
+    Found 24-bit adder for signal <s3_horiz_conv$addsub0010> created at line 77.
+    Found 24-bit adder for signal <s3_horiz_conv$addsub0011> created at line 77.
+    Found 24-bit adder for signal <s3_horiz_conv$addsub0012> created at line 77.
+INFO:Xst:738 - HDL ADVISOR - 360 flip-flops were inferred for signal <s2_horiz_conv_array>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+    Summary:
+	inferred 570 D-type flip-flop(s).
+	inferred  28 Adder/Subtractor(s).
+	inferred  15 Multiplier(s).
+Unit <HorizontalConvolution> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 15
+ 12x9-bit multiplier                                   : 15
+# Adders/Subtractors                                   : 28
+ 11-bit adder                                          : 14
+ 24-bit adder                                          : 14
+# Registers                                            : 34
+ 1-bit register                                        : 3
+ 12-bit register                                       : 15
+ 24-bit register                                       : 15
+ 27-bit register                                       : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch <s2_horiz_conv_array_3_23> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s2_horiz_conv_array_4_21> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s2_horiz_conv_array_4_22> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s2_horiz_conv_array_4_23> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s2_horiz_conv_array_5_21> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s2_horiz_conv_array_5_22> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s2_horiz_conv_array_5_23> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s2_horiz_conv_array_6_21> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s2_horiz_conv_array_6_22> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s2_horiz_conv_array_6_23> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s2_horiz_conv_array_7_21> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s2_horiz_conv_array_7_22> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s2_horiz_conv_array_7_23> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s2_horiz_conv_array_8_21> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s2_horiz_conv_array_8_22> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s2_horiz_conv_array_8_23> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s2_horiz_conv_array_9_21> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s2_horiz_conv_array_9_22> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s2_horiz_conv_array_9_23> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s2_horiz_conv_array_12_21> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s2_horiz_conv_array_12_22> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s2_horiz_conv_array_12_23> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s2_horiz_conv_array_10_21> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s2_horiz_conv_array_10_22> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s2_horiz_conv_array_10_23> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s2_horiz_conv_array_11_21> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s2_horiz_conv_array_11_22> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s2_horiz_conv_array_11_23> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s3_horiz_conv_24> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s3_horiz_conv_25> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s3_horiz_conv_26> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s1_horiz_conv_array_0_11> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s1_horiz_conv_array_1_11> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s1_horiz_conv_array_2_11> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s1_horiz_conv_array_4_11> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s1_horiz_conv_array_3_11> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s1_horiz_conv_array_5_11> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s1_horiz_conv_array_6_11> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s1_horiz_conv_array_7_11> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s1_horiz_conv_array_8_11> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s1_horiz_conv_array_9_11> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s1_horiz_conv_array_10_11> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s1_horiz_conv_array_11_11> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s1_horiz_conv_array_13_11> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s1_horiz_conv_array_12_11> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s1_horiz_conv_array_14_11> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s2_horiz_conv_array_0_21> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s2_horiz_conv_array_0_22> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s2_horiz_conv_array_0_23> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s2_horiz_conv_array_13_21> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s2_horiz_conv_array_13_22> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s2_horiz_conv_array_13_23> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s2_horiz_conv_array_14_21> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s2_horiz_conv_array_14_22> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s2_horiz_conv_array_14_23> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s2_horiz_conv_array_1_21> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s2_horiz_conv_array_1_22> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s2_horiz_conv_array_1_23> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s2_horiz_conv_array_2_21> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s2_horiz_conv_array_2_22> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s2_horiz_conv_array_2_23> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s2_horiz_conv_array_3_21> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <s2_horiz_conv_array_3_22> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <s3_horiz_conv_0> of sequential type is unconnected in block <HorizontalConvolution>.
+WARNING:Xst:2677 - Node <s3_horiz_conv_1> of sequential type is unconnected in block <HorizontalConvolution>.
+WARNING:Xst:2677 - Node <s3_horiz_conv_2> of sequential type is unconnected in block <HorizontalConvolution>.
+WARNING:Xst:2677 - Node <s3_horiz_conv_3> of sequential type is unconnected in block <HorizontalConvolution>.
+WARNING:Xst:2677 - Node <s3_horiz_conv_4> of sequential type is unconnected in block <HorizontalConvolution>.
+WARNING:Xst:2677 - Node <s3_horiz_conv_5> of sequential type is unconnected in block <HorizontalConvolution>.
+WARNING:Xst:2677 - Node <s3_horiz_conv_6> of sequential type is unconnected in block <HorizontalConvolution>.
+WARNING:Xst:2677 - Node <s3_horiz_conv_7> of sequential type is unconnected in block <HorizontalConvolution>.
+WARNING:Xst:2677 - Node <s3_horiz_conv_8> of sequential type is unconnected in block <HorizontalConvolution>.
+WARNING:Xst:2677 - Node <s3_horiz_conv_9> of sequential type is unconnected in block <HorizontalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s3_horiz_conv<26:24>> (without init value) have a constant value of 0 in block <HorizontalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s2_horiz_conv_array_14<23:21>> (without init value) have a constant value of 0 in block <HorizontalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s2_horiz_conv_array_13<23:21>> (without init value) have a constant value of 0 in block <HorizontalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s2_horiz_conv_array_1<23:21>> (without init value) have a constant value of 0 in block <HorizontalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s2_horiz_conv_array_3<23:21>> (without init value) have a constant value of 0 in block <HorizontalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s2_horiz_conv_array_2<23:21>> (without init value) have a constant value of 0 in block <HorizontalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s2_horiz_conv_array_4<23:21>> (without init value) have a constant value of 0 in block <HorizontalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s2_horiz_conv_array_5<23:21>> (without init value) have a constant value of 0 in block <HorizontalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s2_horiz_conv_array_6<23:21>> (without init value) have a constant value of 0 in block <HorizontalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s2_horiz_conv_array_7<23:21>> (without init value) have a constant value of 0 in block <HorizontalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s2_horiz_conv_array_8<23:21>> (without init value) have a constant value of 0 in block <HorizontalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s2_horiz_conv_array_9<23:21>> (without init value) have a constant value of 0 in block <HorizontalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s2_horiz_conv_array_11<23:21>> (without init value) have a constant value of 0 in block <HorizontalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s2_horiz_conv_array_10<23:21>> (without init value) have a constant value of 0 in block <HorizontalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s2_horiz_conv_array_12<23:21>> (without init value) have a constant value of 0 in block <HorizontalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s2_horiz_conv_array_0<23:21>> (without init value) have a constant value of 0 in block <HorizontalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s1_horiz_conv_array_1<11:11>> (without init value) have a constant value of 0 in block <HorizontalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s1_horiz_conv_array_2<11:11>> (without init value) have a constant value of 0 in block <HorizontalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s1_horiz_conv_array_3<11:11>> (without init value) have a constant value of 0 in block <HorizontalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s1_horiz_conv_array_4<11:11>> (without init value) have a constant value of 0 in block <HorizontalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s1_horiz_conv_array_5<11:11>> (without init value) have a constant value of 0 in block <HorizontalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s1_horiz_conv_array_6<11:11>> (without init value) have a constant value of 0 in block <HorizontalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s1_horiz_conv_array_7<11:11>> (without init value) have a constant value of 0 in block <HorizontalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s1_horiz_conv_array_8<11:11>> (without init value) have a constant value of 0 in block <HorizontalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s1_horiz_conv_array_9<11:11>> (without init value) have a constant value of 0 in block <HorizontalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s1_horiz_conv_array_10<11:11>> (without init value) have a constant value of 0 in block <HorizontalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s1_horiz_conv_array_11<11:11>> (without init value) have a constant value of 0 in block <HorizontalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s1_horiz_conv_array_12<11:11>> (without init value) have a constant value of 0 in block <HorizontalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s1_horiz_conv_array_13<11:11>> (without init value) have a constant value of 0 in block <HorizontalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s1_horiz_conv_array_14<11:11>> (without init value) have a constant value of 0 in block <HorizontalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s1_horiz_conv_array_0<11:11>> (without init value) have a constant value of 0 in block <HorizontalConvolution>.
+
+Synthesizing (advanced) Unit <HorizontalConvolution>.
+	Multiplier <Mmult_s2_horiz_conv_array_14_mult0000> in block <HorizontalConvolution> and adder/subtractor <Madd_s3_horiz_conv_addsub0012> in block <HorizontalConvolution> are combined into a MAC<Maddsub_s2_horiz_conv_array_14_mult0000>.
+	The following registers are also absorbed by the MAC: <s1_horiz_conv_array_14> in block <HorizontalConvolution>, <s2_horiz_conv_array_14> in block <HorizontalConvolution>.
+	Multiplier <Mmult_s2_horiz_conv_array_1_mult0000> in block <HorizontalConvolution> and adder/subtractor <Madd_s3_horiz_conv_addsub0000> in block <HorizontalConvolution> are combined into a MAC<Maddsub_s2_horiz_conv_array_1_mult0000>.
+	The following registers are also absorbed by the MAC: <s1_horiz_conv_array_1> in block <HorizontalConvolution>, <s2_horiz_conv_array_1> in block <HorizontalConvolution>.
+	Multiplier <Mmult_s2_horiz_conv_array_2_mult0000> in block <HorizontalConvolution> and adder/subtractor <Madd_s3_horiz_conv_addsub0001> in block <HorizontalConvolution> are combined into a MAC<Maddsub_s2_horiz_conv_array_2_mult0000>.
+	The following registers are also absorbed by the MAC: <s1_horiz_conv_array_2> in block <HorizontalConvolution>, <s2_horiz_conv_array_2> in block <HorizontalConvolution>.
+	Multiplier <Mmult_s2_horiz_conv_array_4_mult0000> in block <HorizontalConvolution> and adder/subtractor <Madd_s3_horiz_conv_addsub0003> in block <HorizontalConvolution> are combined into a MAC<Maddsub_s2_horiz_conv_array_4_mult0000>.
+	The following registers are also absorbed by the MAC: <s1_horiz_conv_array_4> in block <HorizontalConvolution>, <s2_horiz_conv_array_4> in block <HorizontalConvolution>.
+	Multiplier <Mmult_s2_horiz_conv_array_6_mult0000> in block <HorizontalConvolution> and adder/subtractor <Madd_s3_horiz_conv_addsub0004> in block <HorizontalConvolution> are combined into a MAC<Maddsub_s2_horiz_conv_array_6_mult0000>.
+	The following registers are also absorbed by the MAC: <s1_horiz_conv_array_6> in block <HorizontalConvolution>, <s2_horiz_conv_array_6> in block <HorizontalConvolution>.
+	Multiplier <Mmult_s2_horiz_conv_array_8_mult0000> in block <HorizontalConvolution> and adder/subtractor <Madd_s3_horiz_conv_addsub0007> in block <HorizontalConvolution> are combined into a MAC<Maddsub_s2_horiz_conv_array_8_mult0000>.
+	The following registers are also absorbed by the MAC: <s1_horiz_conv_array_8> in block <HorizontalConvolution>, <s2_horiz_conv_array_8> in block <HorizontalConvolution>.
+	Multiplier <Mmult_s2_horiz_conv_array_10_mult0000> in block <HorizontalConvolution> and adder/subtractor <Madd_s3_horiz_conv_addsub0008> in block <HorizontalConvolution> are combined into a MAC<Maddsub_s2_horiz_conv_array_10_mult0000>.
+	The following registers are also absorbed by the MAC: <s1_horiz_conv_array_10> in block <HorizontalConvolution>, <s2_horiz_conv_array_10> in block <HorizontalConvolution>.
+	Multiplier <Mmult_s2_horiz_conv_array_12_mult0000> in block <HorizontalConvolution> and adder/subtractor <Madd_s3_horiz_conv_addsub0011> in block <HorizontalConvolution> are combined into a MAC<Maddsub_s2_horiz_conv_array_12_mult0000>.
+	The following registers are also absorbed by the MAC: <s1_horiz_conv_array_12> in block <HorizontalConvolution>, <s2_horiz_conv_array_12> in block <HorizontalConvolution>.
+	Found pipelined multiplier on signal <s2_horiz_conv_array_7_mult0000>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <s1_horiz_conv_array<7>>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <s2_horiz_conv_array_5_mult0000>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <s1_horiz_conv_array<5>>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <s2_horiz_conv_array_13_mult0000>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <s1_horiz_conv_array<13>>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <s2_horiz_conv_array_9_mult0000>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <s1_horiz_conv_array<9>>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <s2_horiz_conv_array_3_mult0000>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <s1_horiz_conv_array<3>>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <s2_horiz_conv_array_11_mult0000>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <s1_horiz_conv_array<11>>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <s2_horiz_conv_array_0_mult0000>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <s1_horiz_conv_array<0>>.
+		Pushing register(s) into the multiplier macro.
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_s2_horiz_conv_array_7_mult0000 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_s2_horiz_conv_array_5_mult0000 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_s2_horiz_conv_array_13_mult0000 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_s2_horiz_conv_array_9_mult0000 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_s2_horiz_conv_array_3_mult0000 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_s2_horiz_conv_array_11_mult0000 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_s2_horiz_conv_array_0_mult0000 by adding 1 register level(s).
+Unit <HorizontalConvolution> synthesized (advanced).
+WARNING:Xst:2677 - Node <s3_horiz_conv_0> of sequential type is unconnected in block <HorizontalConvolution>.
+WARNING:Xst:2677 - Node <s3_horiz_conv_1> of sequential type is unconnected in block <HorizontalConvolution>.
+WARNING:Xst:2677 - Node <s3_horiz_conv_2> of sequential type is unconnected in block <HorizontalConvolution>.
+WARNING:Xst:2677 - Node <s3_horiz_conv_3> of sequential type is unconnected in block <HorizontalConvolution>.
+WARNING:Xst:2677 - Node <s3_horiz_conv_4> of sequential type is unconnected in block <HorizontalConvolution>.
+WARNING:Xst:2677 - Node <s3_horiz_conv_5> of sequential type is unconnected in block <HorizontalConvolution>.
+WARNING:Xst:2677 - Node <s3_horiz_conv_6> of sequential type is unconnected in block <HorizontalConvolution>.
+WARNING:Xst:2677 - Node <s3_horiz_conv_7> of sequential type is unconnected in block <HorizontalConvolution>.
+WARNING:Xst:2677 - Node <s3_horiz_conv_8> of sequential type is unconnected in block <HorizontalConvolution>.
+WARNING:Xst:2677 - Node <s3_horiz_conv_9> of sequential type is unconnected in block <HorizontalConvolution>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# MACs                                                 : 8
+ 12x9-to-24-bit MAC                                    : 8
+# Multipliers                                          : 7
+ 12x9-bit registered multiplier                        : 7
+# Adders/Subtractors                                   : 20
+ 11-bit adder                                          : 14
+ 24-bit adder                                          : 6
+# Registers                                            : 17
+ Flip-Flops                                            : 17
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <Mmult_s2_horiz_conv_array_9_mult0000_0> (without init value) has a constant value of 0 in block <HorizontalConvolution>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <HorizontalConvolution> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block HorizontalConvolution, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 14
+ Flip-Flops                                            : 14
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : HorizontalConvolution.ngr
+Top Level Output File Name         : HorizontalConvolution
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 475
+
+Cell Usage :
+# BELS                             : 816
+#      GND                         : 1
+#      INV                         : 1
+#      LUT1                        : 8
+#      LUT2                        : 237
+#      LUT3                        : 18
+#      LUT4                        : 32
+#      MUXCY                       : 248
+#      VCC                         : 1
+#      XORCY                       : 270
+# FlipFlops/Latches                : 14
+#      FDE                         : 1
+#      FDR                         : 2
+#      FDRE                        : 11
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 474
+#      IBUF                        : 456
+#      OBUF                        : 18
+# DSPs                             : 20
+#      DSP48E                      : 20
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 5vlx20tff323-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              14  out of  12480     0%  
+ Number of Slice LUTs:                  296  out of  12480     2%  
+    Number used as Logic:               296  out of  12480     2%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    310
+   Number with an unused Flip Flop:     296  out of    310    95%  
+   Number with an unused LUT:            14  out of    310     4%  
+   Number of fully used LUT-FF pairs:     0  out of    310     0%  
+   Number of unique control sets:         3
+
+IO Utilization: 
+ Number of IOs:                         475
+ Number of bonded IOBs:                 475  out of    172   276% (*) 
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+ Number of DSP48Es:                      20  out of     24    83%  
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------------+-------------------------------------+-------+
+Clock Signal                                     | Clock buffer(FF name)               | Load  |
+-------------------------------------------------+-------------------------------------+-------+
+clk                                              | BUFGP                               | 29    |
+Mmult_s2_horiz_conv_array_9_mult0000_Madd1_cy<18>| NONE(Madd_s3_horiz_conv_addsub00021)| 5     |
+-------------------------------------------------+-------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 12.861ns (Maximum Frequency: 77.755MHz)
+   Minimum input arrival time before clock: 13.330ns
+   Maximum output required time after clock: 2.910ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 12.861ns (frequency: 77.755MHz)
+  Total number of paths / destination ports: 11512979120 / 237
+-------------------------------------------------------------------------
+Delay:               12.861ns (Levels of Logic = 24)
+  Source:            Mmult_s2_horiz_conv_array_9_mult0000_5 (FF)
+  Destination:       Madd_s3_horiz_conv_add00001 (DSP)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: Mmult_s2_horiz_conv_array_9_mult0000_5 to Madd_s3_horiz_conv_add00001
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            12   0.396   0.538  Mmult_s2_horiz_conv_array_9_mult0000_5 (Mmult_s2_horiz_conv_array_9_mult0000_5)
+     LUT4:I2->O            1   0.086   0.000  Mmult_s2_horiz_conv_array_9_mult0000_Madd1_lut<7> (Mmult_s2_horiz_conv_array_9_mult0000_Madd1_lut<7>)
+     MUXCY:S->O            1   0.305   0.000  Mmult_s2_horiz_conv_array_9_mult0000_Madd1_cy<7> (Mmult_s2_horiz_conv_array_9_mult0000_Madd1_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  Mmult_s2_horiz_conv_array_9_mult0000_Madd1_cy<8> (Mmult_s2_horiz_conv_array_9_mult0000_Madd1_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  Mmult_s2_horiz_conv_array_9_mult0000_Madd1_cy<9> (Mmult_s2_horiz_conv_array_9_mult0000_Madd1_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  Mmult_s2_horiz_conv_array_9_mult0000_Madd1_cy<10> (Mmult_s2_horiz_conv_array_9_mult0000_Madd1_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  Mmult_s2_horiz_conv_array_9_mult0000_Madd1_cy<11> (Mmult_s2_horiz_conv_array_9_mult0000_Madd1_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  Mmult_s2_horiz_conv_array_9_mult0000_Madd1_cy<12> (Mmult_s2_horiz_conv_array_9_mult0000_Madd1_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  Mmult_s2_horiz_conv_array_9_mult0000_Madd1_cy<13> (Mmult_s2_horiz_conv_array_9_mult0000_Madd1_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  Mmult_s2_horiz_conv_array_9_mult0000_Madd1_cy<14> (Mmult_s2_horiz_conv_array_9_mult0000_Madd1_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  Mmult_s2_horiz_conv_array_9_mult0000_Madd1_cy<15> (Mmult_s2_horiz_conv_array_9_mult0000_Madd1_cy<15>)
+     XORCY:CI->O           1   0.300   0.487  Mmult_s2_horiz_conv_array_9_mult0000_Madd1_xor<16> (Mmult_s2_horiz_conv_array_9_mult0000_Madd_161)
+     LUT2:I0->O            1   0.086   0.000  Mmult_s2_horiz_conv_array_9_mult0000_Madd5_lut<16> (Mmult_s2_horiz_conv_array_9_mult0000_Madd5_lut<16>)
+     MUXCY:S->O            1   0.305   0.000  Mmult_s2_horiz_conv_array_9_mult0000_Madd5_cy<16> (Mmult_s2_horiz_conv_array_9_mult0000_Madd5_cy<16>)
+     XORCY:CI->O           1   0.300   0.487  Mmult_s2_horiz_conv_array_9_mult0000_Madd5_xor<17> (Mmult_s2_horiz_conv_array_9_mult0000_Madd_174)
+     LUT2:I0->O            1   0.086   0.000  Mmult_s2_horiz_conv_array_9_mult0000_Madd6_lut<17> (Mmult_s2_horiz_conv_array_9_mult0000_Madd6_lut<17>)
+     MUXCY:S->O            1   0.305   0.000  Mmult_s2_horiz_conv_array_9_mult0000_Madd6_cy<17> (Mmult_s2_horiz_conv_array_9_mult0000_Madd6_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  Mmult_s2_horiz_conv_array_9_mult0000_Madd6_cy<18> (Mmult_s2_horiz_conv_array_9_mult0000_Madd6_cy<18>)
+     XORCY:CI->O           1   0.300   0.412  Mmult_s2_horiz_conv_array_9_mult0000_Madd6_xor<19> (Mmult_s2_horiz_conv_array_9_mult0000_Madd_194)
+     LUT1:I0->O            1   0.086   0.000  Mmult_s2_horiz_conv_array_9_mult0000_Madd7_cy<19>_rt (Mmult_s2_horiz_conv_array_9_mult0000_Madd7_cy<19>_rt)
+     MUXCY:S->O            0   0.305   0.000  Mmult_s2_horiz_conv_array_9_mult0000_Madd7_cy<19> (Mmult_s2_horiz_conv_array_9_mult0000_Madd7_cy<19>)
+     XORCY:CI->O           1   0.300   0.286  Mmult_s2_horiz_conv_array_9_mult0000_Madd7_xor<20> (Mmult_s2_horiz_conv_array_9_mult0000_Madd_204)
+     DSP48E:C20->PCOUT47    1   1.814   0.000  Maddsub_s2_horiz_conv_array_8_mult0000 (Maddsub_s2_horiz_conv_array_8_mult0000_PCOUT_to_Madd_s3_horiz_conv_addsub00091_PCIN_47)
+     DSP48E:PCIN47->P23    1   1.445   0.286  Madd_s3_horiz_conv_addsub00091 (s3_horiz_conv_addsub0009<23>)
+     DSP48E:A5->P23        1   1.767   0.286  Madd_s3_horiz_conv_addsub00101 (s3_horiz_conv_addsub0010<23>)
+     DSP48E:A5                 1.531          Madd_s3_horiz_conv_add00001
+    ----------------------------------------
+    Total                     12.861ns (10.082ns logic, 2.779ns route)
+                                       (78.4% logic, 21.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 11381215993 / 406
+-------------------------------------------------------------------------
+Offset:              13.330ns (Levels of Logic = 25)
+  Source:            gaussianKernel<52> (PAD)
+  Destination:       Madd_s3_horiz_conv_add00001 (DSP)
+  Destination Clock: clk rising
+
+  Data Path: gaussianKernel<52> to Madd_s3_horiz_conv_add00001
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            11   0.694   0.708  gaussianKernel_52_IBUF (gaussianKernel_52_IBUF)
+     LUT4:I0->O            1   0.086   0.000  Mmult_s2_horiz_conv_array_9_mult0000_Madd1_lut<7> (Mmult_s2_horiz_conv_array_9_mult0000_Madd1_lut<7>)
+     MUXCY:S->O            1   0.305   0.000  Mmult_s2_horiz_conv_array_9_mult0000_Madd1_cy<7> (Mmult_s2_horiz_conv_array_9_mult0000_Madd1_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  Mmult_s2_horiz_conv_array_9_mult0000_Madd1_cy<8> (Mmult_s2_horiz_conv_array_9_mult0000_Madd1_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  Mmult_s2_horiz_conv_array_9_mult0000_Madd1_cy<9> (Mmult_s2_horiz_conv_array_9_mult0000_Madd1_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  Mmult_s2_horiz_conv_array_9_mult0000_Madd1_cy<10> (Mmult_s2_horiz_conv_array_9_mult0000_Madd1_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  Mmult_s2_horiz_conv_array_9_mult0000_Madd1_cy<11> (Mmult_s2_horiz_conv_array_9_mult0000_Madd1_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  Mmult_s2_horiz_conv_array_9_mult0000_Madd1_cy<12> (Mmult_s2_horiz_conv_array_9_mult0000_Madd1_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  Mmult_s2_horiz_conv_array_9_mult0000_Madd1_cy<13> (Mmult_s2_horiz_conv_array_9_mult0000_Madd1_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  Mmult_s2_horiz_conv_array_9_mult0000_Madd1_cy<14> (Mmult_s2_horiz_conv_array_9_mult0000_Madd1_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  Mmult_s2_horiz_conv_array_9_mult0000_Madd1_cy<15> (Mmult_s2_horiz_conv_array_9_mult0000_Madd1_cy<15>)
+     XORCY:CI->O           1   0.300   0.487  Mmult_s2_horiz_conv_array_9_mult0000_Madd1_xor<16> (Mmult_s2_horiz_conv_array_9_mult0000_Madd_161)
+     LUT2:I0->O            1   0.086   0.000  Mmult_s2_horiz_conv_array_9_mult0000_Madd5_lut<16> (Mmult_s2_horiz_conv_array_9_mult0000_Madd5_lut<16>)
+     MUXCY:S->O            1   0.305   0.000  Mmult_s2_horiz_conv_array_9_mult0000_Madd5_cy<16> (Mmult_s2_horiz_conv_array_9_mult0000_Madd5_cy<16>)
+     XORCY:CI->O           1   0.300   0.487  Mmult_s2_horiz_conv_array_9_mult0000_Madd5_xor<17> (Mmult_s2_horiz_conv_array_9_mult0000_Madd_174)
+     LUT2:I0->O            1   0.086   0.000  Mmult_s2_horiz_conv_array_9_mult0000_Madd6_lut<17> (Mmult_s2_horiz_conv_array_9_mult0000_Madd6_lut<17>)
+     MUXCY:S->O            1   0.305   0.000  Mmult_s2_horiz_conv_array_9_mult0000_Madd6_cy<17> (Mmult_s2_horiz_conv_array_9_mult0000_Madd6_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  Mmult_s2_horiz_conv_array_9_mult0000_Madd6_cy<18> (Mmult_s2_horiz_conv_array_9_mult0000_Madd6_cy<18>)
+     XORCY:CI->O           1   0.300   0.412  Mmult_s2_horiz_conv_array_9_mult0000_Madd6_xor<19> (Mmult_s2_horiz_conv_array_9_mult0000_Madd_194)
+     LUT1:I0->O            1   0.086   0.000  Mmult_s2_horiz_conv_array_9_mult0000_Madd7_cy<19>_rt (Mmult_s2_horiz_conv_array_9_mult0000_Madd7_cy<19>_rt)
+     MUXCY:S->O            0   0.305   0.000  Mmult_s2_horiz_conv_array_9_mult0000_Madd7_cy<19> (Mmult_s2_horiz_conv_array_9_mult0000_Madd7_cy<19>)
+     XORCY:CI->O           1   0.300   0.286  Mmult_s2_horiz_conv_array_9_mult0000_Madd7_xor<20> (Mmult_s2_horiz_conv_array_9_mult0000_Madd_204)
+     DSP48E:C20->PCOUT47    1   1.814   0.000  Maddsub_s2_horiz_conv_array_8_mult0000 (Maddsub_s2_horiz_conv_array_8_mult0000_PCOUT_to_Madd_s3_horiz_conv_addsub00091_PCIN_47)
+     DSP48E:PCIN47->P23    1   1.445   0.286  Madd_s3_horiz_conv_addsub00091 (s3_horiz_conv_addsub0009<23>)
+     DSP48E:A5->P23        1   1.767   0.286  Madd_s3_horiz_conv_addsub00101 (s3_horiz_conv_addsub0010<23>)
+     DSP48E:A5                 1.531          Madd_s3_horiz_conv_add00001
+    ----------------------------------------
+    Total                     13.330ns (10.380ns logic, 2.950ns route)
+                                       (77.9% logic, 22.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 15 / 15
+-------------------------------------------------------------------------
+Offset:              2.910ns (Levels of Logic = 1)
+  Source:            Madd_s3_horiz_conv_add00001 (DSP)
+  Destination:       outputData<13> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: Madd_s3_horiz_conv_add00001 to outputData<13>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     DSP48E:CLK->P23       1   0.480   0.286  Madd_s3_horiz_conv_add00001 (outputData_13_OBUF)
+     OBUF:I->O                 2.144          outputData_13_OBUF (outputData<13>)
+    ----------------------------------------
+    Total                      2.910ns (2.624ns logic, 0.286ns route)
+                                       (90.2% logic, 9.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 15.00 secs
+Total CPU time to Xst completion: 15.41 secs
+ 
+--> 
+
+
+Total memory usage is 606452 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  117 (   0 filtered)
+Number of infos    :    9 (   0 filtered)
+

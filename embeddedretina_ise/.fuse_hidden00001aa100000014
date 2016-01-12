@@ -1,0 +1,656 @@
+Release 14.6 - xst P.68d (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> 
+Reading design: PointBuffer.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "PointBuffer.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "PointBuffer"
+Output Format                      : NGC
+Target Device                      : xc5vlx20t-2-ff323
+
+---- Source Options
+Top Module Name                    : PointBuffer
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/RetinaParameters.vhd" in Library work.
+Architecture retinaparameters of Entity retinaparameters is up to date.
+Compiling vhdl file "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/PointFifo.vhd" in Library work.
+Entity <pointfifo> compiled.
+Entity <pointfifo> (Architecture <behavioral>) compiled.
+Compiling vhdl file "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/PointBuffer.vhd" in Library work.
+Architecture behavioral of Entity pointbuffer is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <PointBuffer> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <PointFifo> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <PointBuffer> in library <work> (Architecture <behavioral>).
+Entity <PointBuffer> analyzed. Unit <PointBuffer> generated.
+
+Analyzing Entity <PointFifo> in library <work> (Architecture <behavioral>).
+INFO:Xst:2679 - Register <s_point_array<511>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<510>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<509>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<508>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<507>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<506>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<505>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<504>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<503>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<502>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<501>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<500>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<499>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<498>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<497>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<496>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<495>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<494>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<493>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<492>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<491>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<490>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<489>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<488>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<487>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<486>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<485>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<484>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<483>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<482>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<481>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<480>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<479>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<478>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<477>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<476>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<475>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<474>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<473>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<472>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<471>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<470>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<469>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<468>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<467>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<466>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<465>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<464>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<463>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<462>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<461>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<460>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<459>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<458>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<457>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<456>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<455>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<454>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<453>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<452>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<451>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<450>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<449>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<448>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<447>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<446>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<445>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<444>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<443>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<442>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<441>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<440>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<439>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<438>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<437>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<436>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<435>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<434>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<433>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<432>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<431>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<430>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<429>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<428>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<427>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<426>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<425>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<424>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<423>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<422>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<421>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<420>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<419>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<418>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<417>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<416>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<415>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<414>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<413>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<412>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<411>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<410>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<409>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<408>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<407>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<406>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<405>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<404>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<403>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<402>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<401>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<400>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<399>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<398>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<397>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<396>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<395>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<394>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<393>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<392>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<391>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<390>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<389>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<388>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<387>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<386>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<385>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<384>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<383>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<382>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<381>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<380>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<379>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<378>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<377>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<376>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<375>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<374>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<373>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<372>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<371>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<370>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<369>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<368>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<367>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<366>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<365>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<364>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<363>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<362>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<361>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<360>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<359>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<358>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<357>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<356>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<355>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<354>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<353>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<352>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<351>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<350>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<349>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<348>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<347>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<346>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<345>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<344>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<343>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<342>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<341>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<340>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<339>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<338>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<337>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<336>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<335>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<334>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<333>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<332>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<331>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<330>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<329>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<328>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<327>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<326>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<325>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<324>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<323>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<322>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<321>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<320>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<319>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<318>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<317>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<316>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<315>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<314>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<313>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<312>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<311>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<310>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<309>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<308>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<307>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<306>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<305>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<304>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<303>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<302>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<301>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<300>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<299>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<298>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<297>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<296>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<295>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<294>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<293>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<292>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<291>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<290>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<289>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<288>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<287>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<286>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<285>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<284>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<283>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<282>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<281>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<280>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<279>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<278>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<277>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<276>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<275>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<274>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<273>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<272>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<271>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<270>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<269>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<268>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<267>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<266>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<265>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<264>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<263>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<262>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<261>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<260>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<259>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<258>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<257>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<256>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<255>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<254>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<253>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<252>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<251>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<250>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<249>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<248>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<247>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<246>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<245>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<244>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<243>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<242>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<241>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<240>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<239>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<238>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<237>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<236>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<235>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<234>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<233>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<232>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<231>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<230>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<229>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<228>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<227>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<226>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<225>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<224>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<223>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<222>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<221>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<220>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<219>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<218>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<217>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<216>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<215>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<214>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<213>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<212>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<211>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<210>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<209>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<208>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<207>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<206>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<205>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<204>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<203>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<202>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<201>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<200>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<199>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<198>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<197>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<196>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<195>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<194>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<193>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<192>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<191>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<190>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<189>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<188>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<187>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<186>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<185>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<184>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<183>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<182>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<181>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<180>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<179>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<178>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<177>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<176>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<175>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<174>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<173>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<172>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<171>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<170>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<169>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<168>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<167>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<166>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<165>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<164>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<163>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<162>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<161>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<160>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<159>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<158>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<157>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<156>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<155>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<154>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<153>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<152>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<151>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<150>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<149>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<148>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<147>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<146>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<145>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<144>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<143>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<142>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<141>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<140>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<139>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<138>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<137>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<136>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<135>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<134>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<133>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<132>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<131>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<130>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<129>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<128>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<127>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<126>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<125>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<124>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<123>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<122>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<121>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<120>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<119>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<118>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<117>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<116>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<115>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<114>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<113>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<112>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<111>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<110>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<109>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<108>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<107>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<106>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<105>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<104>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<103>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<102>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<101>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<100>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<99>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<98>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<97>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<96>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<95>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<94>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<93>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<92>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<91>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<90>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<89>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<88>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<87>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<86>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<85>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<84>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<83>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<82>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<81>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<80>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<79>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<78>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<77>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<76>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<75>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<74>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<73>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<72>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<71>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<70>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<69>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<68>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<67>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<66>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<65>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<64>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<63>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<62>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<61>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<60>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<59>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<58>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<57>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<56>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<55>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<54>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<53>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<52>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<51>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<50>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<49>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<48>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<47>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<46>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<45>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<44>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <s_point_array<43>> in unit <PointFifo> has a constant value of 00000000000000 during circuit operation. The register is replaced by logic.
+Entity <PointFifo> analyzed. Unit <PointFifo> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+INFO:Xst:2679 - Register <enableOut> in unit <PointBuffer> has a constant value of 1 during circuit operation. The register is replaced by logic.
+
+Synthesizing Unit <PointFifo>.
+    Related source file is "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/PointFifo.vhd".
+WARNING:Xst:1305 - Output <pointSet> is never assigned. Tied to value 00000000000000.
+WARNING:Xst:646 - Signal <s_point_array<511:42>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <enableOut>.
+    Found 6-bit up counter for signal <counter>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <PointFifo> synthesized.
+
+
+Synthesizing Unit <PointBuffer>.
+    Related source file is "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/PointBuffer.vhd".
+    Found 7168-bit register for signal <pointSet>.
+    Found 2-bit register for signal <enables>.
+    Found 1-bit register for signal <sScaleSelector<0>>.
+    Summary:
+	inferred 7171 D-type flip-flop(s).
+Unit <PointBuffer> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 2
+ 6-bit up counter                                      : 2
+# Registers                                            : 517
+ 1-bit register                                        : 5
+ 14-bit register                                       : 512
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+

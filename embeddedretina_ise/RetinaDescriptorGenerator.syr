@@ -1,0 +1,1882 @@
+Release 14.6 - xst P.68d (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> 
+Reading design: RetinaDescriptorGenerator.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "RetinaDescriptorGenerator.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "RetinaDescriptorGenerator"
+Output Format                      : NGC
+Target Device                      : xc5vlx330t-1-ff1738
+
+---- Source Options
+Top Module Name                    : RetinaDescriptorGenerator
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/RetinaParameters.vhd" in Library work.
+Architecture retinaparameters of Entity retinaparameters is up to date.
+Compiling vhdl file "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/ROM_PAIRS.vhd" in Library work.
+Architecture behavioral of Entity rom_pairs is up to date.
+Compiling vhdl file "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/PointBuffer.vhd" in Library work.
+Architecture behavioral of Entity pointbuffer is up to date.
+Compiling vhdl file "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/DescriptorMaker.vhd" in Library work.
+Architecture behavioral of Entity descriptormaker is up to date.
+Compiling vhdl file "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/rom_coe.vhd" in Library work.
+Architecture behavioral of Entity rom_coe is up to date.
+Compiling vhdl file "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/VerticalConvolution.vhd" in Library work.
+Architecture behavioral of Entity verticalconvolution is up to date.
+Compiling vhdl file "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/IntermediateRegsConv.vhd" in Library work.
+Architecture behavioral of Entity intermediateregsconv is up to date.
+Compiling vhdl file "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/HorizontalConvolution.vhd" in Library work.
+Architecture behavioral of Entity horizontalconvolution is up to date.
+Compiling vhdl file "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/KeypointReader.vhd" in Library work.
+Architecture behavioral of Entity keypointreader is up to date.
+Compiling vhdl file "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/AddressGenerator.vhd" in Library work.
+Architecture behavioral of Entity addressgenerator is up to date.
+Compiling vhdl file "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/ImagePatchReader.vhd" in Library work.
+Architecture behavioral of Entity imagepatchreader is up to date.
+Compiling vhdl file "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/GaussianFilter.vhd" in Library work.
+Architecture behavioral of Entity gaussianfilter is up to date.
+Compiling vhdl file "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/TopDescriptorMaker.vhd" in Library work.
+Architecture behavioral of Entity topdescriptormaker is up to date.
+Compiling vhdl file "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/RetinaDescriptorGenerator.vhd" in Library work.
+Architecture behavioral of Entity retinadescriptorgenerator is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <RetinaDescriptorGenerator> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <KeypointReader> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <AddressGenerator> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ImagePatchReader> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <GaussianFilter> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <TopDescriptorMaker> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <rom_coe> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <VerticalConvolution> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <IntermediateRegsConv> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <HorizontalConvolution> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ROM_PAIRS> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <PointBuffer> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <DescriptorMaker> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <RetinaDescriptorGenerator> in library <work> (Architecture <behavioral>).
+Entity <RetinaDescriptorGenerator> analyzed. Unit <RetinaDescriptorGenerator> generated.
+
+Analyzing Entity <KeypointReader> in library <work> (Architecture <behavioral>).
+Entity <KeypointReader> analyzed. Unit <KeypointReader> generated.
+
+Analyzing Entity <AddressGenerator> in library <work> (Architecture <behavioral>).
+Entity <AddressGenerator> analyzed. Unit <AddressGenerator> generated.
+
+Analyzing Entity <ImagePatchReader> in library <work> (Architecture <behavioral>).
+Entity <ImagePatchReader> analyzed. Unit <ImagePatchReader> generated.
+
+Analyzing Entity <GaussianFilter> in library <work> (Architecture <behavioral>).
+Entity <GaussianFilter> analyzed. Unit <GaussianFilter> generated.
+
+Analyzing Entity <rom_coe> in library <work> (Architecture <behavioral>).
+WARNING:Xst:790 - "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/rom_coe.vhd" line 71: Index value(s) does not match array range, simulation mismatch.
+Entity <rom_coe> analyzed. Unit <rom_coe> generated.
+
+Analyzing Entity <VerticalConvolution> in library <work> (Architecture <behavioral>).
+Entity <VerticalConvolution> analyzed. Unit <VerticalConvolution> generated.
+
+Analyzing Entity <IntermediateRegsConv> in library <work> (Architecture <behavioral>).
+Entity <IntermediateRegsConv> analyzed. Unit <IntermediateRegsConv> generated.
+
+Analyzing Entity <HorizontalConvolution> in library <work> (Architecture <behavioral>).
+Entity <HorizontalConvolution> analyzed. Unit <HorizontalConvolution> generated.
+
+Analyzing Entity <TopDescriptorMaker> in library <work> (Architecture <behavioral>).
+Entity <TopDescriptorMaker> analyzed. Unit <TopDescriptorMaker> generated.
+
+Analyzing Entity <ROM_PAIRS> in library <work> (Architecture <behavioral>).
+WARNING:Xst:790 - "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/ROM_PAIRS.vhd" line 53: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/ROM_PAIRS.vhd" line 54: Index value(s) does not match array range, simulation mismatch.
+Entity <ROM_PAIRS> analyzed. Unit <ROM_PAIRS> generated.
+
+Analyzing Entity <PointBuffer> in library <work> (Architecture <behavioral>).
+Entity <PointBuffer> analyzed. Unit <PointBuffer> generated.
+
+Analyzing Entity <DescriptorMaker> in library <work> (Architecture <behavioral>).
+WARNING:Xst:790 - "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/DescriptorMaker.vhd" line 63: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/DescriptorMaker.vhd" line 63: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/DescriptorMaker.vhd" line 63: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/DescriptorMaker.vhd" line 63: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/DescriptorMaker.vhd" line 63: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/DescriptorMaker.vhd" line 63: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/DescriptorMaker.vhd" line 63: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/DescriptorMaker.vhd" line 63: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/DescriptorMaker.vhd" line 63: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/DescriptorMaker.vhd" line 63: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/DescriptorMaker.vhd" line 63: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/DescriptorMaker.vhd" line 63: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/DescriptorMaker.vhd" line 63: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/DescriptorMaker.vhd" line 63: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/DescriptorMaker.vhd" line 63: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/DescriptorMaker.vhd" line 63: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/DescriptorMaker.vhd" line 63: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/DescriptorMaker.vhd" line 63: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/DescriptorMaker.vhd" line 63: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/DescriptorMaker.vhd" line 63: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/DescriptorMaker.vhd" line 63: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/DescriptorMaker.vhd" line 63: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/DescriptorMaker.vhd" line 63: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/DescriptorMaker.vhd" line 63: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/DescriptorMaker.vhd" line 63: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/DescriptorMaker.vhd" line 63: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/DescriptorMaker.vhd" line 63: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/DescriptorMaker.vhd" line 63: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/DescriptorMaker.vhd" line 63: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/DescriptorMaker.vhd" line 63: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/DescriptorMaker.vhd" line 63: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/DescriptorMaker.vhd" line 63: Index value(s) does not match array range, simulation mismatch.
+Entity <DescriptorMaker> analyzed. Unit <DescriptorMaker> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <KeypointReader>.
+    Related source file is "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/KeypointReader.vhd".
+WARNING:Xst:647 - Input <memData<31:28>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found finite state machine <FSM_0> for signal <s_readingMemState>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 3                                              |
+    | Inputs             | 0                                              |
+    | Outputs            | 5                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Clock enable       | s_readingMemState$and0000 (positive)           |
+    | Reset              | rst                       (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | init                                           |
+    | Power Up State     | init                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 6-bit register for signal <kptScale>.
+    Found 1-bit register for signal <busy>.
+    Found 32-bit register for signal <memAddr>.
+    Found 1-bit register for signal <read_mem>.
+    Found 2-bit register for signal <kptOctave>.
+    Found 10-bit register for signal <kptCoordX>.
+    Found 10-bit register for signal <kptCoordY>.
+    Found 32-bit register for signal <addrAux>.
+    Found 1-bit register for signal <enableAux>.
+    Found 32-bit adder for signal <memAddr$add0000> created at line 102.
+    Found 31-bit up accumulator for signal <s_offset>.
+    Found 1-bit register for signal <s_producerState<0>>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 Accumulator(s).
+	inferred  96 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <KeypointReader> synthesized.
+
+
+Synthesizing Unit <AddressGenerator>.
+    Related source file is "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/AddressGenerator.vhd".
+    Found finite state machine <FSM_1> for signal <s_consumerState>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 5                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | rst                       (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | init                                           |
+    | Power Up State     | init                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+WARNING:Xst:643 - "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/AddressGenerator.vhd" line 156: The result of a 11x11-bit multiplication is partially used. Only the 21 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/AddressGenerator.vhd" line 146: The result of a 2x10-bit multiplication is partially used. Only the 11 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+    Found 21x7-bit ROM for signal <$rom0000>.
+    Found 32x8-bit ROM for signal <$rom0001>.
+    Found 1-bit register for signal <request_out>.
+    Found 1-bit register for signal <busy_out>.
+    Found 6-bit register for signal <kptScaleOut>.
+    Found 9-bit adder for signal <coordArray$add0000> created at line 155.
+    Found 6x3-bit multiplier for signal <coordArray$mult0000> created at line 155.
+    Found 6-bit 6-to-1 multiplexer for signal <coordArray$mux0000> created at line 156.
+    Found 6-bit 6-to-1 multiplexer for signal <coordArray$mux0001> created at line 156.
+    Found 32-bit register for signal <point_addr>.
+    Found 32-bit adder for signal <point_addr$add0000> created at line 146.
+    Found 34-bit adder for signal <point_addr$add0001> created at line 156.
+    Found 10-bit adder carry out for signal <point_addr$addsub0001> created at line 156.
+    Found 11x11-bit multiplier for signal <point_addr$mult0001> created at line 156.
+    Found 10x10-bit multiplier for signal <point_addr$mult0002> created at line 146.
+    Found 2x10-bit multiplier for signal <point_addr$mult0003> created at line 146.
+    Found 11x9-bit multiplier for signal <point_addr$mult0004> created at line 146.
+    Found 32-bit adder for signal <point_addr$mux0001>.
+    Found 32-bit adder for signal <point_addr$mux0003>.
+    Found 3-bit up counter for signal <point_set_id>.
+    Found 1-bit register for signal <s_producerState<0>>.
+    Found 3-bit register for signal <select_pair>.
+    Found 3-bit subtractor for signal <select_pair$addsub0000> created at line 193.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   2 ROM(s).
+	inferred   1 Counter(s).
+	inferred  44 D-type flip-flop(s).
+	inferred   7 Adder/Subtractor(s).
+	inferred   5 Multiplier(s).
+	inferred  12 Multiplexer(s).
+Unit <AddressGenerator> synthesized.
+
+
+Synthesizing Unit <ImagePatchReader>.
+    Related source file is "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/ImagePatchReader.vhd".
+    Found finite state machine <FSM_2> for signal <s_consumerState>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 5                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | rst                       (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | init                                           |
+    | Power Up State     | init                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_3> for signal <s_readingMemState>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 5                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Clock enable       | s_consumerState$cmp_eq0004 (positive)          |
+    | Reset              | rst                       (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | init                                           |
+    | Power Up State     | init                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+WARNING:Xst:643 - "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/ImagePatchReader.vhd" line 176: The result of a 6x6-bit multiplication is partially used. Only the 6 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+    Found 4x32-bit ROM for signal <s_mem_addr$mux0002> created at line 93.
+    Found 1-bit register for signal <request_out>.
+    Found 1-bit register for signal <en_out>.
+    Found 6-bit adder for signal <addrKernel>.
+    Found 1-bit register for signal <readMem>.
+    Found 6x6-bit multiplier for signal <addrKernel$mult0001> created at line 176.
+    Found 4-bit register for signal <col_counter>.
+    Found 4-bit adder for signal <col_counter$addsub0000> created at line 124.
+    Found 6-bit up counter for signal <pointCounterA>.
+    Found 3-bit up counter for signal <pointCounterB>.
+    Found 4-bit register for signal <row_counter>.
+    Found 4-bit adder for signal <row_counter$addsub0000> created at line 133.
+    Found 72-bit register for signal <s_column_array>.
+    Found 32-bit register for signal <s_mem_addr>.
+    Found 32-bit addsub for signal <s_mem_addr$share0000> created at line 93.
+    Found 6-bit register for signal <sAddrKernel>.
+    Found 6-bit adder for signal <sAddrKernel$addsub0000> created at line 165.
+    Summary:
+	inferred   2 Finite State Machine(s).
+	inferred   1 ROM(s).
+	inferred   2 Counter(s).
+	inferred 121 D-type flip-flop(s).
+	inferred   5 Adder/Subtractor(s).
+	inferred   1 Multiplier(s).
+Unit <ImagePatchReader> synthesized.
+
+
+Synthesizing Unit <rom_coe>.
+    Related source file is "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/rom_coe.vhd".
+WARNING:Xst:647 - Input <address<5>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 21x55-bit ROM for signal <data_out$rom0000> created at line 71.
+    Found 55-bit register for signal <data_out>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred  55 D-type flip-flop(s).
+Unit <rom_coe> synthesized.
+
+
+Synthesizing Unit <VerticalConvolution>.
+    Related source file is "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/VerticalConvolution.vhd".
+WARNING:Xst:646 - Signal <s3_vert_conv<9:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:643 - "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/VerticalConvolution.vhd" line 64: The result of a 11x9-bit multiplication is partially used. Only the 18 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/VerticalConvolution.vhd" line 64: The result of a 11x9-bit multiplication is partially used. Only the 18 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/VerticalConvolution.vhd" line 64: The result of a 11x9-bit multiplication is partially used. Only the 18 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/VerticalConvolution.vhd" line 64: The result of a 11x9-bit multiplication is partially used. Only the 18 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/VerticalConvolution.vhd" line 64: The result of a 11x9-bit multiplication is partially used. Only the 18 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+    Found 1-bit register for signal <enableOut>.
+    Found 45-bit register for signal <s1_vert_conv_array>.
+    Found 8-bit adder for signal <s1_vert_conv_array_1$add0000> created at line 53.
+    Found 8-bit adder for signal <s1_vert_conv_array_2$add0000> created at line 53.
+    Found 8-bit adder for signal <s1_vert_conv_array_3$add0000> created at line 53.
+    Found 8-bit adder for signal <s1_vert_conv_array_4$add0000> created at line 53.
+    Found 1-bit register for signal <s1_vert_enable>.
+    Found 90-bit register for signal <s2_vert_conv_array>.
+    Found 11x9-bit multiplier for signal <s2_vert_conv_array_0$mult0001> created at line 64.
+    Found 11x9-bit multiplier for signal <s2_vert_conv_array_1$mult0001> created at line 64.
+    Found 11x9-bit multiplier for signal <s2_vert_conv_array_2$mult0001> created at line 64.
+    Found 11x9-bit multiplier for signal <s2_vert_conv_array_3$mult0001> created at line 64.
+    Found 11x9-bit multiplier for signal <s2_vert_conv_array_4$mult0001> created at line 64.
+    Found 1-bit register for signal <s2_vert_enable>.
+    Found 20-bit register for signal <s3_vert_conv>.
+    Found 18-bit adder for signal <s3_vert_conv$add0000> created at line 78.
+    Found 18-bit adder for signal <s3_vert_conv$addsub0000> created at line 78.
+    Found 18-bit adder for signal <s3_vert_conv$addsub0001> created at line 78.
+    Found 18-bit adder for signal <s3_vert_conv$addsub0002> created at line 78.
+    Summary:
+	inferred 158 D-type flip-flop(s).
+	inferred   8 Adder/Subtractor(s).
+	inferred   5 Multiplier(s).
+Unit <VerticalConvolution> synthesized.
+
+
+Synthesizing Unit <IntermediateRegsConv>.
+    Related source file is "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/IntermediateRegsConv.vhd".
+    Found 1-bit register for signal <enableOut>.
+    Found 4-bit up counter for signal <counter>.
+    Found 90-bit register for signal <intermediate_registers>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  91 D-type flip-flop(s).
+Unit <IntermediateRegsConv> synthesized.
+
+
+Synthesizing Unit <HorizontalConvolution>.
+    Related source file is "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/HorizontalConvolution.vhd".
+WARNING:Xst:646 - Signal <s3_horiz_conv<9:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <enableOut>.
+    Found 55-bit register for signal <s1_horiz_conv_array>.
+    Found 10-bit adder for signal <s1_horiz_conv_array_1$add0000> created at line 53.
+    Found 10-bit adder for signal <s1_horiz_conv_array_2$add0000> created at line 53.
+    Found 10-bit adder for signal <s1_horiz_conv_array_3$add0000> created at line 53.
+    Found 10-bit adder for signal <s1_horiz_conv_array_4$add0000> created at line 53.
+    Found 1-bit register for signal <s1_horiz_enable>.
+    Found 110-bit register for signal <s2_horiz_conv_array>.
+    Found 11x11-bit multiplier for signal <s2_horiz_conv_array_0$mult0000> created at line 64.
+    Found 11x11-bit multiplier for signal <s2_horiz_conv_array_1$mult0000> created at line 64.
+    Found 11x11-bit multiplier for signal <s2_horiz_conv_array_2$mult0000> created at line 64.
+    Found 11x11-bit multiplier for signal <s2_horiz_conv_array_3$mult0000> created at line 64.
+    Found 11x11-bit multiplier for signal <s2_horiz_conv_array_4$mult0000> created at line 64.
+    Found 1-bit register for signal <s2_horiz_enable>.
+    Found 24-bit register for signal <s3_horiz_conv>.
+    Found 22-bit adder for signal <s3_horiz_conv$add0000> created at line 76.
+    Found 22-bit adder for signal <s3_horiz_conv$addsub0000> created at line 76.
+    Found 22-bit adder for signal <s3_horiz_conv$addsub0001> created at line 76.
+    Found 22-bit adder for signal <s3_horiz_conv$addsub0002> created at line 76.
+    Summary:
+	inferred 192 D-type flip-flop(s).
+	inferred   8 Adder/Subtractor(s).
+	inferred   5 Multiplier(s).
+Unit <HorizontalConvolution> synthesized.
+
+
+Synthesizing Unit <ROM_PAIRS>.
+    Related source file is "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/ROM_PAIRS.vhd".
+    Found 512x6-bit ROM for signal <pointIndex1$rom0000>.
+    Found 512x12-bit ROM for signal <pointIndex1$rom0001>.
+    Found 512x12-bit ROM for signal <pointIndex1$rom0002>.
+    Found 512x12-bit ROM for signal <pointIndex1$rom0003>.
+    Found 512x12-bit ROM for signal <pointIndex1$rom0004>.
+    Found 512x12-bit ROM for signal <pointIndex1$rom0005>.
+    Found 512x12-bit ROM for signal <pointIndex1$rom0006>.
+    Found 512x12-bit ROM for signal <pointIndex1$rom0007>.
+    Found 512x12-bit ROM for signal <pointIndex1$rom0008>.
+    Found 512x12-bit ROM for signal <pointIndex1$rom0009>.
+    Found 512x12-bit ROM for signal <pointIndex1$rom0010>.
+    Found 512x12-bit ROM for signal <pointIndex1$rom0011>.
+    Found 512x12-bit ROM for signal <pointIndex1$rom0012>.
+    Found 512x12-bit ROM for signal <pointIndex1$rom0013>.
+    Found 512x12-bit ROM for signal <pointIndex1$rom0014>.
+    Found 512x12-bit ROM for signal <pointIndex1$rom0015>.
+    Found 90-bit register for signal <points1<15:1>>.
+    Found 90-bit register for signal <points2<15:1>>.
+    Found 9-bit adder for signal <pointIndex1$add0000> created at line 53.
+    Found 9-bit adder for signal <pointIndex1$add0001> created at line 53.
+    Found 9-bit adder for signal <pointIndex1$add0002> created at line 53.
+    Found 9-bit adder for signal <pointIndex1$add0003> created at line 53.
+    Found 9-bit adder for signal <pointIndex1$add0004> created at line 53.
+    Found 9-bit adder for signal <pointIndex1$add0005> created at line 53.
+    Found 9-bit adder for signal <pointIndex1$add0006> created at line 53.
+    Found 9-bit adder for signal <pointIndex1$add0007> created at line 53.
+    Found 9-bit adder for signal <pointIndex1$add0008> created at line 53.
+    Found 9-bit adder for signal <pointIndex1$add0009> created at line 53.
+    Found 9-bit adder for signal <pointIndex1$add0010> created at line 53.
+    Found 9-bit adder for signal <pointIndex1$add0011> created at line 53.
+    Found 9-bit adder for signal <pointIndex1$add0012> created at line 53.
+    Found 9-bit adder for signal <pointIndex1$add0013> created at line 53.
+    Found 9-bit adder for signal <pointIndex1$add0014> created at line 53.
+    Summary:
+	inferred  16 ROM(s).
+	inferred 192 D-type flip-flop(s).
+	inferred  15 Adder/Subtractor(s).
+Unit <ROM_PAIRS> synthesized.
+
+
+Synthesizing Unit <PointBuffer>.
+    Related source file is "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/PointBuffer.vhd".
+    Found 1-bit register for signal <enableOut>.
+    Found 6-bit up counter for signal <counter>.
+    Found 602-bit register for signal <sPointSet>.
+INFO:Xst:738 - HDL ADVISOR - 602 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+    Summary:
+	inferred   1 Counter(s).
+	inferred 603 D-type flip-flop(s).
+Unit <PointBuffer> synthesized.
+
+
+Synthesizing Unit <DescriptorMaker>.
+    Related source file is "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/DescriptorMaker.vhd".
+    Found 1-bit register for signal <enableOut>.
+    Found 14-bit 43-to-1 multiplexer for signal <$varindex0000> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <$varindex0001> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <$varindex0002> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <$varindex0003> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <$varindex0004> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <$varindex0005> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <$varindex0006> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <$varindex0007> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <$varindex0008> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <$varindex0009> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <$varindex0010> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <$varindex0011> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <$varindex0012> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <$varindex0013> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <$varindex0014> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <$varindex0015> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <$varindex0016> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <$varindex0017> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <$varindex0018> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <$varindex0019> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <$varindex0020> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <$varindex0021> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <$varindex0022> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <$varindex0023> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <$varindex0024> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <$varindex0025> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <$varindex0026> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <$varindex0027> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <$varindex0028> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <$varindex0029> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <$varindex0030> created at line 63.
+    Found 14-bit 43-to-1 multiplexer for signal <$varindex0031> created at line 63.
+    Found 5-bit up counter for signal <counter>.
+    Found 1-bit register for signal <innerEnable>.
+    Found 512-bit register for signal <sDescriptor>.
+    Found 14-bit comparator greater for signal <sDescriptor_479$cmp_gt0000> created at line 63.
+    Found 14-bit comparator greater for signal <sDescriptor_484$cmp_gt0000> created at line 63.
+    Found 14-bit comparator greater for signal <sDescriptor_485$cmp_gt0000> created at line 63.
+    Found 14-bit comparator greater for signal <sDescriptor_486$cmp_gt0000> created at line 63.
+    Found 14-bit comparator greater for signal <sDescriptor_487$cmp_gt0000> created at line 63.
+    Found 14-bit comparator greater for signal <sDescriptor_488$cmp_gt0000> created at line 63.
+    Found 14-bit comparator greater for signal <sDescriptor_489$cmp_gt0000> created at line 63.
+    Found 14-bit comparator greater for signal <sDescriptor_490$cmp_gt0000> created at line 63.
+    Found 14-bit comparator greater for signal <sDescriptor_491$cmp_gt0000> created at line 63.
+    Found 14-bit comparator greater for signal <sDescriptor_492$cmp_gt0000> created at line 63.
+    Found 14-bit comparator greater for signal <sDescriptor_493$cmp_gt0000> created at line 63.
+    Found 14-bit comparator greater for signal <sDescriptor_494$cmp_gt0000> created at line 63.
+    Found 14-bit comparator greater for signal <sDescriptor_496$cmp_gt0000> created at line 63.
+    Found 14-bit comparator greater for signal <sDescriptor_497$cmp_gt0000> created at line 63.
+    Found 14-bit comparator greater for signal <sDescriptor_498$cmp_gt0000> created at line 63.
+    Found 14-bit comparator greater for signal <sDescriptor_499$cmp_gt0000> created at line 63.
+    Found 602-bit register for signal <sPointSet>.
+INFO:Xst:738 - HDL ADVISOR - 512 flip-flops were inferred for signal <sDescriptor>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+INFO:Xst:738 - HDL ADVISOR - 602 flip-flops were inferred for signal <sPointSet>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+    Summary:
+	inferred   1 Counter(s).
+	inferred 1116 D-type flip-flop(s).
+	inferred  16 Comparator(s).
+	inferred 448 Multiplexer(s).
+Unit <DescriptorMaker> synthesized.
+
+
+Synthesizing Unit <GaussianFilter>.
+    Related source file is "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/GaussianFilter.vhd".
+Unit <GaussianFilter> synthesized.
+
+
+Synthesizing Unit <TopDescriptorMaker>.
+    Related source file is "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/TopDescriptorMaker.vhd".
+    Found 5-bit up counter for signal <addr>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <TopDescriptorMaker> synthesized.
+
+
+Synthesizing Unit <RetinaDescriptorGenerator>.
+    Related source file is "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/RetinaDescriptorGenerator.vhd".
+Unit <RetinaDescriptorGenerator> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 20
+ 21x55-bit ROM                                         : 1
+ 21x7-bit ROM                                          : 1
+ 32x8-bit ROM                                          : 1
+ 4x32-bit ROM                                          : 1
+ 512x12-bit ROM                                        : 15
+ 512x6-bit ROM                                         : 1
+# Multipliers                                          : 16
+ 10x10-bit multiplier                                  : 1
+ 11x11-bit multiplier                                  : 6
+ 11x9-bit multiplier                                   : 6
+ 2x10-bit multiplier                                   : 1
+ 6x3-bit multiplier                                    : 1
+ 6x6-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 44
+ 10-bit adder                                          : 4
+ 10-bit adder carry out                                : 1
+ 18-bit adder                                          : 4
+ 22-bit adder                                          : 4
+ 3-bit subtractor                                      : 1
+ 32-bit adder                                          : 4
+ 32-bit addsub                                         : 1
+ 34-bit adder                                          : 1
+ 4-bit adder                                           : 2
+ 6-bit adder                                           : 2
+ 8-bit adder                                           : 4
+ 9-bit adder                                           : 16
+# Counters                                             : 7
+ 3-bit up counter                                      : 2
+ 4-bit up counter                                      : 1
+ 5-bit up counter                                      : 2
+ 6-bit up counter                                      : 2
+# Accumulators                                         : 1
+ 31-bit up accumulator                                 : 1
+# Registers                                            : 714
+ 1-bit register                                        : 544
+ 10-bit register                                       : 11
+ 11-bit register                                       : 5
+ 14-bit register                                       : 86
+ 18-bit register                                       : 5
+ 2-bit register                                        : 1
+ 20-bit register                                       : 1
+ 22-bit register                                       : 5
+ 24-bit register                                       : 1
+ 3-bit register                                        : 1
+ 32-bit register                                       : 4
+ 4-bit register                                        : 2
+ 55-bit register                                       : 1
+ 6-bit register                                        : 33
+ 8-bit register                                        : 9
+ 9-bit register                                        : 5
+# Comparators                                          : 16
+ 14-bit comparator greater                             : 16
+# Multiplexers                                         : 44
+ 1-bit 6-to-1 multiplexer                              : 12
+ 14-bit 43-to-1 multiplexer                            : 32
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_3> for best encoding.
+Optimizing FSM <imagePatch_Reader/s_readingMemState/FSM> on signal <s_readingMemState[1:4]> with one-hot encoding.
+----------------------
+ State    | Encoding
+----------------------
+ init     | 0001
+ reading  | 0010
+ ready    | 0100
+ end_read | 1000
+----------------------
+Analyzing FSM <FSM_2> for best encoding.
+Optimizing FSM <imagePatch_Reader/s_consumerState/FSM> on signal <s_consumerState[1:2]> with gray encoding.
+---------------------
+ State   | Encoding
+---------------------
+ init    | 00
+ req     | 01
+ waiting | 11
+ ready   | 10
+---------------------
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <address_Generator/s_consumerState/FSM> on signal <s_consumerState[1:2]> with gray encoding.
+---------------------
+ State   | Encoding
+---------------------
+ init    | 00
+ req     | 01
+ waiting | 11
+ ready   | 10
+---------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <keypoint_Reader/s_readingMemState/FSM> on signal <s_readingMemState[1:3]> with one-hot encoding.
+---------------------
+ State   | Encoding
+---------------------
+ init    | 001
+ reading | 010
+ ready   | 100
+---------------------
+INFO:Xst:2261 - The FF/Latch <s_producerState_0> in Unit <keypoint_Reader> is equivalent to the following FF/Latch, which will be removed : <busy> 
+INFO:Xst:2261 - The FF/Latch <s_producerState_0> in Unit <address_Generator> is equivalent to the following FF/Latch, which will be removed : <busy_out> 
+INFO:Xst:2261 - The FF/Latch <s1_vert_conv_array_0_8> in Unit <vert_conv> is equivalent to the following 4 FFs/Latches, which will be removed : <s1_vert_conv_array_1_8> <s1_vert_conv_array_4_8> <s1_vert_conv_array_2_8> <s1_vert_conv_array_3_8> 
+INFO:Xst:2261 - The FF/Latch <s3_vert_conv_18> in Unit <vert_conv> is equivalent to the following FF/Latch, which will be removed : <s3_vert_conv_19> 
+INFO:Xst:2261 - The FF/Latch <s3_horiz_conv_22> in Unit <horiz_conv> is equivalent to the following FF/Latch, which will be removed : <s3_horiz_conv_23> 
+INFO:Xst:2261 - The FF/Latch <s1_horiz_conv_array_0_10> in Unit <horiz_conv> is equivalent to the following 4 FFs/Latches, which will be removed : <s1_horiz_conv_array_1_10> <s1_horiz_conv_array_2_10> <s1_horiz_conv_array_3_10> <s1_horiz_conv_array_4_10> 
+WARNING:Xst:1426 - The value init of the FF/Latch enableAux hinder the constant cleaning in the block keypoint_Reader.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1293 - FF/Latch <sPointSet_23_12> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_23_13> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_24_12> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_24_13> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_18_12> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_18_13> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_19_12> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_19_13> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_30_12> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_30_13> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_25_12> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_25_13> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_31_12> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_31_13> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_26_12> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_26_13> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_32_12> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_32_13> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_28_12> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_28_13> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_27_12> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_10_12> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_10_13> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_11_12> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_11_13> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_14_12> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_14_13> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_12_12> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_12_13> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_13_12> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_13_13> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_20_12> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_20_13> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_15_12> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_15_13> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_17_12> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_17_13> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_21_12> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_21_13> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_16_12> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_16_13> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_22_12> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_22_13> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_38_13> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_0_12> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_0_13> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_1_12> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_1_13> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_2_12> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_2_13> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_3_12> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_3_13> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_4_12> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_4_13> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_5_12> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_5_13> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_6_12> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_6_13> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_7_12> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_7_13> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_8_12> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_8_13> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_9_12> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_9_13> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_27_13> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_33_12> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_33_13> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_34_12> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_34_13> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_29_12> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_29_13> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_41_12> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_41_13> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_40_12> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_40_13> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_35_12> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_35_13> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_36_12> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_36_13> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_42_12> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_42_13> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_39_12> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_39_13> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_37_12> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_37_13> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_38_12> has a constant value of 0 in block <descripMakerX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s1_vert_conv_array_0_8> (without init value) has a constant value of 0 in block <vert_conv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s3_vert_conv_18> (without init value) has a constant value of 0 in block <vert_conv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <intermediate_registers_0_8> has a constant value of 0 in block <Intermediate_RegsConv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <intermediate_registers_0_9> has a constant value of 0 in block <Intermediate_RegsConv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_0_13> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <sPointSet_0_12> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s3_horiz_conv_22> (without init value) has a constant value of 0 in block <horiz_conv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s1_horiz_conv_array_0_10> (without init value) has a constant value of 0 in block <horiz_conv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s1_horiz_conv_array_0_9> (without init value) has a constant value of 0 in block <horiz_conv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <s1_horiz_conv_array_0_8> (without init value) has a constant value of 0 in block <horiz_conv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_1_13> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_1_12> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <intermediate_registers_1_9> has a constant value of 0 in block <Intermediate_RegsConv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <intermediate_registers_1_8> has a constant value of 0 in block <Intermediate_RegsConv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_2_13> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_2_12> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <intermediate_registers_2_9> has a constant value of 0 in block <Intermediate_RegsConv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <intermediate_registers_2_8> has a constant value of 0 in block <Intermediate_RegsConv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_3_13> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_3_12> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <intermediate_registers_3_9> has a constant value of 0 in block <Intermediate_RegsConv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <intermediate_registers_3_8> has a constant value of 0 in block <Intermediate_RegsConv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_4_13> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_4_12> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <intermediate_registers_4_9> has a constant value of 0 in block <Intermediate_RegsConv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <intermediate_registers_4_8> has a constant value of 0 in block <Intermediate_RegsConv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_5_13> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_5_12> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <intermediate_registers_5_9> has a constant value of 0 in block <Intermediate_RegsConv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <intermediate_registers_5_8> has a constant value of 0 in block <Intermediate_RegsConv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <intermediate_registers_6_9> has a constant value of 0 in block <Intermediate_RegsConv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <intermediate_registers_6_8> has a constant value of 0 in block <Intermediate_RegsConv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_6_12> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_6_13> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <intermediate_registers_7_9> has a constant value of 0 in block <Intermediate_RegsConv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <intermediate_registers_7_8> has a constant value of 0 in block <Intermediate_RegsConv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_7_12> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_7_13> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_8_13> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_8_12> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <intermediate_registers_8_8> has a constant value of 0 in block <Intermediate_RegsConv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <intermediate_registers_8_9> has a constant value of 0 in block <Intermediate_RegsConv>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_9_12> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_9_13> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_10_12> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_10_13> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_11_12> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_11_13> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_12_12> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_12_13> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_13_12> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_13_13> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_14_12> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_14_13> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_15_12> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_15_13> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_16_12> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_16_13> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_17_12> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_17_13> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_18_12> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_18_13> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_19_12> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_19_13> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_20_12> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_20_13> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_21_12> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_21_13> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_22_13> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_22_12> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_23_12> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_23_13> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_24_12> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_24_13> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_25_12> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_25_13> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_26_12> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_26_13> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_27_12> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_27_13> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_28_12> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_28_13> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_29_13> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_29_12> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_30_12> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_30_13> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_31_12> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_31_13> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_32_12> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_32_13> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_33_12> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_33_13> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_34_13> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_34_12> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_35_13> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_35_12> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_36_13> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_36_12> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_37_13> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_37_12> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_38_13> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_38_12> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_39_13> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_39_12> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_40_12> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_40_13> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_41_12> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_41_13> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_42_12> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_42_13> has a constant value of 0 in block <pointBufferX>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <s3_vert_conv_0> of sequential type is unconnected in block <vert_conv>.
+WARNING:Xst:2677 - Node <s3_vert_conv_1> of sequential type is unconnected in block <vert_conv>.
+WARNING:Xst:2677 - Node <s3_vert_conv_2> of sequential type is unconnected in block <vert_conv>.
+WARNING:Xst:2677 - Node <s3_vert_conv_3> of sequential type is unconnected in block <vert_conv>.
+WARNING:Xst:2677 - Node <s3_vert_conv_4> of sequential type is unconnected in block <vert_conv>.
+WARNING:Xst:2677 - Node <s3_vert_conv_5> of sequential type is unconnected in block <vert_conv>.
+WARNING:Xst:2677 - Node <s3_vert_conv_6> of sequential type is unconnected in block <vert_conv>.
+WARNING:Xst:2677 - Node <s3_vert_conv_7> of sequential type is unconnected in block <vert_conv>.
+WARNING:Xst:2677 - Node <s3_vert_conv_8> of sequential type is unconnected in block <vert_conv>.
+WARNING:Xst:2677 - Node <s3_vert_conv_9> of sequential type is unconnected in block <vert_conv>.
+WARNING:Xst:2677 - Node <s3_horiz_conv_0> of sequential type is unconnected in block <horiz_conv>.
+WARNING:Xst:2677 - Node <s3_horiz_conv_1> of sequential type is unconnected in block <horiz_conv>.
+WARNING:Xst:2677 - Node <s3_horiz_conv_2> of sequential type is unconnected in block <horiz_conv>.
+WARNING:Xst:2677 - Node <s3_horiz_conv_3> of sequential type is unconnected in block <horiz_conv>.
+WARNING:Xst:2677 - Node <s3_horiz_conv_4> of sequential type is unconnected in block <horiz_conv>.
+WARNING:Xst:2677 - Node <s3_horiz_conv_5> of sequential type is unconnected in block <horiz_conv>.
+WARNING:Xst:2677 - Node <s3_horiz_conv_6> of sequential type is unconnected in block <horiz_conv>.
+WARNING:Xst:2677 - Node <s3_horiz_conv_7> of sequential type is unconnected in block <horiz_conv>.
+WARNING:Xst:2677 - Node <s3_horiz_conv_8> of sequential type is unconnected in block <horiz_conv>.
+WARNING:Xst:2677 - Node <s3_horiz_conv_9> of sequential type is unconnected in block <horiz_conv>.
+WARNING:Xst:2404 -  FFs/Latches <s3_vert_conv<19:18>> (without init value) have a constant value of 0 in block <VerticalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s1_vert_conv_array_1<8:8>> (without init value) have a constant value of 0 in block <VerticalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s1_vert_conv_array_3<8:8>> (without init value) have a constant value of 0 in block <VerticalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s1_vert_conv_array_2<8:8>> (without init value) have a constant value of 0 in block <VerticalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s1_vert_conv_array_4<8:8>> (without init value) have a constant value of 0 in block <VerticalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s1_vert_conv_array_0<8:8>> (without init value) have a constant value of 0 in block <VerticalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s3_horiz_conv<23:22>> (without init value) have a constant value of 0 in block <HorizontalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s1_horiz_conv_array_1<10:10>> (without init value) have a constant value of 0 in block <HorizontalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s1_horiz_conv_array_2<10:10>> (without init value) have a constant value of 0 in block <HorizontalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s1_horiz_conv_array_3<10:10>> (without init value) have a constant value of 0 in block <HorizontalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s1_horiz_conv_array_4<10:10>> (without init value) have a constant value of 0 in block <HorizontalConvolution>.
+WARNING:Xst:2404 -  FFs/Latches <s1_horiz_conv_array_0<10:10>> (without init value) have a constant value of 0 in block <HorizontalConvolution>.
+
+Synthesizing (advanced) Unit <AddressGenerator>.
+	Multiplier <Mmult_point_addr_mult0004> in block <AddressGenerator> and adder/subtractor <Madd_point_addr_add0000> in block <AddressGenerator> are combined into a MAC<Maddsub_point_addr_mult0004>.
+Unit <AddressGenerator> synthesized (advanced).
+
+Synthesizing (advanced) Unit <GaussianFilter>.
+	Multiplier <horiz_conv/Mmult_s2_horiz_conv_array_4_mult0000> in block <GaussianFilter> and adder/subtractor <horiz_conv/Madd_s3_horiz_conv_add0000> in block <GaussianFilter> are combined into a MAC<horiz_conv/Maddsub_s2_horiz_conv_array_4_mult0000>.
+	The following registers are also absorbed by the MAC: <horiz_conv/s1_horiz_conv_array_4> in block <GaussianFilter>, <gauss_coe/data_out> in block <GaussianFilter>, <horiz_conv/s2_horiz_conv_array_4> in block <GaussianFilter>, <horiz_conv/s3_horiz_conv> in block <GaussianFilter>.
+	Multiplier <horiz_conv/Mmult_s2_horiz_conv_array_2_mult0000> in block <GaussianFilter> and adder/subtractor <horiz_conv/Madd_s3_horiz_conv_addsub0001> in block <GaussianFilter> are combined into a MAC<horiz_conv/Maddsub_s2_horiz_conv_array_2_mult0000>.
+	The following registers are also absorbed by the MAC: <horiz_conv/s1_horiz_conv_array_2> in block <GaussianFilter>, <gauss_coe/data_out> in block <GaussianFilter>, <horiz_conv/s2_horiz_conv_array_2> in block <GaussianFilter>.
+	Multiplier <horiz_conv/Mmult_s2_horiz_conv_array_1_mult0000> in block <GaussianFilter> and adder/subtractor <horiz_conv/Madd_s3_horiz_conv_addsub0000> in block <GaussianFilter> are combined into a MAC<horiz_conv/Maddsub_s2_horiz_conv_array_1_mult0000>.
+	The following registers are also absorbed by the MAC: <horiz_conv/s1_horiz_conv_array_1> in block <GaussianFilter>, <gauss_coe/data_out> in block <GaussianFilter>, <horiz_conv/s2_horiz_conv_array_1> in block <GaussianFilter>.
+	Multiplier <vert_conv/Mmult_s2_vert_conv_array_4_mult0001> in block <GaussianFilter> and adder/subtractor <vert_conv/Madd_s3_vert_conv_add0000> in block <GaussianFilter> are combined into a MAC<vert_conv/Maddsub_s2_vert_conv_array_4_mult0001>.
+	The following registers are also absorbed by the MAC: <gauss_coe/data_out> in block <GaussianFilter>, <vert_conv/s1_vert_conv_array_4> in block <GaussianFilter>, <vert_conv/s2_vert_conv_array_4> in block <GaussianFilter>, <vert_conv/s3_vert_conv> in block <GaussianFilter>.
+	Multiplier <vert_conv/Mmult_s2_vert_conv_array_2_mult0001> in block <GaussianFilter> and adder/subtractor <vert_conv/Madd_s3_vert_conv_addsub0001> in block <GaussianFilter> are combined into a MAC<vert_conv/Maddsub_s2_vert_conv_array_2_mult0001>.
+	The following registers are also absorbed by the MAC: <gauss_coe/data_out> in block <GaussianFilter>, <vert_conv/s1_vert_conv_array_2> in block <GaussianFilter>, <vert_conv/s2_vert_conv_array_2> in block <GaussianFilter>.
+Unit <GaussianFilter> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ROM_PAIRS>.
+INFO:Xst:3044 - The ROM <Mrom_pointIndex1_rom0002> will be implemented as a read-only BLOCK RAM, absorbing the register: <pointIndex1_rom0002>.
+INFO:Xst:3044 - The ROM <Mrom_pointIndex1_rom0001> will be implemented as a read-only BLOCK RAM, absorbing the register: <pointIndex1_rom0001>.
+INFO:Xst:3044 - The ROM <Mrom_pointIndex1_rom0003> will be implemented as a read-only BLOCK RAM, absorbing the register: <pointIndex1_rom0003>.
+INFO:Xst:3044 - The ROM <Mrom_pointIndex1_rom0005> will be implemented as a read-only BLOCK RAM, absorbing the register: <pointIndex1_rom0005>.
+INFO:Xst:3044 - The ROM <Mrom_pointIndex1_rom0004> will be implemented as a read-only BLOCK RAM, absorbing the register: <pointIndex1_rom0004>.
+INFO:Xst:3044 - The ROM <Mrom_pointIndex1_rom0006> will be implemented as a read-only BLOCK RAM, absorbing the register: <pointIndex1_rom0006>.
+INFO:Xst:3044 - The ROM <Mrom_pointIndex1_rom0007> will be implemented as a read-only BLOCK RAM, absorbing the register: <pointIndex1_rom0007>.
+INFO:Xst:3044 - The ROM <Mrom_pointIndex1_rom0008> will be implemented as a read-only BLOCK RAM, absorbing the register: <pointIndex1_rom0008>.
+INFO:Xst:3044 - The ROM <Mrom_pointIndex1_rom0009> will be implemented as a read-only BLOCK RAM, absorbing the register: <pointIndex1_rom0009>.
+INFO:Xst:3044 - The ROM <Mrom_pointIndex1_rom0010> will be implemented as a read-only BLOCK RAM, absorbing the register: <pointIndex1_rom0010>.
+INFO:Xst:3044 - The ROM <Mrom_pointIndex1_rom0012> will be implemented as a read-only BLOCK RAM, absorbing the register: <pointIndex1_rom0012>.
+INFO:Xst:3044 - The ROM <Mrom_pointIndex1_rom0011> will be implemented as a read-only BLOCK RAM, absorbing the register: <pointIndex1_rom0011>.
+INFO:Xst:3044 - The ROM <Mrom_pointIndex1_rom0013> will be implemented as a read-only BLOCK RAM, absorbing the register: <pointIndex1_rom0013>.
+INFO:Xst:3044 - The ROM <Mrom_pointIndex1_rom0015> will be implemented as a read-only BLOCK RAM, absorbing the register: <pointIndex1_rom0015>.
+INFO:Xst:3044 - The ROM <Mrom_pointIndex1_rom0014> will be implemented as a read-only BLOCK RAM, absorbing the register: <pointIndex1_rom0014>.
+INFO:Xst:3044 - The ROM <Mrom_pointIndex1_rom0000> will be implemented as a read-only BLOCK RAM, absorbing the register: <pointIndex1_rom0000>.
+INFO:Xst:3225 - The RAM <Mrom_pointIndex1_rom0002> will be implemented as BLOCK RAM
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 12-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to internal node          |          |
+    |     diA            | connected to internal node          |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3225 - The RAM <Mrom_pointIndex1_rom0001> will be implemented as BLOCK RAM
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 12-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to internal node          |          |
+    |     diA            | connected to internal node          |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3225 - The RAM <Mrom_pointIndex1_rom0003> will be implemented as BLOCK RAM
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 12-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to internal node          |          |
+    |     diA            | connected to internal node          |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3225 - The RAM <Mrom_pointIndex1_rom0005> will be implemented as BLOCK RAM
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 12-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to internal node          |          |
+    |     diA            | connected to internal node          |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3225 - The RAM <Mrom_pointIndex1_rom0004> will be implemented as BLOCK RAM
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 12-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to internal node          |          |
+    |     diA            | connected to internal node          |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3225 - The RAM <Mrom_pointIndex1_rom0006> will be implemented as BLOCK RAM
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 12-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to internal node          |          |
+    |     diA            | connected to internal node          |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3225 - The RAM <Mrom_pointIndex1_rom0007> will be implemented as BLOCK RAM
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 12-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to internal node          |          |
+    |     diA            | connected to internal node          |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3225 - The RAM <Mrom_pointIndex1_rom0008> will be implemented as BLOCK RAM
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 12-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to internal node          |          |
+    |     diA            | connected to internal node          |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3225 - The RAM <Mrom_pointIndex1_rom0009> will be implemented as BLOCK RAM
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 12-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to internal node          |          |
+    |     diA            | connected to internal node          |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3225 - The RAM <Mrom_pointIndex1_rom0010> will be implemented as BLOCK RAM
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 12-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to internal node          |          |
+    |     diA            | connected to internal node          |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3225 - The RAM <Mrom_pointIndex1_rom0012> will be implemented as BLOCK RAM
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 12-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to internal node          |          |
+    |     diA            | connected to internal node          |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3225 - The RAM <Mrom_pointIndex1_rom0011> will be implemented as BLOCK RAM
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 12-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to internal node          |          |
+    |     diA            | connected to internal node          |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3225 - The RAM <Mrom_pointIndex1_rom0013> will be implemented as BLOCK RAM
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 12-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to internal node          |          |
+    |     diA            | connected to internal node          |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3225 - The RAM <Mrom_pointIndex1_rom0015> will be implemented as BLOCK RAM
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 12-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to internal node          |          |
+    |     diA            | connected to internal node          |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3225 - The RAM <Mrom_pointIndex1_rom0014> will be implemented as BLOCK RAM
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 12-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to internal node          |          |
+    |     diA            | connected to internal node          |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3225 - The RAM <Mrom_pointIndex1_rom0000> will be implemented as BLOCK RAM
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 6-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to internal node          |          |
+    |     diA            | connected to internal node          |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <ROM_PAIRS> synthesized (advanced).
+
+Synthesizing (advanced) Unit <RetinaDescriptorGenerator>.
+	Multiplier <imagePatch_Reader/Mmult_addrKernel_mult0001> in block <RetinaDescriptorGenerator> and adder/subtractor <imagePatch_Reader/Madd_addrKernel> in block <RetinaDescriptorGenerator> are combined into a MAC<imagePatch_Reader/Maddsub_addrKernel_mult0001>.
+	The following registers are also absorbed by the MAC: <address_Generator/kptScaleOut> in block <RetinaDescriptorGenerator>, <imagePatch_Reader/sAddrKernel> in block <RetinaDescriptorGenerator>.
+	Multiplier <address_Generator/Mmult_coordArray_mult0000> in block <RetinaDescriptorGenerator> and adder/subtractor <address_Generator/Madd_coordArray_add0000> in block <RetinaDescriptorGenerator> are combined into a MAC<address_Generator/Maddsub_coordArray_mult0000>.
+	The following registers are also absorbed by the MAC: <keypoint_Reader/kptScale> in block <RetinaDescriptorGenerator>.
+	Multiplier <gaussian_Filter/vert_conv/Mmult_s2_vert_conv_array_1_mult0001> in block <RetinaDescriptorGenerator> and adder/subtractor <gaussian_Filter/vert_conv/Madd_s3_vert_conv_addsub0000> in block <RetinaDescriptorGenerator> are combined into a MAC<gaussian_Filter/vert_conv/Maddsub_s2_vert_conv_array_1_mult0001>.
+	The following registers are also absorbed by the MAC: <gaussian_Filter/gauss_coe/data_out> in block <RetinaDescriptorGenerator>, <gaussian_Filter/vert_conv/s1_vert_conv_array_1> in block <RetinaDescriptorGenerator>, <gaussian_Filter/vert_conv/s2_vert_conv_array_1> in block <RetinaDescriptorGenerator>.
+	Found pipelined multiplier on signal <gaussian_Filter/horiz_conv/s2_horiz_conv_array_3_mult0000>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <gaussian_Filter/horiz_conv/s1_horiz_conv_array<3>>.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <gaussian_Filter/gaussian_coefficients<>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <gaussian_Filter/vert_conv/s2_vert_conv_array_3_mult0001>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <gaussian_Filter/gaussian_coefficients<>.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <gaussian_Filter/vert_conv/s1_vert_conv_array<3>>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <gaussian_Filter/vert_conv/s2_vert_conv_array_0_mult0001>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <gaussian_Filter/gaussian_coefficients<>.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <gaussian_Filter/vert_conv/s1_vert_conv_array<0>>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <address_Generator/point_addr_mult0003>:
+		- 1 pipeline level(s) found in a register on signal <skptOctave>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <address_Generator/point_addr_mult0002>:
+		- 1 pipeline level(s) found in a register on signal <skptCoordY>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <gaussian_Filter/horiz_conv/s2_horiz_conv_array_0_mult0000>:
+		- 1 pipeline level(s) found in a register connected to the multiplier macro output.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <gaussian_Filter/horiz_conv/s1_horiz_conv_array<0>>.
+		Pushing register(s) into the multiplier macro.
+
+		- 1 pipeline level(s) found in a register on signal <gaussian_Filter/gaussian_coefficients<>.
+		Pushing register(s) into the multiplier macro.
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier gaussian_Filter/horiz_conv/Mmult_s2_horiz_conv_array_3_mult0000 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier gaussian_Filter/vert_conv/Mmult_s2_vert_conv_array_3_mult0001 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier gaussian_Filter/vert_conv/Mmult_s2_vert_conv_array_0_mult0001 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier address_Generator/Mmult_point_addr_mult0003 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier address_Generator/Mmult_point_addr_mult0002 by adding 2 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier gaussian_Filter/horiz_conv/Mmult_s2_horiz_conv_array_0_mult0000 by adding 1 register level(s).
+Unit <RetinaDescriptorGenerator> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 16
+ 512x12-bit single-port block RAM                      : 15
+ 512x6-bit single-port block RAM                       : 1
+# ROMs                                                 : 4
+ 21x55-bit ROM                                         : 1
+ 21x7-bit ROM                                          : 1
+ 32x8-bit ROM                                          : 1
+ 4x32-bit ROM                                          : 1
+# MACs                                                 : 9
+ 11x11-to-22-bit MAC                                   : 3
+ 11x9-to-18-bit MAC                                    : 3
+ 11x9-to-32-bit MAC                                    : 1
+ 3x6-to-9-bit MAC                                      : 1
+ 6x6-to-6-bit MAC                                      : 1
+# Multipliers                                          : 7
+ 10x10-bit registered multiplier                       : 1
+ 11x11-bit multiplier                                  : 1
+ 11x11-bit registered multiplier                       : 2
+ 11x9-bit registered multiplier                        : 2
+ 2x10-bit registered multiplier                        : 1
+# Adders/Subtractors                                   : 35
+ 10-bit adder                                          : 4
+ 10-bit adder carry out                                : 1
+ 18-bit adder                                          : 1
+ 22-bit adder                                          : 1
+ 3-bit subtractor                                      : 1
+ 32-bit adder                                          : 4
+ 32-bit addsub                                         : 1
+ 4-bit adder                                           : 2
+ 6-bit adder                                           : 1
+ 8-bit adder                                           : 4
+ 9-bit adder                                           : 15
+# Counters                                             : 7
+ 3-bit up counter                                      : 2
+ 4-bit up counter                                      : 1
+ 5-bit up counter                                      : 2
+ 6-bit up counter                                      : 2
+# Accumulators                                         : 1
+ 31-bit up accumulator                                 : 1
+# Registers                                            : 2080
+ Flip-Flops                                            : 2080
+# Comparators                                          : 16
+ 14-bit comparator greater                             : 16
+# Multiplexers                                         : 44
+ 1-bit 6-to-1 multiplexer                              : 12
+ 14-bit 43-to-1 multiplexer                            : 32
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1426 - The value init of the FF/Latch keypoint_Reader/enableAux hinder the constant cleaning in the block RetinaDescriptorGenerator.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1293 - FF/Latch <gaussian_Filter/Intermediate_RegsConv/intermediate_registers_0_8> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gaussian_Filter/Intermediate_RegsConv/intermediate_registers_0_9> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gaussian_Filter/Intermediate_RegsConv/intermediate_registers_1_8> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gaussian_Filter/Intermediate_RegsConv/intermediate_registers_1_9> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gaussian_Filter/Intermediate_RegsConv/intermediate_registers_2_8> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gaussian_Filter/Intermediate_RegsConv/intermediate_registers_2_9> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gaussian_Filter/Intermediate_RegsConv/intermediate_registers_3_8> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gaussian_Filter/Intermediate_RegsConv/intermediate_registers_3_9> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gaussian_Filter/Intermediate_RegsConv/intermediate_registers_4_9> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gaussian_Filter/Intermediate_RegsConv/intermediate_registers_4_8> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gaussian_Filter/Intermediate_RegsConv/intermediate_registers_5_8> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gaussian_Filter/Intermediate_RegsConv/intermediate_registers_5_9> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gaussian_Filter/Intermediate_RegsConv/intermediate_registers_6_8> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gaussian_Filter/Intermediate_RegsConv/intermediate_registers_6_9> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gaussian_Filter/Intermediate_RegsConv/intermediate_registers_7_8> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gaussian_Filter/Intermediate_RegsConv/intermediate_registers_7_9> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gaussian_Filter/Intermediate_RegsConv/intermediate_registers_8_8> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <gaussian_Filter/Intermediate_RegsConv/intermediate_registers_8_9> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <keypoint_Reader/s_producerState_0> in Unit <RetinaDescriptorGenerator> is equivalent to the following FF/Latch, which will be removed : <keypoint_Reader/busy> 
+INFO:Xst:2261 - The FF/Latch <address_Generator/s_producerState_0> in Unit <RetinaDescriptorGenerator> is equivalent to the following FF/Latch, which will be removed : <address_Generator/busy_out> 
+INFO:Xst:2261 - The FF/Latch <sPointSet_0_12> in Unit <PointBuffer> is equivalent to the following FF/Latch, which will be removed : <sPointSet_0_13> 
+WARNING:Xst:1293 - FF/Latch <sPointSet_0_12> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_1_12> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_1_13> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_2_12> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_2_13> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_3_12> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_3_13> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_4_12> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_4_13> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_5_12> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_5_13> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_6_13> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_6_12> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_7_12> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_7_13> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_8_12> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_8_13> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_9_12> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_9_13> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_10_12> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_10_13> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_11_13> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_11_12> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_12_12> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_12_13> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_13_12> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_13_13> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_14_12> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_14_13> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_15_12> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_15_13> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_16_13> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_16_12> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_17_12> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_17_13> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_18_12> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_18_13> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_19_12> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_19_13> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_20_12> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_20_13> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_21_13> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_21_12> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_22_12> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_22_13> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_23_12> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_23_13> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_24_12> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_24_13> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_25_12> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_25_13> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_26_12> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_26_13> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_27_13> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_27_12> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_28_12> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_28_13> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_29_12> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_29_13> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_30_12> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_30_13> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_31_12> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_31_13> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_32_13> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_32_12> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_33_12> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_33_13> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_34_12> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_34_13> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_35_12> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_35_13> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_36_12> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_36_13> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_37_13> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_37_12> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_38_12> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_38_13> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_39_12> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_39_13> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_40_12> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_40_13> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_41_12> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_41_13> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_42_12> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sPointSet_42_13> has a constant value of 0 in block <PointBuffer>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2697 - Unit <ROM_PAIRS> : the RAMs <Mrom_pointIndex1_rom0002>, <Mrom_pointIndex1_rom0001> are packed into the single block RAM <Mrom_pointIndex1_rom00021>
+INFO:Xst:2697 - Unit <ROM_PAIRS> : the RAMs <Mrom_pointIndex1_rom0003>, <Mrom_pointIndex1_rom0005> are packed into the single block RAM <Mrom_pointIndex1_rom00031>
+INFO:Xst:2697 - Unit <ROM_PAIRS> : the RAMs <Mrom_pointIndex1_rom0004>, <Mrom_pointIndex1_rom0006> are packed into the single block RAM <Mrom_pointIndex1_rom00041>
+INFO:Xst:2697 - Unit <ROM_PAIRS> : the RAMs <Mrom_pointIndex1_rom0007>, <Mrom_pointIndex1_rom0008> are packed into the single block RAM <Mrom_pointIndex1_rom00071>
+INFO:Xst:2697 - Unit <ROM_PAIRS> : the RAMs <Mrom_pointIndex1_rom0009>, <Mrom_pointIndex1_rom0010> are packed into the single block RAM <Mrom_pointIndex1_rom00091>
+INFO:Xst:2697 - Unit <ROM_PAIRS> : the RAMs <Mrom_pointIndex1_rom0012>, <Mrom_pointIndex1_rom0011> are packed into the single block RAM <Mrom_pointIndex1_rom00121>
+INFO:Xst:2697 - Unit <ROM_PAIRS> : the RAMs <Mrom_pointIndex1_rom0013>, <Mrom_pointIndex1_rom0015> are packed into the single block RAM <Mrom_pointIndex1_rom00131>
+WARNING:Xst:1293 - FF/Latch <keypoint_Reader/s_offset_0> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <keypoint_Reader/s_offset_1> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <keypoint_Reader/kptCoordY_6> in Unit <RetinaDescriptorGenerator> is equivalent to the following FF/Latch, which will be removed : <address_Generator/Mmult_point_addr_mult0002_3> 
+INFO:Xst:2261 - The FF/Latch <keypoint_Reader/kptCoordY_1> in Unit <RetinaDescriptorGenerator> is equivalent to the following FF/Latch, which will be removed : <address_Generator/Mmult_point_addr_mult0002_8> 
+INFO:Xst:2261 - The FF/Latch <keypoint_Reader/kptCoordY_7> in Unit <RetinaDescriptorGenerator> is equivalent to the following FF/Latch, which will be removed : <address_Generator/Mmult_point_addr_mult0002_2> 
+INFO:Xst:2261 - The FF/Latch <keypoint_Reader/kptCoordY_2> in Unit <RetinaDescriptorGenerator> is equivalent to the following FF/Latch, which will be removed : <address_Generator/Mmult_point_addr_mult0002_7> 
+INFO:Xst:2261 - The FF/Latch <keypoint_Reader/kptCoordY_8> in Unit <RetinaDescriptorGenerator> is equivalent to the following FF/Latch, which will be removed : <address_Generator/Mmult_point_addr_mult0002_1> 
+INFO:Xst:2261 - The FF/Latch <keypoint_Reader/kptCoordY_3> in Unit <RetinaDescriptorGenerator> is equivalent to the following FF/Latch, which will be removed : <address_Generator/Mmult_point_addr_mult0002_6> 
+INFO:Xst:2261 - The FF/Latch <keypoint_Reader/kptCoordY_9> in Unit <RetinaDescriptorGenerator> is equivalent to the following FF/Latch, which will be removed : <address_Generator/Mmult_point_addr_mult0002_0> 
+INFO:Xst:2261 - The FF/Latch <keypoint_Reader/kptCoordY_4> in Unit <RetinaDescriptorGenerator> is equivalent to the following FF/Latch, which will be removed : <address_Generator/Mmult_point_addr_mult0002_5> 
+INFO:Xst:2261 - The FF/Latch <keypoint_Reader/kptCoordY_5> in Unit <RetinaDescriptorGenerator> is equivalent to the following FF/Latch, which will be removed : <address_Generator/Mmult_point_addr_mult0002_4> 
+INFO:Xst:2261 - The FF/Latch <keypoint_Reader/kptCoordY_0> in Unit <RetinaDescriptorGenerator> is equivalent to the following FF/Latch, which will be removed : <address_Generator/Mmult_point_addr_mult0002_9> 
+
+Optimizing unit <RetinaDescriptorGenerator> ...
+
+Optimizing unit <ROM_PAIRS> ...
+
+Optimizing unit <PointBuffer> ...
+
+Optimizing unit <DescriptorMaker> ...
+WARNING:Xst:1293 - FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_23_12> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_23_13> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_24_12> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_24_13> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_18_12> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_18_13> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_19_12> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_19_13> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_30_12> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_30_13> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_25_12> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_25_13> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_31_12> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_31_13> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_26_12> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_26_13> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_32_12> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_32_13> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_28_12> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_28_13> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_27_12> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_10_12> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_10_13> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_11_12> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_11_13> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_14_12> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_14_13> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_12_12> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_12_13> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_13_12> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_13_13> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_20_12> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_20_13> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_15_12> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_15_13> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_17_12> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_17_13> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_21_12> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_21_13> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_16_12> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_16_13> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_22_12> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_22_13> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_38_13> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_0_12> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_0_13> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_1_12> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_1_13> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_2_12> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_2_13> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_3_12> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_3_13> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_4_12> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_4_13> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_5_12> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_5_13> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_6_12> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_6_13> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_7_12> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_7_13> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_8_12> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_8_13> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_9_12> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_9_13> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_27_13> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_33_12> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_33_13> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_34_12> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_34_13> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_29_12> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_29_13> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_41_12> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_41_13> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_40_12> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_40_13> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_35_12> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_35_13> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_36_12> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_36_13> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_42_12> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_42_13> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_39_12> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_39_13> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_37_12> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_37_13> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <TopDescriptor_Maker/descripMakerX/sPointSet_38_12> has a constant value of 0 in block <RetinaDescriptorGenerator>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block RetinaDescriptorGenerator, actual ratio is 3.
+FlipFlop address_Generator/point_set_id_0 has been replicated 1 time(s)
+FlipFlop address_Generator/point_set_id_1 has been replicated 1 time(s)
+FlipFlop address_Generator/point_set_id_2 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1954
+ Flip-Flops                                            : 1954
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : RetinaDescriptorGenerator.ngr
+Top Level Output File Name         : RetinaDescriptorGenerator
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 686
+
+Cell Usage :
+# BELS                             : 7571
+#      GND                         : 1
+#      INV                         : 27
+#      LUT1                        : 32
+#      LUT2                        : 134
+#      LUT3                        : 59
+#      LUT4                        : 281
+#      LUT5                        : 913
+#      LUT6                        : 4822
+#      MUXCY                       : 313
+#      MUXF7                       : 779
+#      VCC                         : 1
+#      XORCY                       : 209
+# FlipFlops/Latches                : 1954
+#      FD                          : 4
+#      FDE                         : 46
+#      FDR                         : 19
+#      FDRE                        : 1879
+#      FDRS                        : 1
+#      FDRSE                       : 1
+#      FDSE                        : 4
+# RAMS                             : 9
+#      RAMB18                      : 9
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 681
+#      IBUF                        : 102
+#      OBUF                        : 579
+# DSPs                             : 17
+#      DSP48E                      : 17
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 5vlx330tff1738-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            1954  out of  207360     0%  
+ Number of Slice LUTs:                 6268  out of  207360     3%  
+    Number used as Logic:              6268  out of  207360     3%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   7981
+   Number with an unused Flip Flop:    6027  out of   7981    75%  
+   Number with an unused LUT:          1713  out of   7981    21%  
+   Number of fully used LUT-FF pairs:   241  out of   7981     3%  
+   Number of unique control sets:        66
+
+IO Utilization: 
+ Number of IOs:                         686
+ Number of bonded IOBs:                 682  out of    960    71%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                5  out of    324     1%  
+    Number using Block RAM only:          5
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+ Number of DSP48Es:                      17  out of    192     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+--------------------------------------------------------+----------------------------------------------------------------+-------+
+Clock Signal                                            | Clock buffer(FF name)                                          | Load  |
+--------------------------------------------------------+----------------------------------------------------------------+-------+
+CLK                                                     | BUFGP                                                          | 1976  |
+TopDescriptor_Maker/descripMakerX/Mmux__varindex0000_106| NONE(gaussian_Filter/horiz_conv/Madd_s3_horiz_conv_addsub00021)| 2     |
+--------------------------------------------------------+----------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 14.796ns (Maximum Frequency: 67.587MHz)
+   Minimum input arrival time before clock: 8.758ns
+   Maximum output required time after clock: 3.275ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 14.796ns (frequency: 67.587MHz)
+  Total number of paths / destination ports: 86295181 / 4221
+-------------------------------------------------------------------------
+Delay:               14.796ns (Levels of Logic = 45)
+  Source:            address_Generator/Maddsub_coordArray_mult0000_swapped (DSP)
+  Destination:       address_Generator/point_addr_31 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: address_Generator/Maddsub_coordArray_mult0000_swapped to address_Generator/point_addr_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     DSP48E:CLK->P0       61   4.037   0.922  address_Generator/Maddsub_coordArray_mult0000_swapped (address_Generator/coordArray_add0000<0>)
+     LUT4:I0->O            2   0.094   0.485  address_Generator/Mmux_coordArray_mux0001<0>431 (N57)
+     LUT6:I5->O            1   0.094   0.789  address_Generator/Mmux_coordArray_mux0001<2>5238_SW0 (N799)
+     LUT6:I2->O            1   0.094   0.710  address_Generator/Mmux_coordArray_mux0001<2>5341 (address_Generator/Mmux_coordArray_mux0001<2>5341)
+     LUT5:I2->O            1   0.094   0.000  address_Generator/Madd_point_addr_addsub0001_lut<2> (address_Generator/Madd_point_addr_addsub0001_lut<2>)
+     MUXCY:S->O            1   0.372   0.000  address_Generator/Madd_point_addr_addsub0001_cy<2> (address_Generator/Madd_point_addr_addsub0001_cy<2>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_addsub0001_cy<3> (address_Generator/Madd_point_addr_addsub0001_cy<3>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_addsub0001_cy<4> (address_Generator/Madd_point_addr_addsub0001_cy<4>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_addsub0001_cy<5> (address_Generator/Madd_point_addr_addsub0001_cy<5>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_addsub0001_cy<6> (address_Generator/Madd_point_addr_addsub0001_cy<6>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_addsub0001_cy<7> (address_Generator/Madd_point_addr_addsub0001_cy<7>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_addsub0001_cy<8> (address_Generator/Madd_point_addr_addsub0001_cy<8>)
+     XORCY:CI->O           1   0.357   0.336  address_Generator/Madd_point_addr_addsub0001_xor<9> (address_Generator/point_addr_addsub0001<9>)
+     DSP48E:A9->P1         2   3.646   0.485  address_Generator/Mmult_point_addr_mult0001 (address_Generator/point_addr_mult0001<1>)
+     LUT5:I4->O            1   0.094   0.480  address_Generator/Madd_point_addr_mux0001C301 (address_Generator/Madd_point_addr_mux0001C)
+     LUT6:I5->O            1   0.094   0.000  address_Generator/Madd_point_addr_mux0001_Madd_lut<2> (address_Generator/Madd_point_addr_mux0001_Madd_lut<2>)
+     MUXCY:S->O            1   0.372   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<2> (address_Generator/Madd_point_addr_mux0001_Madd_cy<2>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<3> (address_Generator/Madd_point_addr_mux0001_Madd_cy<3>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<4> (address_Generator/Madd_point_addr_mux0001_Madd_cy<4>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<5> (address_Generator/Madd_point_addr_mux0001_Madd_cy<5>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<6> (address_Generator/Madd_point_addr_mux0001_Madd_cy<6>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<7> (address_Generator/Madd_point_addr_mux0001_Madd_cy<7>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<8> (address_Generator/Madd_point_addr_mux0001_Madd_cy<8>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<9> (address_Generator/Madd_point_addr_mux0001_Madd_cy<9>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<10> (address_Generator/Madd_point_addr_mux0001_Madd_cy<10>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<11> (address_Generator/Madd_point_addr_mux0001_Madd_cy<11>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<12> (address_Generator/Madd_point_addr_mux0001_Madd_cy<12>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<13> (address_Generator/Madd_point_addr_mux0001_Madd_cy<13>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<14> (address_Generator/Madd_point_addr_mux0001_Madd_cy<14>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<15> (address_Generator/Madd_point_addr_mux0001_Madd_cy<15>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<16> (address_Generator/Madd_point_addr_mux0001_Madd_cy<16>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<17> (address_Generator/Madd_point_addr_mux0001_Madd_cy<17>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<18> (address_Generator/Madd_point_addr_mux0001_Madd_cy<18>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<19> (address_Generator/Madd_point_addr_mux0001_Madd_cy<19>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<20> (address_Generator/Madd_point_addr_mux0001_Madd_cy<20>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<21> (address_Generator/Madd_point_addr_mux0001_Madd_cy<21>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<22> (address_Generator/Madd_point_addr_mux0001_Madd_cy<22>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<23> (address_Generator/Madd_point_addr_mux0001_Madd_cy<23>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<24> (address_Generator/Madd_point_addr_mux0001_Madd_cy<24>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<25> (address_Generator/Madd_point_addr_mux0001_Madd_cy<25>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<26> (address_Generator/Madd_point_addr_mux0001_Madd_cy<26>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<27> (address_Generator/Madd_point_addr_mux0001_Madd_cy<27>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<28> (address_Generator/Madd_point_addr_mux0001_Madd_cy<28>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<29> (address_Generator/Madd_point_addr_mux0001_Madd_cy<29>)
+     MUXCY:CI->O           0   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<30> (address_Generator/Madd_point_addr_mux0001_Madd_cy<30>)
+     XORCY:CI->O           1   0.357   0.000  address_Generator/Madd_point_addr_mux0001_Madd_xor<31> (address_Generator/point_addr_mux0001<31>)
+     FDRE:D                   -0.018          address_Generator/point_addr_31
+    ----------------------------------------
+    Total                     14.796ns (10.589ns logic, 4.207ns route)
+                                       (71.6% logic, 28.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 2289799 / 2118
+-------------------------------------------------------------------------
+Offset:              8.758ns (Levels of Logic = 33)
+  Source:            IMG_BASE_ADDR<2> (PAD)
+  Destination:       address_Generator/point_addr_31 (FF)
+  Destination Clock: CLK rising
+
+  Data Path: IMG_BASE_ADDR<2> to address_Generator/point_addr_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.818   0.336  IMG_BASE_ADDR_2_IBUF (IMG_BASE_ADDR_2_IBUF)
+     DSP48E:C2->PCOUT31    1   2.277   0.000  address_Generator/Maddsub_point_addr_mult0004 (address_Generator/Maddsub_point_addr_mult0004_PCOUT_to_address_Generator/Madd_point_addr_add0001_Madd1_PCIN_31)
+     DSP48E:PCIN31->P4     2   1.816   0.794  address_Generator/Madd_point_addr_add0001_Madd1 (address_Generator/point_addr_add0001<4>)
+     LUT5:I1->O            1   0.094   0.576  address_Generator/point_addr_mux0005<4>1 (address_Generator/point_addr_mux0005<4>)
+     LUT6:I4->O            1   0.094   0.480  address_Generator/Madd_point_addr_mux0001C31 (address_Generator/Madd_point_addr_mux0001C3)
+     LUT6:I5->O            1   0.094   0.000  address_Generator/Madd_point_addr_mux0001_Madd_lut<5> (address_Generator/Madd_point_addr_mux0001_Madd_lut<5>)
+     MUXCY:S->O            1   0.372   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<5> (address_Generator/Madd_point_addr_mux0001_Madd_cy<5>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<6> (address_Generator/Madd_point_addr_mux0001_Madd_cy<6>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<7> (address_Generator/Madd_point_addr_mux0001_Madd_cy<7>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<8> (address_Generator/Madd_point_addr_mux0001_Madd_cy<8>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<9> (address_Generator/Madd_point_addr_mux0001_Madd_cy<9>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<10> (address_Generator/Madd_point_addr_mux0001_Madd_cy<10>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<11> (address_Generator/Madd_point_addr_mux0001_Madd_cy<11>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<12> (address_Generator/Madd_point_addr_mux0001_Madd_cy<12>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<13> (address_Generator/Madd_point_addr_mux0001_Madd_cy<13>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<14> (address_Generator/Madd_point_addr_mux0001_Madd_cy<14>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<15> (address_Generator/Madd_point_addr_mux0001_Madd_cy<15>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<16> (address_Generator/Madd_point_addr_mux0001_Madd_cy<16>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<17> (address_Generator/Madd_point_addr_mux0001_Madd_cy<17>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<18> (address_Generator/Madd_point_addr_mux0001_Madd_cy<18>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<19> (address_Generator/Madd_point_addr_mux0001_Madd_cy<19>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<20> (address_Generator/Madd_point_addr_mux0001_Madd_cy<20>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<21> (address_Generator/Madd_point_addr_mux0001_Madd_cy<21>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<22> (address_Generator/Madd_point_addr_mux0001_Madd_cy<22>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<23> (address_Generator/Madd_point_addr_mux0001_Madd_cy<23>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<24> (address_Generator/Madd_point_addr_mux0001_Madd_cy<24>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<25> (address_Generator/Madd_point_addr_mux0001_Madd_cy<25>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<26> (address_Generator/Madd_point_addr_mux0001_Madd_cy<26>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<27> (address_Generator/Madd_point_addr_mux0001_Madd_cy<27>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<28> (address_Generator/Madd_point_addr_mux0001_Madd_cy<28>)
+     MUXCY:CI->O           1   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<29> (address_Generator/Madd_point_addr_mux0001_Madd_cy<29>)
+     MUXCY:CI->O           0   0.026   0.000  address_Generator/Madd_point_addr_mux0001_Madd_cy<30> (address_Generator/Madd_point_addr_mux0001_Madd_cy<30>)
+     XORCY:CI->O           1   0.357   0.000  address_Generator/Madd_point_addr_mux0001_Madd_xor<31> (address_Generator/point_addr_mux0001<31>)
+     FDRE:D                   -0.018          address_Generator/point_addr_31
+    ----------------------------------------
+    Total                      8.758ns (6.572ns logic, 2.186ns route)
+                                       (75.0% logic, 25.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 579 / 579
+-------------------------------------------------------------------------
+Offset:              3.275ns (Levels of Logic = 1)
+  Source:            imagePatch_Reader/s_mem_addr_30 (FF)
+  Destination:       PIXEL_ADDR_MEM<30> (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: imagePatch_Reader/s_mem_addr_30 to PIXEL_ADDR_MEM<30>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              4   0.471   0.352  imagePatch_Reader/s_mem_addr_30 (imagePatch_Reader/s_mem_addr_30)
+     OBUF:I->O                 2.452          PIXEL_ADDR_MEM_30_OBUF (PIXEL_ADDR_MEM<30>)
+    ----------------------------------------
+    Total                      3.275ns (2.923ns logic, 0.352ns route)
+                                       (89.3% logic, 10.7% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 116.00 secs
+Total CPU time to Xst completion: 113.13 secs
+ 
+--> 
+
+
+Total memory usage is 838160 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  468 (   0 filtered)
+Number of infos    :   69 (   0 filtered)
+

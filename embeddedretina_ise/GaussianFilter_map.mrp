@@ -1,0 +1,1415 @@
+Release 14.6 Map P.68d (lin64)
+Xilinx Mapping Report File for Design 'GaussianFilter'
+
+Design Information
+------------------
+Command Line   : map -filter
+/media/DATA42/Projects/EmbeddedRetina/EmbeddedRetina_ISE/iseconfig/filter.filter
+-intstyle ise -p xc7z020-clg400-2 -w -logic_opt off -ol high -t 1 -xt 0
+-register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o
+GaussianFilter_map.ncd GaussianFilter.ngd GaussianFilter.pcf 
+Target Device  : xc7z020
+Target Package : clg400
+Target Speed   : -2
+Mapper Version : zynq -- $Revision: 1.55 $
+Mapped Date    : Wed Apr 16 23:43:10 2014
+
+Interim Summary
+---------------
+Slice Logic Utilization:
+  Number of Slice Registers:                   573 out of 106,400    1%
+    Number used as Flip Flops:                 496
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:               77
+  Number of Slice LUTs:                        527 out of  53,200    1%
+    Number used as logic:                      459 out of  53,200    1%
+      Number using O6 output only:             354
+      Number using O5 output only:               0
+      Number using O5 and O6:                  105
+      Number used as ROM:                        0
+    Number used as Memory:                      68 out of  17,400    1%
+      Number used as Dual Port RAM:              0
+      Number used as Single Port RAM:           68
+        Number using O6 output only:             0
+        Number using O5 output only:             1
+        Number using O5 and O6:                 67
+      Number used as Shift Register:             0
+    Number used exclusively as route-thrus:      0
+
+Slice Logic Distribution:
+  Number of LUT Flip Flop pairs used:          764
+    Number with an unused Flip Flop:           192 out of     764   25%
+    Number with an unused LUT:                 237 out of     764   31%
+    Number of fully used LUT-FF pairs:         335 out of     764   43%
+    Number of unique control sets:               7
+    Number of slice register sites lost
+      to control set restrictions:               9 out of 106,400    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+  OVERMAPPING of BRAM resources should be ignored if the design is
+  over-mapped for a non-BRAM resource or if placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                       257 out of     125  205% (OVERMAPPED)
+
+Specific Feature Utilization:
+  Number of RAMB36E1/FIFO36E1s:                  0 out of     140    0%
+  Number of RAMB18E1/FIFO18E1s:                  0 out of     280    0%
+  Number of BUFG/BUFGCTRLs:                      1 out of      32    3%
+    Number used as BUFGs:                        1
+    Number used as BUFGCTRLs:                    0
+  Number of IDELAYE2/IDELAYE2_FINEDELAYs:        0 out of     200    0%
+  Number of ILOGICE2/ILOGICE3/ISERDESE2s:        0 out of     200    0%
+  Number of ODELAYE2/ODELAYE2_FINEDELAYs:        0
+  Number of OLOGICE2/OLOGICE3/OSERDESE2s:        0 out of     200    0%
+  Number of PHASER_IN/PHASER_IN_PHYs:            0 out of      16    0%
+  Number of PHASER_OUT/PHASER_OUT_PHYs:          0 out of      16    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHCEs:                             0 out of      72    0%
+  Number of BUFRs:                               0 out of      16    0%
+  Number of CAPTUREs:                            0 out of       1    0%
+  Number of DNA_PORTs:                           0 out of       1    0%
+  Number of DSP48E1s:                           30 out of     220   13%
+  Number of EFUSE_USRs:                          0 out of       1    0%
+  Number of FRAME_ECCs:                          0 out of       1    0%
+  Number of ICAPs:                               0 out of       2    0%
+  Number of IDELAYCTRLs:                         0 out of       4    0%
+  Number of IN_FIFOs:                            0 out of      16    0%
+  Number of MMCME2_ADVs:                         0 out of       4    0%
+  Number of OUT_FIFOs:                           0 out of      16    0%
+  Number of PHASER_REFs:                         0 out of       4    0%
+  Number of PHY_CONTROLs:                        0 out of       4    0%
+  Number of PLLE2_ADVs:                          0 out of       4    0%
+  Number of PS7s:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of XADCs:                               0 out of       1    0%
+
+
+Mapping completed.
+See MAP report file "GaussianFilter_map.mrp" for details.
+Problem encountered during the packing phase.
+
+Design Summary
+--------------
+Number of errors   :   2
+Number of warnings :   2
+
+Section 1 - Errors
+------------------
+ERROR:Pack:2309 - Too many bonded comps of type "IOB" found to fit this device.
+ERROR:Map:237 - The design is too large to fit the device.  Please check the Design Summary section to see which resource requirement for
+   your design exceeds the resources available in the device. Note that the number of slices reported may not be reflected accurately as
+   their packing might not have been completed.
+
+Section 2 - Warnings
+--------------------
+WARNING:LIT:701 - PAD symbol "CLK" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "CLK" is not constrained (LOC) to a specific
+   location.
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network
+   gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<134>
+   has no load.
+INFO:LIT:395 - The above info message is repeated 134 more times for the
+   following (max. 5 shown):
+   gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<133>,
+   gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<132>,
+   gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<131>,
+   gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<130>,
+   gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<129>
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram100"
+   (output signal=gaussian_coefficients<99>) INITSTATE has been changed from
+   00000608 to 06080608 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram101"
+   (output signal=gaussian_coefficients<100>) INITSTATE has been changed from
+   00003870 to 38703870 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram102"
+   (output signal=gaussian_coefficients<101>) INITSTATE has been changed from
+   00001C70 to 1C701C70 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram103"
+   (output signal=gaussian_coefficients<102>) INITSTATE has been changed from
+   00002430 to 24302430 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram104"
+   (output signal=gaussian_coefficients<103>) INITSTATE has been changed from
+   00001620 to 16201620 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram105"
+   (output signal=gaussian_coefficients<104>) INITSTATE has been changed from
+   00003210 to 32103210 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram106"
+   (output signal=gaussian_coefficients<105>) INITSTATE has been changed from
+   00000E70 to 0E700E70 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram107"
+   (output signal=gaussian_coefficients<106>) INITSTATE has been changed from
+   00000008 to 00080008 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram109"
+   (output signal=gaussian_coefficients<108>) INITSTATE has been changed from
+   00001554 to 15541554 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram11"
+   (output signal=gaussian_coefficients<10>) INITSTATE has been changed from
+   00002000 to 20002000 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram110"
+   (output signal=gaussian_coefficients<109>) INITSTATE has been changed from
+   00003948 to 39483948 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram111"
+   (output signal=gaussian_coefficients<110>) INITSTATE has been changed from
+   000011D0 to 11D011D0 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram112"
+   (output signal=gaussian_coefficients<111>) INITSTATE has been changed from
+   00002C04 to 2C042C04 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram113"
+   (output signal=gaussian_coefficients<112>) INITSTATE has been changed from
+   0000121C to 121C121C because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram114"
+   (output signal=gaussian_coefficients<113>) INITSTATE has been changed from
+   00003534 to 35343534 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram115"
+   (output signal=gaussian_coefficients<114>) INITSTATE has been changed from
+   00000C70 to 0C700C70 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram116"
+   (output signal=gaussian_coefficients<115>) INITSTATE has been changed from
+   0000038C to 038C038C because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram118"
+   (output signal=gaussian_coefficients<117>) INITSTATE has been changed from
+   00002F09 to 2F092F09 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram119"
+   (output signal=gaussian_coefficients<118>) INITSTATE has been changed from
+   00002337 to 23372337 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram120"
+   (output signal=gaussian_coefficients<119>) INITSTATE has been changed from
+   00000B8D to 0B8D0B8D because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram121"
+   (output signal=gaussian_coefficients<120>) INITSTATE has been changed from
+   000039DB to 39DB39DB because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram122"
+   (output signal=gaussian_coefficients<121>) INITSTATE has been changed from
+   0000151D to 151D151D because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram123"
+   (output signal=gaussian_coefficients<122>) INITSTATE has been changed from
+   000036B1 to 36B136B1 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram124"
+   (output signal=gaussian_coefficients<123>) INITSTATE has been changed from
+   00000DF6 to 0DF60DF6 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram125"
+   (output signal=gaussian_coefficients<124>) INITSTATE has been changed from
+   0000038C to 038C038C because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram126"
+   (output signal=gaussian_coefficients<125>) INITSTATE has been changed from
+   00000003 to 00030003 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram127"
+   (output signal=gaussian_coefficients<126>) INITSTATE has been changed from
+   000033BD to 33BD33BD because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram128"
+   (output signal=gaussian_coefficients<127>) INITSTATE has been changed from
+   00002AB1 to 2AB12AB1 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram129"
+   (output signal=gaussian_coefficients<128>) INITSTATE has been changed from
+   00000F82 to 0F820F82 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram13"
+   (output signal=gaussian_coefficients<12>) INITSTATE has been changed from
+   00002000 to 20002000 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram130"
+   (output signal=gaussian_coefficients<129>) INITSTATE has been changed from
+   00003AD2 to 3AD23AD2 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram131"
+   (output signal=gaussian_coefficients<130>) INITSTATE has been changed from
+   00001590 to 15901590 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram132"
+   (output signal=gaussian_coefficients<131>) INITSTATE has been changed from
+   0000373E to 373E373E because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram133"
+   (output signal=gaussian_coefficients<132>) INITSTATE has been changed from
+   00000D76 to 0D760D76 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram134"
+   (output signal=gaussian_coefficients<133>) INITSTATE has been changed from
+   0000030D to 030D030D because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram135"
+   (output signal=gaussian_coefficients<134>) INITSTATE has been changed from
+   00000083 to 00830083 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram14"
+   (output signal=gaussian_coefficients<13>) INITSTATE has been changed from
+   00002000 to 20002000 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram21"
+   (output signal=gaussian_coefficients<20>) INITSTATE has been changed from
+   00002000 to 20002000 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram22"
+   (output signal=gaussian_coefficients<21>) INITSTATE has been changed from
+   00002000 to 20002000 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram23"
+   (output signal=gaussian_coefficients<22>) INITSTATE has been changed from
+   00002000 to 20002000 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram28"
+   (output signal=gaussian_coefficients<27>) INITSTATE has been changed from
+   00001000 to 10001000 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram29"
+   (output signal=gaussian_coefficients<28>) INITSTATE has been changed from
+   00003000 to 30003000 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram30"
+   (output signal=gaussian_coefficients<29>) INITSTATE has been changed from
+   00002000 to 20002000 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram31"
+   (output signal=gaussian_coefficients<30>) INITSTATE has been changed from
+   00003000 to 30003000 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram32"
+   (output signal=gaussian_coefficients<31>) INITSTATE has been changed from
+   00003000 to 30003000 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram37"
+   (output signal=gaussian_coefficients<36>) INITSTATE has been changed from
+   00001000 to 10001000 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram38"
+   (output signal=gaussian_coefficients<37>) INITSTATE has been changed from
+   00001000 to 10001000 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram39"
+   (output signal=gaussian_coefficients<38>) INITSTATE has been changed from
+   00001000 to 10001000 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram4"
+   (output signal=gaussian_coefficients<3>) INITSTATE has been changed from
+   00002000 to 20002000 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram40"
+   (output signal=gaussian_coefficients<39>) INITSTATE has been changed from
+   00001000 to 10001000 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram41"
+   (output signal=gaussian_coefficients<40>) INITSTATE has been changed from
+   00001000 to 10001000 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram42"
+   (output signal=gaussian_coefficients<41>) INITSTATE has been changed from
+   00002000 to 20002000 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram46"
+   (output signal=gaussian_coefficients<45>) INITSTATE has been changed from
+   00001000 to 10001000 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram47"
+   (output signal=gaussian_coefficients<46>) INITSTATE has been changed from
+   00003000 to 30003000 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram5"
+   (output signal=gaussian_coefficients<4>) INITSTATE has been changed from
+   00002000 to 20002000 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram51"
+   (output signal=gaussian_coefficients<50>) INITSTATE has been changed from
+   00003000 to 30003000 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram55"
+   (output signal=gaussian_coefficients<54>) INITSTATE has been changed from
+   00002000 to 20002000 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram56"
+   (output signal=gaussian_coefficients<55>) INITSTATE has been changed from
+   00003000 to 30003000 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram57"
+   (output signal=gaussian_coefficients<56>) INITSTATE has been changed from
+   00001800 to 18001800 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram60"
+   (output signal=gaussian_coefficients<59>) INITSTATE has been changed from
+   00003800 to 38003800 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram64"
+   (output signal=gaussian_coefficients<63>) INITSTATE has been changed from
+   00002800 to 28002800 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram65"
+   (output signal=gaussian_coefficients<64>) INITSTATE has been changed from
+   00001840 to 18401840 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram66"
+   (output signal=gaussian_coefficients<65>) INITSTATE has been changed from
+   00002040 to 20402040 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram67"
+   (output signal=gaussian_coefficients<66>) INITSTATE has been changed from
+   00001840 to 18401840 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram68"
+   (output signal=gaussian_coefficients<67>) INITSTATE has been changed from
+   00000040 to 00400040 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram69"
+   (output signal=gaussian_coefficients<68>) INITSTATE has been changed from
+   00003840 to 38403840 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram73"
+   (output signal=gaussian_coefficients<72>) INITSTATE has been changed from
+   00001840 to 18401840 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram74"
+   (output signal=gaussian_coefficients<73>) INITSTATE has been changed from
+   00002800 to 28002800 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram75"
+   (output signal=gaussian_coefficients<74>) INITSTATE has been changed from
+   00003000 to 30003000 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram76"
+   (output signal=gaussian_coefficients<75>) INITSTATE has been changed from
+   00001000 to 10001000 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram77"
+   (output signal=gaussian_coefficients<76>) INITSTATE has been changed from
+   00000800 to 08000800 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram78"
+   (output signal=gaussian_coefficients<77>) INITSTATE has been changed from
+   00003800 to 38003800 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram79"
+   (output signal=gaussian_coefficients<78>) INITSTATE has been changed from
+   00000040 to 00400040 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram82"
+   (output signal=gaussian_coefficients<81>) INITSTATE has been changed from
+   00001460 to 14601460 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram83"
+   (output signal=gaussian_coefficients<82>) INITSTATE has been changed from
+   00000C40 to 0C400C40 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram84"
+   (output signal=gaussian_coefficients<83>) INITSTATE has been changed from
+   00000420 to 04200420 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram85"
+   (output signal=gaussian_coefficients<84>) INITSTATE has been changed from
+   00002C00 to 2C002C00 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram86"
+   (output signal=gaussian_coefficients<85>) INITSTATE has been changed from
+   00001C20 to 1C201C20 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram87"
+   (output signal=gaussian_coefficients<86>) INITSTATE has been changed from
+   00003C00 to 3C003C00 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram88"
+   (output signal=gaussian_coefficients<87>) INITSTATE has been changed from
+   00000060 to 00600060 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram91"
+   (output signal=gaussian_coefficients<90>) INITSTATE has been changed from
+   00003450 to 34503450 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram92"
+   (output signal=gaussian_coefficients<91>) INITSTATE has been changed from
+   00001420 to 14201420 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram93"
+   (output signal=gaussian_coefficients<92>) INITSTATE has been changed from
+   00000450 to 04500450 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram94"
+   (output signal=gaussian_coefficients<93>) INITSTATE has been changed from
+   00002420 to 24202420 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram95"
+   (output signal=gaussian_coefficients<94>) INITSTATE has been changed from
+   00001020 to 10201020 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram96"
+   (output signal=gaussian_coefficients<95>) INITSTATE has been changed from
+   00003010 to 30103010 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:MapLib:825 - RAM32X1S symbol
+   "gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/Mram_ram97"
+   (output signal=gaussian_coefficients<96>) INITSTATE has been changed from
+   00000C70 to 0C700C70 because pin A4 is driven by GND. This pin has been
+   connected to VCC instead, in order to relieve routing congestion.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 0.950 Volts. (default - Range: 0.950 to
+   1.050 Volts)
+
+Section 4 - Removed Logic Summary
+---------------------------------
+ 136 block(s) removed
+   3 block(s) optimized away
+ 136 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+Loadless block "horiz_conv/ADDERTREE_INTERNAL_Madd1323" (ROM) removed.
+The signal "gauss_coe/N1" is sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<134>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<133>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<132>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<131>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<130>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<129>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<128>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<127>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<126>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<125>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<124>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<123>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<122>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<121>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<120>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<119>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<118>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<117>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<116>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<115>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<114>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<113>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<112>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<111>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<110>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<109>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<108>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<107>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<106>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<105>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<104>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<103>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<102>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<101>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<100>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<99>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<98>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<97>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<96>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<95>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<94>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<93>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<92>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<91>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<90>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<89>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<88>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<87>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<86>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<85>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<84>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<83>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<82>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<81>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<80>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<79>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<78>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<77>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<76>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<75>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<74>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<73>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<72>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<71>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<70>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<69>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<68>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<67>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<66>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<65>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<64>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<63>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<62>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<61>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<60>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<59>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<58>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<57>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<56>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<55>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<54>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<53>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<52>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<51>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<50>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<49>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<48>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<47>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<46>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<45>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<44>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<43>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<42>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<41>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<40>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<39>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<38>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<37>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<36>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<35>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<34>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<33>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<32>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<31>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<30>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<29>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<28>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<27>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<26>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<25>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<24>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<23>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<22>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<21>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<20>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<19>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<18>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<17>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<16>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<15>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<14>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<13>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<12>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<11>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<10>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<9>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<8>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<7>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<6>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<5>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<4>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<3>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<2>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<1>" is
+sourceless and has been removed.
+The signal
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int<0>" is
+sourceless and has been removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_0" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_1" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_10" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_100" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_101" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_102" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_103" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_104" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_105" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_106" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_107" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_108" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_109" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_11" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_110" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_111" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_112" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_113" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_114" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_115" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_116" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_117" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_118" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_119" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_12" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_120" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_121" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_122" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_123" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_124" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_125" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_126" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_127" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_128" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_129" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_13" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_130" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_131" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_132" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_133" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_134" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_14" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_15" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_16" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_17" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_18" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_19" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_2" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_20" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_21" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_22" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_23" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_24" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_25" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_26" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_27" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_28" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_29" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_3" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_30" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_31" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_32" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_33" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_34" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_35" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_36" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_37" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_38" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_39" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_4" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_40" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_41" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_42" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_43" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_44" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_45" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_46" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_47" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_48" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_49" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_5" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_50" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_51" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_52" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_53" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_54" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_55" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_56" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_57" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_58" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_59" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_6" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_60" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_61" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_62" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_63" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_64" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_65" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_66" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_67" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_68" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_69" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_7" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_70" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_71" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_72" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_73" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_74" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_75" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_76" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_77" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_78" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_79" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_8" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_80" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_81" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_82" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_83" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_84" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_85" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_86" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_87" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_88" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_89" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_9" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_90" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_91" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_92" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_93" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_94" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_95" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_96" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_97" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_98" (FF)
+removed.
+Unused block
+"gauss_coe/U0/xst_options.dist_mem_inst/gen_sp_ram.spram_inst/qspo_int_99" (FF)
+removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+GND 		gauss_coe/XST_GND
+
+Section 12 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 13 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.

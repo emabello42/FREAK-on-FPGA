@@ -1,0 +1,6 @@
+vhdl work "ipcore_dir/ROM_GAUSS_COE.vhd"
+vhdl work "RetinaParameters.vhd"
+vhdl work "VerticalConvolution.vhd"
+vhdl work "IntermediateRegsConv.vhd"
+vhdl work "HorizontalConvolution.vhd"
+vhdl work "GaussianFilter.vhd"

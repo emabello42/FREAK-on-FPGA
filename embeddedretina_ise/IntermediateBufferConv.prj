@@ -1,0 +1,3 @@
+vhdl work "RetinaParameters.vhd"
+vhdl work "IntermediateFifoConv.vhd"
+vhdl work "IntermediateBufferConv.vhd"

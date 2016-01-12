@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/TOP_DESIGN.xst" -ofn "/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/TOP_DESIGN.syr" 

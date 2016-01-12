@@ -1,0 +1,6 @@
+vhdl isim_temp "ipcore_dir/ROM_GAUSS_COE.vhd"
+vhdl isim_temp "RetinaParameters.vhd"
+vhdl isim_temp "VerticalConvolution.vhd"
+vhdl isim_temp "IntermediateRegsConv.vhd"
+vhdl isim_temp "HorizontalConvolution.vhd"
+vhdl isim_temp "GaussianFilter.vhd"

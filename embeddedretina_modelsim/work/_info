@@ -1,0 +1,458 @@
+m255
+13
+cModel Technology
+d/home/emmanuel
+T_opt
+V>D2C2:545c[8RXVV?I0[43
+04 28 8 work tb_retinadescriptorgenerator behavior 0
+o-quiet -auto_acc_if_foreign -work work
+tExplicit 1
+OE;O;6.2b;35
+Eaddressgenerator
+w1402625074
+DP work retinaparameters oF8Vh^aLW7]k3o<@a?FEL3
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+d/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_modelsim
+F/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/AddressGenerator.vhd
+l0
+L25
+V4dLkM5I1c0eX?9]^kMn`21
+OE;C;6.2b;35
+32
+o-work work -2002 -explicit
+tExplicit 1
+Abehavioral
+DP work retinaparameters oF8Vh^aLW7]k3o<@a?FEL3
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work addressgenerator 4dLkM5I1c0eX?9]^kMn`21
+l78
+L42
+Vh?[XcQa4JRM@e?9ZIXPgM0
+OE;C;6.2b;35
+32
+M3 ieee std_logic_1164
+M2 ieee numeric_std
+M1 work retinaparameters
+o-work work -2002 -explicit
+tExplicit 1
+Edescriptormaker
+w1401935504
+DP work retinaparameters oF8Vh^aLW7]k3o<@a?FEL3
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+d/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_modelsim
+F/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/DescriptorMaker.vhd
+l0
+L25
+V>K?aDR2CF]OGJ?EnJn0d01
+OE;C;6.2b;35
+32
+o-work work -2002 -explicit
+tExplicit 1
+Abehavioral
+DP work retinaparameters oF8Vh^aLW7]k3o<@a?FEL3
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work descriptormaker >K?aDR2CF]OGJ?EnJn0d01
+l42
+L37
+VD:4SLW]13@F9>PU7a500=0
+OE;C;6.2b;35
+32
+M3 ieee std_logic_1164
+M2 ieee numeric_std
+M1 work retinaparameters
+o-work work -2002 -explicit
+tExplicit 1
+Egaussianfilter
+w1401746020
+DP work retinaparameters oF8Vh^aLW7]k3o<@a?FEL3
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+d/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_modelsim
+F/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/GaussianFilter.vhd
+l0
+L23
+VI8aS7W6@ki<Xc89S449IF2
+OE;C;6.2b;35
+32
+o-work work -2002 -explicit
+tExplicit 1
+Abehavioral
+DP work retinaparameters oF8Vh^aLW7]k3o<@a?FEL3
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work gaussianfilter I8aS7W6@ki<Xc89S449IF2
+l101
+L34
+VKlP23KJ:@30PkRYooVVg?1
+OE;C;6.2b;35
+32
+M3 ieee std_logic_1164
+M2 ieee numeric_std
+M1 work retinaparameters
+o-work work -2002 -explicit
+tExplicit 1
+Ehorizontalconvolution
+w1401479112
+DP work retinaparameters oF8Vh^aLW7]k3o<@a?FEL3
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+d/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_modelsim
+F/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/HorizontalConvolution.vhd
+l0
+L22
+VkKXBZj<NXKZcglme`VI_U1
+OE;C;6.2b;35
+32
+o-work work -2002 -explicit
+tExplicit 1
+Abehavioral
+DP work retinaparameters oF8Vh^aLW7]k3o<@a?FEL3
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work horizontalconvolution kKXBZj<NXKZcglme`VI_U1
+l39
+L33
+VTMbbgV^kfPlTkJ[PSR1Lm0
+OE;C;6.2b;35
+32
+M3 ieee std_logic_1164
+M2 ieee numeric_std
+M1 work retinaparameters
+o-work work -2002 -explicit
+tExplicit 1
+Eimagepatchreader
+w1404253256
+DP work retinaparameters oF8Vh^aLW7]k3o<@a?FEL3
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+d/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_modelsim
+F/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/ImagePatchReader.vhd
+l0
+L24
+VeJFVQM^l>g010U;K5NigL3
+OE;C;6.2b;35
+32
+o-work work -2002 -explicit
+tExplicit 1
+Abehavioral
+DP work retinaparameters oF8Vh^aLW7]k3o<@a?FEL3
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work imagepatchreader eJFVQM^l>g010U;K5NigL3
+l52
+L40
+VM^^`CdFm7[eBRUbXXZWGb2
+OE;C;6.2b;35
+32
+M3 ieee std_logic_1164
+M2 ieee numeric_std
+M1 work retinaparameters
+o-work work -2002 -explicit
+tExplicit 1
+Eintermediateregsconv
+w1404255863
+DP work retinaparameters oF8Vh^aLW7]k3o<@a?FEL3
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+d/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_modelsim
+F/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/IntermediateRegsConv.vhd
+l0
+L24
+V>njmEOH]HD@T_b2g=RaYG2
+OE;C;6.2b;35
+32
+o-work work -2002 -explicit
+tExplicit 1
+Abehavioral
+DP work retinaparameters oF8Vh^aLW7]k3o<@a?FEL3
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work intermediateregsconv >njmEOH]HD@T_b2g=RaYG2
+l39
+L34
+VC4L5nhdX@IAb@1ZAA[?l>3
+OE;C;6.2b;35
+32
+M3 ieee std_logic_1164
+M2 ieee numeric_std
+M1 work retinaparameters
+o-work work -2002 -explicit
+tExplicit 1
+Ekeypointreader
+w1404178897
+DP work retinaparameters oF8Vh^aLW7]k3o<@a?FEL3
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+d/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_modelsim
+F/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/KeypointReader.vhd
+l0
+L24
+VH^;=h@2]S`zQLiJ5Q;gTB2
+OE;C;6.2b;35
+32
+o-work work -2002 -explicit
+tExplicit 1
+Abehavioral
+DP work retinaparameters oF8Vh^aLW7]k3o<@a?FEL3
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work keypointreader H^;=h@2]S`zQLiJ5Q;gTB2
+l52
+L41
+V693aK59Ei:[:JFGCYJO610
+OE;C;6.2b;35
+32
+M3 ieee std_logic_1164
+M2 ieee numeric_std
+M1 work retinaparameters
+o-work work -2002 -explicit
+tExplicit 1
+Epointbuffer
+w1401009636
+DP work retinaparameters oF8Vh^aLW7]k3o<@a?FEL3
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+d/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_modelsim
+F/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/PointBuffer.vhd
+l0
+L24
+VO_]9^11lz]_TGdL6PaQTa1
+OE;C;6.2b;35
+32
+o-work work -2002 -explicit
+tExplicit 1
+Abehavioral
+DP work retinaparameters oF8Vh^aLW7]k3o<@a?FEL3
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work pointbuffer O_]9^11lz]_TGdL6PaQTa1
+l37
+L34
+VPNf`RRY]ROh;9^]F;gP]j0
+OE;C;6.2b;35
+32
+M3 ieee std_logic_1164
+M2 ieee numeric_std
+M1 work retinaparameters
+o-work work -2002 -explicit
+tExplicit 1
+Eram
+w1402625172
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+d/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_modelsim
+F/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/RAM.vhd
+l0
+L32
+V^PTmQDdKP3o_QSDFZBYbW0
+OE;C;6.2b;35
+32
+o-work work -2002 -explicit
+tExplicit 1
+Abehavioral
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work ram ^PTmQDdKP3o_QSDFZBYbW0
+l43
+L41
+V0_?@13lZY8PjBDTa_2hF`2
+OE;C;6.2b;35
+32
+M1 ieee std_logic_1164
+o-work work -2002 -explicit
+tExplicit 1
+Eretinadescriptorgenerator
+w1402625193
+DP work retinaparameters oF8Vh^aLW7]k3o<@a?FEL3
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+d/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_modelsim
+F/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/RetinaDescriptorGenerator.vhd
+l0
+L24
+V@IQ^5G=n4kVXOGfL?Vn:31
+OE;C;6.2b;35
+32
+o-work work -2002 -explicit
+tExplicit 1
+Abehavioral
+DP work retinaparameters oF8Vh^aLW7]k3o<@a?FEL3
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work retinadescriptorgenerator @IQ^5G=n4kVXOGfL?Vn:31
+l136
+L41
+VV>zaoak8;8QMzo6JBXEED0
+OE;C;6.2b;35
+32
+M3 ieee std_logic_1164
+M2 ieee numeric_std
+M1 work retinaparameters
+o-work work -2002 -explicit
+tExplicit 1
+Pretinaparameters
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+w1402626183
+d/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_modelsim
+F/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/RetinaParameters.vhd
+l0
+L13
+VoF8Vh^aLW7]k3o<@a?FEL3
+OE;C;6.2b;35
+32
+M1 ieee std_logic_1164
+o-work work -2002 -explicit
+tExplicit 1
+Bbody
+DB work retinaparameters oF8Vh^aLW7]k3o<@a?FEL3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+l0
+L13
+V?3FK0o6ohamXk9mYeIVIU3
+OE;C;6.2b;35
+32
+M1 ieee std_logic_1164
+o-work work -2002 -explicit
+tExplicit 1
+nbody
+Erom_coe
+w1402656331
+DP work retinaparameters oF8Vh^aLW7]k3o<@a?FEL3
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+d/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_modelsim
+F/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/rom_coe.vhd
+l0
+L33
+VJNiC6lOGe=M?EUhB8@QiP0
+OE;C;6.2b;35
+32
+o-work work -2002 -explicit
+tExplicit 1
+Abehavioral
+DP work retinaparameters oF8Vh^aLW7]k3o<@a?FEL3
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work rom_coe JNiC6lOGe=M?EUhB8@QiP0
+l67
+L41
+VCHoakn4cOBWo@efLzz7RA0
+OE;C;6.2b;35
+32
+M3 ieee std_logic_1164
+M2 ieee numeric_std
+M1 work retinaparameters
+o-work work -2002 -explicit
+tExplicit 1
+Erom_pairs
+w1401243522
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP work retinaparameters oF8Vh^aLW7]k3o<@a?FEL3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+d/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_modelsim
+F/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/ROM_PAIRS.vhd
+l0
+L32
+VTZ9i7NTenmDS;N>8FdSgE2
+OE;C;6.2b;35
+32
+o-work work -2002 -explicit
+tExplicit 1
+Abehavioral
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP work retinaparameters oF8Vh^aLW7]k3o<@a?FEL3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work rom_pairs TZ9i7NTenmDS;N>8FdSgE2
+l46
+L41
+V833n^_IJJ@aUVY1lM4fSb3
+OE;C;6.2b;35
+32
+M3 ieee std_logic_1164
+M2 work retinaparameters
+M1 ieee numeric_std
+o-work work -2002 -explicit
+tExplicit 1
+Etb_retinadescriptorgenerator
+w1404248000
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+d/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_modelsim
+F/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/tb_RetinaDescriptorGenerator.vhd
+l0
+L35
+VNzMVa`Jg3V>=XX?9lLL1E1
+OE;C;6.2b;35
+32
+o-work work -2002 -explicit
+tExplicit 1
+Abehavior
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work tb_retinadescriptorgenerator NzMVa`Jg3V>=XX?9lLL1E1
+l91
+L38
+VAZGACzC><0FooLVT;?4Ga2
+OE;C;6.2b;35
+32
+M1 ieee std_logic_1164
+o-work work -2002 -explicit
+tExplicit 1
+Etopdescriptormaker
+w1401742709
+DP work retinaparameters oF8Vh^aLW7]k3o<@a?FEL3
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+d/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_modelsim
+F/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/TopDescriptorMaker.vhd
+l0
+L25
+VQYC:J58Ra[NaV;JM0HQgT3
+OE;C;6.2b;35
+32
+o-work work -2002 -explicit
+tExplicit 1
+Abehavioral
+DP work retinaparameters oF8Vh^aLW7]k3o<@a?FEL3
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work topdescriptormaker QYC:J58Ra[NaV;JM0HQgT3
+l72
+L35
+VR6Vi8I6CA<FQV>o;MZg0S1
+OE;C;6.2b;35
+32
+M3 ieee std_logic_1164
+M2 ieee numeric_std
+M1 work retinaparameters
+o-work work -2002 -explicit
+tExplicit 1
+Everticalconvolution
+w1401479094
+DP work retinaparameters oF8Vh^aLW7]k3o<@a?FEL3
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+d/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_modelsim
+F/media/DATA42/Dropbox/EmbeddedRetina/embeddedretina_ise/VerticalConvolution.vhd
+l0
+L22
+VRoNh_F0;`R7DIY49i2?J]0
+OE;C;6.2b;35
+32
+o-work work -2002 -explicit
+tExplicit 1
+Abehavioral
+DP work retinaparameters oF8Vh^aLW7]k3o<@a?FEL3
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work verticalconvolution RoNh_F0;`R7DIY49i2?J]0
+l39
+L33
+V?O;hMQMNXIEO<HJXjn3SB3
+OE;C;6.2b;35
+32
+M3 ieee std_logic_1164
+M2 ieee numeric_std
+M1 work retinaparameters
+o-work work -2002 -explicit
+tExplicit 1
