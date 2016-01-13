@@ -8,79 +8,16 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/emmanuel/Projects/FREAK-on-FPGA/embeddedretina_ise/AddressGenerator.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/emmanuel/Projects/FREAK-on-FPGA/embeddedretina_ise/DescriptorMaker.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/emmanuel/Projects/FREAK-on-FPGA/embeddedretina_ise/DoG.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/emmanuel/Projects/FREAK-on-FPGA/embeddedretina_ise/GaussianFilter.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/emmanuel/Projects/FREAK-on-FPGA/embeddedretina_ise/HorizontalConvolution.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/emmanuel/Projects/FREAK-on-FPGA/embeddedretina_ise/ImagePatchReader.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/emmanuel/Projects/FREAK-on-FPGA/embeddedretina_ise/IntermediateBufferConv.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/emmanuel/Projects/FREAK-on-FPGA/embeddedretina_ise/IntermediateFifoConv.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/emmanuel/Projects/FREAK-on-FPGA/embeddedretina_ise/IntermediateRegsConv.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/emmanuel/Projects/FREAK-on-FPGA/embeddedretina_ise/KeypointReader.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/emmanuel/Projects/FREAK-on-FPGA/embeddedretina_ise/PairSelector.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/emmanuel/Projects/FREAK-on-FPGA/embeddedretina_ise/PointBuffer.vhd&quot; into library work</arg>
-</msg>
-
 <msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/emmanuel/Projects/FREAK-on-FPGA/embeddedretina_ise/PointFifo.vhd&quot; into library work</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/emmanuel/Projects/FREAK-on-FPGA/embeddedretina_ise/PointFifo.vhd</arg>&quot; Line <arg fmt="%d" index="2">35</arg>. <arg fmt="%s" index="3">Syntax error near &quot;-&quot;.</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/emmanuel/Projects/FREAK-on-FPGA/embeddedretina_ise/ROM_PAIRS.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/emmanuel/Projects/FREAK-on-FPGA/embeddedretina_ise/RetinaDescriptorGenerator.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/emmanuel/Projects/FREAK-on-FPGA/embeddedretina_ise/RetinaParameters.vhd&quot; into library work</arg>
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/emmanuel/Projects/FREAK-on-FPGA/embeddedretina_ise/PointFifo.vhd</arg>&quot; Line <arg fmt="%d" index="2">55</arg>. <arg fmt="%s" index="3">Syntax error near &quot;-&quot;.</arg>
 </msg>
 
 <msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/emmanuel/Projects/FREAK-on-FPGA/embeddedretina_ise/TOP_DESIGN.vhd&quot; into library work</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/emmanuel/Projects/FREAK-on-FPGA/embeddedretina_ise/TOP_DESIGN.vhd</arg>&quot; Line <arg fmt="%d" index="2">111</arg>. <arg fmt="%s" index="3">Syntax error near &quot;end&quot;.</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/emmanuel/Projects/FREAK-on-FPGA/embeddedretina_ise/TopDescriptorMaker.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/emmanuel/Projects/FREAK-on-FPGA/embeddedretina_ise/VerticalConvolution.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/emmanuel/Projects/FREAK-on-FPGA/embeddedretina_ise/rom_coe.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/emmanuel/Projects/FREAK-on-FPGA/embeddedretina_ise/tb_AddressGenerator.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/emmanuel/Projects/FREAK-on-FPGA/embeddedretina_ise/tb_PatchReader.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/emmanuel/Projects/FREAK-on-FPGA/embeddedretina_ise/tb_RetinaDescriptorGenerator.vhd&quot; into library work</arg>
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/emmanuel/Projects/FREAK-on-FPGA/embeddedretina_ise/TOP_DESIGN.vhd</arg>&quot; Line <arg fmt="%d" index="2">131</arg>. <arg fmt="%s" index="3">Syntax error near &quot;end&quot;.</arg>
 </msg>
 
 <msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/emmanuel/Projects/FREAK-on-FPGA/embeddedretina_ise/td_GaussianFilter.vhd&quot; into library work</arg>

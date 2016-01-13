@@ -29,13 +29,13 @@
          <ClosedNode>/td_GaussianFilter - behavior |media|DATA42|Dropbox|EmbeddedRetina|embeddedretina_ise|td_GaussianFilter.vhd/uut - GaussianFilter - BEHAVIORAL/intermBufferConv - IntermediateBufferConv - BEHAVIORAL</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>PointFifo - BEHAVIORAL (/home/emmanuel/Projects/FREAK-on-FPGA/embeddedretina_ise/PointFifo.vhd)</SelectedItem>
+         <SelectedItem>TopDescriptor_Maker - TopDescriptorMaker - BEHAVIORAL (/home/emmanuel/Projects/FREAK-on-FPGA/embeddedretina_ise/TopDescriptorMaker.vhd)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >46</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000002d8000000020000000000000000000000000200000064ffffffff000000810000000300000002000002d80000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>PointFifo - BEHAVIORAL (/home/emmanuel/Projects/FREAK-on-FPGA/embeddedretina_ise/PointFifo.vhd)</CurrentItem>
+      <CurrentItem>TopDescriptor_Maker - TopDescriptorMaker - BEHAVIORAL (/home/emmanuel/Projects/FREAK-on-FPGA/embeddedretina_ise/TopDescriptorMaker.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -89,13 +89,13 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f2000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f20000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001ca000000010000000100000000000000000000000064ffffffff000000810000000000000001000001ca0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <SourceProcessView>000000ff0000000000000002000001c80000000001000000060100000002</SourceProcessView>
    <CurrentView>Implementation</CurrentView>

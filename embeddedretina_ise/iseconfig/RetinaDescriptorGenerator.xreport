@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-01-12T17:21:42</DateModified>
+  <DateModified>2016-01-12T21:24:52</DateModified>
   <ModuleName>RetinaDescriptorGenerator</ModuleName>
   <SummaryTimeStamp>2014-09-04T17:18:52</SummaryTimeStamp>
   <SavedFilePath>/home/emmanuel/Projects/FREAK-on-FPGA/embeddedretina_ise/iseconfig/RetinaDescriptorGenerator.xreport</SavedFilePath>
